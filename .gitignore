@@ -1,0 +1,10 @@
+prototype/plumpy.html
+prototype/voices/
+prototype/__pycache__/
+site/
+build/
+voice/received/
+voice/audio/
+voice/samples/
+voice/sfx/
+node_modules/

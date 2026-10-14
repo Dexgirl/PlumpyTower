@@ -1,0 +1,6229 @@
+{
+ "version": 3,
+ "samples": {
+  "plumpy": "[sleepy] four a.m. [yawns] stomach growling. time for a snack. [confused] the plate is... empty? there is a note. [groans] ugh. [determined] no rocket. no plan. we stack ourselves to the moon.",
+  "bear": "[laughs] i took every snack in the chog world to the purple moon. [smug] and i locked your little friends in cages. [menacing] sell. SELL. [laughs maniacally]",
+  "narrator": "[warmly] Chog World. Every night, the Purple Moon rains crumbs... and the Chogs stack up to catch them. [mysteriously] One night... a star fell instead.",
+  "chog_common": "[panicked] get me out of here! this cage smells like pickles! [gasps] oh my gosh, you did it, you actually knocked him off! [excited] i am free! where are the snacks?",
+  "chog_cool": "[unimpressed] yeah, i knew you would come. took you long enough though. that cage was mid, no cap. [confidently] alright, stack me up, i was born for this.",
+  "chog_skull": "[spooky] i have waited in the dark for so long. my bones... thank you. all of them. [ominously] the dead rise, and they stack. rattle, rattle.",
+  "chog_toxic": "[hyper] warning, warning, radioactive chog released! my atoms are vibrating! i stick to everything, including you now. ten out of ten, would glow again!",
+  "legend_scream": "[screaming] AAAAAAAAAAH! [suddenly calm] sorry. sorry. that means hello. [screaming] AAAAH! [suddenly calm] that means thank you. i only have one setting and it is screaming.",
+  "legend_grim": "[deep and slow] i do not fear the cage. the cage fears me. death took a holiday today. so i will take the tower instead. lead the way.",
+  "legend_abom": "[gloomy] i was a normal chog once. then i ate the forbidden snack. now i am... like this. [warmly] but i am free. and i am yours. [gurgles]",
+  "legend_blaze": "[fired up] this cage is getting HOT and i am the reason! i am out and i am ON FIRE! let us burn this tower all the way to the moon!",
+  "legend_skully": "[fierce] skeleton. on fire. in a cage. you knew what to do. [proudly] flaming bones, at your service. the bear is going to feel the heat.",
+  "legend_midas": "[haughty] everything i touch turns to gold. except that dreadful cage, apparently. [smugly] free at last. darling, everything i stack turns to gold.",
+  "v_gremlin": "[giggles] sorry, busy. i am aura farming. this chog was free aura, so i took it. [cackles] minus a thousand aura!",
+  "v_menace": "[menacing] you broke six cages? cool. i am the seventh. and i am FURIOUS. [growls] i do not calm down. i level up.",
+  "v_bot": "[robotic] countdown started. four seconds per chog. i have infinite seconds. you do not. tick tock. i do not stop.",
+  "v_diva": "[sassy] welcome to my prom. it is vip only. commons? ew. wait outside, sweetie. [laughs mockingly] not on the list? not in the tower.",
+  "v_bro": "[chuckles] yeehaw, partner. this here chog is under arrest for bein too snackable. [smug] no keys. no chog. no cap.",
+  "v_creep": "[whispers] boooo. three perfects in a row, or i haunt your combo forever. [creepy laugh] miss once, and you are ghosted.",
+  "v_cute": "[giggles] hiii! i froze your friend. it is giving snow globe. [sweetly] too cute to catch. too cold to care. [giggles]",
+  "v_regal": "[proudly] i conquered the arctic with one coin and a hat. your chog is next. [grandly] short king. long position. cold heart."
+ },
+ "sfx": {
+  "stomach_growl": {
+   "prompt": "cartoon hungry stomach growling, a long low gurgling rumble, close up",
+   "seconds": 1.6
+  },
+  "bone_rattle": {
+   "prompt": "dry cartoon skeleton bones rattling and clattering together",
+   "seconds": 1.2
+  },
+  "wind_blow": {
+   "prompt": "a big cartoon gust of wind blowing past, whoosh",
+   "seconds": 1.6
+  },
+  "slow_clap": {
+   "prompt": "one person slowly clapping, four sarcastic slow claps, small room",
+   "seconds": 2.4
+  },
+  "knuckle_crack": {
+   "prompt": "knuckles cracking loudly, crack crack",
+   "seconds": 0.9
+  },
+  "junk_crash": {
+   "prompt": "a huge pile of pots, plates and furniture crashing and tumbling down, cartoon",
+   "seconds": 2.2
+  },
+  "keys_jangle": {
+   "prompt": "a big ring of metal keys jangling",
+   "seconds": 1.4
+  },
+  "tumble_thud": {
+   "prompt": "cartoon character tumbling over and landing with a heavy thud",
+   "seconds": 1.2
+  },
+  "laser_pew": {
+   "prompt": "two quick retro sci-fi laser blasts, pew pew",
+   "seconds": 0.8
+  },
+  "smoke_puff": {
+   "prompt": "a soft puff of smoke, short airy whoosh",
+   "seconds": 0.7
+  },
+  "fire_breath": {
+   "prompt": "a short burst of fire breath, roaring flames whoosh",
+   "seconds": 1.4
+  },
+  "straw_slurp": {
+   "prompt": "slurping the last drops of a juice box through a straw",
+   "seconds": 1.1
+  },
+  "mop_squeak": {
+   "prompt": "a wet mop squeaking and sloshing on a shiny floor",
+   "seconds": 1.2
+  },
+  "robot_beep": {
+   "prompt": "a single cute robot beep",
+   "seconds": 0.5
+  },
+  "big_chomp": {
+   "prompt": "a big crunchy cartoon bite, chomp",
+   "seconds": 0.6
+  },
+  "cookie_crunch": {
+   "prompt": "loudly crunching a hard cookie, crunchy bites",
+   "seconds": 1
+  },
+  "glass_shatter": {
+   "prompt": "a pane of glass cracking and shattering",
+   "seconds": 1
+  },
+  "whoosh": {
+   "prompt": "a fast swoosh of air, cartoon whoosh",
+   "seconds": 0.7
+  },
+  "clock_tick": {
+   "prompt": "a loud clock ticking, tick tock tick tock",
+   "seconds": 2
+  },
+  "robot_powerdown": {
+   "prompt": "a robot glitching and powering down, electronic failure sound",
+   "seconds": 1.4
+  },
+  "hand_saw": {
+   "prompt": "a hand saw sawing through a wooden table leg, a few quick strokes",
+   "seconds": 1.5
+  },
+  "clown_honk": {
+   "prompt": "a clown bicycle horn honking twice, honk honk",
+   "seconds": 0.8
+  },
+  "thunder": {
+   "prompt": "a thunder clap followed by a low rumble",
+   "seconds": 2
+  },
+  "truck_reverse": {
+   "prompt": "a truck reversing alarm, beep beep beep",
+   "seconds": 1.4
+  },
+  "guitar_riff": {
+   "prompt": "a short heavy metal electric guitar riff, distorted",
+   "seconds": 2
+  },
+  "welding": {
+   "prompt": "a welding torch sizzling and crackling with sparks",
+   "seconds": 1.5
+  },
+  "cartoon_boom": {
+   "prompt": "a cartoon explosion, big boom",
+   "seconds": 1.2
+  },
+  "button_fizzle": {
+   "prompt": "pressing a big plastic button, click, then a tiny sad fizzle",
+   "seconds": 1.2
+  },
+  "rocket_launch": {
+   "prompt": "small toy rockets launching, fizzing whoosh",
+   "seconds": 1.2
+  },
+  "vr_boot": {
+   "prompt": "a futuristic headset booting up, rising digital beeps",
+   "seconds": 1
+  },
+  "plush_squish": {
+   "prompt": "a soft plush toy being squished, squishy squeak",
+   "seconds": 0.5
+  },
+  "goo_gurgle": {
+   "prompt": "thick slimy goo bubbling and gurgling",
+   "seconds": 1.2
+  },
+  "star_fall": {
+   "prompt": "a magical shooting star falling through the sky, twinkling chimes and a soft whoosh",
+   "seconds": 2.2
+  },
+  "munching": {
+   "prompt": "a cartoon creature munching food fast, crunchy chewing",
+   "seconds": 1.4
+  },
+  "giant_stomps": {
+   "prompt": "three giant heavy footsteps, the ground shakes",
+   "seconds": 2
+  },
+  "cage_creak": {
+   "prompt": "a metal cage creaking and cracking under strain",
+   "seconds": 1.4
+  },
+  "club_beat": {
+   "prompt": "loud club music bass thumping, heard through a wall",
+   "seconds": 2.5
+  },
+  "record_scratch": {
+   "prompt": "a vinyl record scratch, the music stops",
+   "seconds": 0.8
+  },
+  "sad_violin": {
+   "prompt": "a short sad slow violin melody",
+   "seconds": 2.5
+  },
+  "drool_drip": {
+   "prompt": "thick slimy drool dripping, wet splats",
+   "seconds": 1
+  },
+  "bubble_pop": {
+   "prompt": "a big bubblegum bubble popping",
+   "seconds": 0.6
+  },
+  "coins_rain": {
+   "prompt": "a shower of gold coins falling and clinking",
+   "seconds": 1.4
+  },
+  "glitch_zap": {
+   "prompt": "a digital glitch zap, electronic stutter",
+   "seconds": 0.8
+  }
+ },
+ "lines": [
+  {
+   "id": "w1_0",
+   "voice": "plumpy",
+   "where": "World 1 intro",
+   "text": "four a.m.. stomach growling. time for a snack.",
+   "text_v3": "[sleepy] four a.m. [yawns] stomach growling. time for a snack.",
+   "sfx": [
+    {
+     "sfx": "stomach_growl",
+     "at": "time",
+     "insert": true
+    }
+   ]
+  },
+  {
+   "id": "w1_1",
+   "voice": "plumpy",
+   "where": "World 1 intro",
+   "text": "the plate is... empty?? there is a note.",
+   "text_v3": "[confused] the plate is... empty?? [gasps] there is a note."
+  },
+  {
+   "id": "w1_2",
+   "voice": "bear",
+   "where": "World 1 intro",
+   "text": "ha ha. i took every snack to the Purple Moon. and i locked 50 of your friends in cages.",
+   "text_v3": "[laughs] i took every snack to the Purple Moon. [smug] and i locked fifty of your friends in cages."
+  },
+  {
+   "id": "w1_3",
+   "voice": "bear",
+   "where": "World 1 intro",
+   "text": "oh, and i hired 50 villains from every chain to guard them. one per cage. good luck.",
+   "text_v3": "[smug] oh, and i hired fifty villains from every chain to guard them. one per cage. [chuckles] good luck."
+  },
+  {
+   "id": "w1_4",
+   "voice": "plumpy",
+   "where": "World 1 intro",
+   "text": "no rocket. no plan. we stack ourselves up there, knock every villain off its perch and free everyone.",
+   "text_v3": "[determined] no rocket. no plan. we stack ourselves up there, knock every villain off its perch... and free everyone."
+  },
+  {
+   "id": "w2_0",
+   "voice": "bear",
+   "where": "World 2 intro",
+   "text": "i left the freezer door open. enjoy the ice rink.",
+   "text_v3": "[mischievously] i left the freezer door open. [chuckles] enjoy the ice rink."
+  },
+  {
+   "id": "w2_1",
+   "voice": "plumpy",
+   "where": "World 2 intro",
+   "text": "my feet are cold. my belly is empty. i am not okay.",
+   "text_v3": "[shivering] my feet are cold. my belly is empty. [deadpan] i am not okay."
+  },
+  {
+   "id": "w3_0",
+   "voice": "bear",
+   "where": "World 3 intro",
+   "text": "hoo. hoooooo.",
+   "text_v3": "[blows air] hoo. HOOOOOOO.",
+   "sfx": [
+    {
+     "sfx": "wind_blow",
+     "at": "hoo",
+     "vol": 0.7
+    }
+   ]
+  },
+  {
+   "id": "w3_1",
+   "voice": "plumpy",
+   "where": "World 3 intro",
+   "text": "that is not wind. that is a bear breathing on us. disgusting.",
+   "text_v3": "[disgusted] that is not wind. that is a bear... breathing on us. disgusting."
+  },
+  {
+   "id": "w4_0",
+   "voice": "plumpy",
+   "where": "World 4 intro",
+   "text": "clouds. i ate one. it tasted like nothing.",
+   "text_v3": "[deadpan] clouds. i ate one. it tasted like nothing."
+  },
+  {
+   "id": "w4_1",
+   "voice": "bear",
+   "where": "World 4 intro",
+   "text": "up here everything floats. good luck landing anything, fatty.",
+   "text_v3": "[mocking] up here everything floats. good luck landing anything, fatty."
+  },
+  {
+   "id": "w4_2",
+   "voice": "plumpy",
+   "where": "World 4 intro",
+   "text": "he called me fatty. i will land PERFECTLY out of spite.",
+   "text_v3": "[offended] he called me fatty. [determined] i will land PERFECTLY. out of spite."
+  },
+  {
+   "id": "w5_0",
+   "voice": "bear",
+   "where": "World 5 intro",
+   "text": "meet my goons. Paper Hands. they sell everything.",
+   "text_v3": "[proudly] meet my goons. Paper Hands. [laughs] they sell everything."
+  },
+  {
+   "id": "w5_1",
+   "voice": "plumpy",
+   "where": "World 5 intro",
+   "text": "they are dumping on the tower. on PURPOSE.",
+   "text_v3": "[outraged] they are dumping on the tower. on PURPOSE."
+  },
+  {
+   "id": "w5_2",
+   "voice": "plumpy",
+   "where": "World 5 intro",
+   "text": "hold. HOLD.",
+   "text_v3": "[panicked] hold. HOLD!"
+  },
+  {
+   "id": "w6_0",
+   "voice": "bear",
+   "where": "World 6 intro",
+   "text": "Rugzilla. do the thing.",
+   "text_v3": "[shouting] Rugzilla! do the thing!"
+  },
+  {
+   "id": "w6_1",
+   "voice": "plumpy",
+   "where": "World 6 intro",
+   "text": "not the rug. ANYTHING but the rug.",
+   "text_v3": "[panicked] not the rug. ANYTHING but the rug!"
+  },
+  {
+   "id": "w7_0",
+   "voice": "bear",
+   "where": "World 7 intro",
+   "text": "you actually made it. for SNACKS. respect.",
+   "text_v3": "[sarcastic] you actually made it. for SNACKS. respect.",
+   "sfx": [
+    {
+     "sfx": "slow_clap",
+     "at": "before"
+    }
+   ]
+  },
+  {
+   "id": "w7_1",
+   "voice": "bear",
+   "where": "World 7 intro",
+   "text": "but the moon is MINE.",
+   "text_v3": "[menacing] but the moon... is MINE.",
+   "sfx": [
+    {
+     "sfx": "knuckle_crack",
+     "at": "after"
+    }
+   ]
+  },
+  {
+   "id": "w7_2",
+   "voice": "plumpy",
+   "where": "World 7 intro",
+   "text": "pointy heads. your time is coming.",
+   "text_v3": "[ominously] pointy heads. your time is coming."
+  },
+  {
+   "id": "w8_0",
+   "voice": "bear",
+   "where": "World 8 intro",
+   "text": "last cage. the shiny one. my boss guards it himself.",
+   "text_v3": "[greedy] last cage. the shiny one. [whispers] my boss guards it himself."
+  },
+  {
+   "id": "w8_1",
+   "voice": "bear",
+   "where": "World 8 intro",
+   "text": "RAAAAAWR!",
+   "text_v3": "[roars] RAAAAAWR!",
+   "sfx": [
+    {
+     "sfx": "junk_crash",
+     "at": "after"
+    }
+   ]
+  },
+  {
+   "id": "w8_2",
+   "voice": "plumpy",
+   "where": "World 8 intro",
+   "text": "we stack to twenty. then a pointy Chog plants the flag. for snacks. for the cages. for chog world.",
+   "text_v3": "[heroic] we stack to twenty. then a pointy Chog plants the flag. for snacks. for the cages. [shouting] for chog world!"
+  },
+  {
+   "id": "l1_jar",
+   "voice": "chog_common",
+   "where": "Level 1: the caged Chog",
+   "text": "he drools on the bars and calls it 'aura'. please help.",
+   "text_v3": "[pleading] he drools on the bars and calls it 'aura'. please help.",
+   "sfx": [
+    {
+     "sfx": "drool_drip",
+     "at": "and",
+     "insert": true
+    }
+   ]
+  },
+  {
+   "id": "v1_intro",
+   "voice": "v_gremlin",
+   "where": "Level 1: DROOLCORE",
+   "text": "sorry, busy. i'm aura farming. this chog was free aura, so i took it. slurp",
+   "text_v3": "[giggles] sorry, busy. i'm aura farming. this chog was free aura, so i took it. [slurps]"
+  },
+  {
+   "id": "v1_hook",
+   "voice": "v_gremlin",
+   "where": "Level 1: DROOLCORE",
+   "text": "Minus a thousand aura. Plus one Chog.",
+   "text_v3": "[mischievously] Minus a thousand aura. Plus one Chog."
+  },
+  {
+   "id": "v1_spit0",
+   "voice": "v_gremlin",
+   "where": "Level 1: DROOLCORE",
+   "text": "go, little drools. drip on everything.",
+   "text_v3": "[cackles] go, little drools. drip on everything.",
+   "sfx": [
+    {
+     "sfx": "drool_drip",
+     "at": "drip",
+     "vol": 0.7
+    }
+   ]
+  },
+  {
+   "id": "v1_spit1",
+   "voice": "v_gremlin",
+   "where": "Level 1: DROOLCORE",
+   "text": "sadge? nah. SPIT.",
+   "text_v3": "[cackles] sadge? nah. SPIT."
+  },
+  {
+   "id": "v1_down",
+   "voice": "v_gremlin",
+   "where": "Level 1: DROOLCORE",
+   "text": "my aura... it went negative... sob",
+   "text_v3": "[whining] my aura... it went negative... [sobs]"
+  },
+  {
+   "id": "v1_gloat",
+   "voice": "v_gremlin",
+   "where": "Level 1: DROOLCORE",
+   "text": "you fell? minus a thousand aura.",
+   "text_v3": "[cackles] you fell? minus a thousand aura."
+  },
+  {
+   "id": "f1_0",
+   "voice": "chog_common",
+   "where": "Level 1: fight (SHADES BEAM)",
+   "text": "shades on, villain gone!",
+   "text_v3": "[excited] shades on, villain gone!",
+   "sfx": [
+    {
+     "sfx": "laser_pew",
+     "at": "after",
+     "vol": 0.8
+    }
+   ]
+  },
+  {
+   "id": "f1_1",
+   "voice": "chog_common",
+   "where": "Level 1: fight (THUNDER CAP)",
+   "text": "thunder cap, lightning slap!",
+   "text_v3": "[excited] thunder cap, lightning slap!",
+   "sfx": [
+    {
+     "sfx": "thunder",
+     "at": "after",
+     "vol": 0.8
+    }
+   ]
+  },
+  {
+   "id": "f1_2",
+   "voice": "chog_common",
+   "where": "Level 1: fight (AURA BURST)",
+   "text": "aura check: villain's a wreck!",
+   "text_v3": "[excited] aura check: villain's a wreck!"
+  },
+  {
+   "id": "f1_3",
+   "voice": "chog_common",
+   "where": "Level 1: fight (STACK ATTACK)",
+   "text": "from the plate to the moon. villain, you are DOOMED!",
+   "text_v3": "[shouting] from the plate to the moon. villain, you are DOOMED!"
+  },
+  {
+   "id": "l1_free",
+   "voice": "chog_common",
+   "where": "Level 1: the Chog is freed",
+   "text": "finally. my legs work. mostly.",
+   "text_v3": "[relieved] finally. my legs work. mostly."
+  },
+  {
+   "id": "l2_say",
+   "voice": "bear",
+   "where": "Level 2 intro",
+   "text": "three chogs tall? on that plate? ha ha.",
+   "text_v3": "[laughs] three chogs tall? on that plate? [laughs harder]"
+  },
+  {
+   "id": "l2_jar",
+   "voice": "chog_common",
+   "where": "Level 2: the caged Chog",
+   "text": "he's been jangling those keys for six hours. i'd rather be stacked.",
+   "text_v3": "[whiny] he's been jangling those keys for six hours. i'd rather be stacked.",
+   "sfx": [
+    {
+     "sfx": "keys_jangle",
+     "at": "for",
+     "insert": true
+    }
+   ]
+  },
+  {
+   "id": "v2_intro",
+   "voice": "v_bro",
+   "where": "Level 2: KEYMASTER CHEW",
+   "text": "yeehaw. this here chog's under arrest. the charge? bein' too snackable.",
+   "text_v3": "[chuckles] yeehaw. this here chog's under arrest. the charge? bein' too snackable."
+  },
+  {
+   "id": "v2_hook",
+   "voice": "v_bro",
+   "where": "Level 2: KEYMASTER CHEW",
+   "text": "No keys. No Chog. No cap.",
+   "text_v3": "[smug] No keys. No Chog. No cap.",
+   "sfx": [
+    {
+     "sfx": "keys_jangle",
+     "at": "No",
+     "n": 2,
+     "insert": true
+    }
+   ]
+  },
+  {
+   "id": "v2_spit0",
+   "voice": "v_bro",
+   "where": "Level 2: KEYMASTER CHEW",
+   "text": "deputies! lock somethin' up!",
+   "text_v3": "[hollering] deputies! lock somethin' up!"
+  },
+  {
+   "id": "v2_spit1",
+   "voice": "v_bro",
+   "where": "Level 2: KEYMASTER CHEW",
+   "text": "go jingle, lil' ones!",
+   "text_v3": "[hollering] go jingle, lil' ones!"
+  },
+  {
+   "id": "v2_down",
+   "voice": "v_bro",
+   "where": "Level 2: KEYMASTER CHEW",
+   "text": "my keys! who took my... tumbles",
+   "text_v3": "[groans] my keys! who took my...",
+   "sfx": [
+    {
+     "sfx": "tumble_thud",
+     "at": "after"
+    }
+   ]
+  },
+  {
+   "id": "v2_gloat",
+   "voice": "v_bro",
+   "where": "Level 2: KEYMASTER CHEW",
+   "text": "case closed, partner.",
+   "text_v3": "[chuckles] case closed, partner."
+  },
+  {
+   "id": "f2_0",
+   "voice": "chog_common",
+   "where": "Level 2: fight (TEAR TSUNAMI)",
+   "text": "tears of rage, off the stage!",
+   "text_v3": "[excited] tears of rage, off the stage!"
+  },
+  {
+   "id": "f2_1",
+   "voice": "chog_common",
+   "where": "Level 2: fight (HONK ATTACK)",
+   "text": "honk honk, villain conked!",
+   "text_v3": "[excited] honk honk, villain conked!",
+   "sfx": [
+    {
+     "sfx": "clown_honk",
+     "at": "after",
+     "vol": 0.8
+    }
+   ]
+  },
+  {
+   "id": "f2_2",
+   "voice": "chog_common",
+   "where": "Level 2: fight (AURA BURST)",
+   "text": "aura check: villain's a wreck!",
+   "text_v3": "[excited] aura check: villain's a wreck!"
+  },
+  {
+   "id": "f2_3",
+   "voice": "chog_common",
+   "where": "Level 2: fight (STACK ATTACK)",
+   "text": "from the plate to the moon. villain, you are DOOMED!",
+   "text_v3": "[shouting] from the plate to the moon. villain, you are DOOMED!"
+  },
+  {
+   "id": "l2_free",
+   "voice": "chog_common",
+   "where": "Level 2: the Chog is freed",
+   "text": "i was in there for days. or minutes. it felt like days.",
+   "text_v3": "[relieved] i was in there for days. or minutes. it felt like days."
+  },
+  {
+   "id": "l3_say",
+   "voice": "plumpy",
+   "where": "Level 3 intro",
+   "text": "i only land perfect. it is a lifestyle.",
+   "text_v3": "[smug] i only land perfect. it is a lifestyle."
+  },
+  {
+   "id": "l3_jar",
+   "voice": "chog_common",
+   "where": "Level 3: the caged Chog",
+   "text": "he lasered my cage and missed. twice. he says it's 'priced in'.",
+   "text_v3": "[whiny] he lasered my cage and missed. twice. he says it's 'priced in'.",
+   "sfx": [
+    {
+     "sfx": "laser_pew",
+     "at": "and",
+     "insert": true
+    }
+   ]
+  },
+  {
+   "id": "v3_intro",
+   "voice": "v_gremlin",
+   "where": "Level 3: LASER QUANT",
+   "text": "i backtested your tower. it fails one hundred percent of the time. trust the chart.",
+   "text_v3": "[giggles] i backtested your tower. it fails one hundred percent of the time. trust the chart."
+  },
+  {
+   "id": "v3_hook",
+   "voice": "v_gremlin",
+   "where": "Level 3: LASER QUANT",
+   "text": "Laser eyes. Zero misses. Zero chill.",
+   "text_v3": "[mischievously] Laser eyes. Zero misses. Zero chill.",
+   "sfx": [
+    {
+     "sfx": "laser_pew",
+     "at": "Zero",
+     "insert": true
+    }
+   ]
+  },
+  {
+   "id": "v3_spit0",
+   "voice": "v_gremlin",
+   "where": "Level 3: LASER QUANT",
+   "text": "deploying micro-lasers. pew pew.",
+   "text_v3": "[cackles] deploying micro-lasers. pew pew.",
+   "sfx": [
+    {
+     "sfx": "laser_pew",
+     "at": "pew"
+    }
+   ]
+  },
+  {
+   "id": "v3_spit1",
+   "voice": "v_gremlin",
+   "where": "Level 3: LASER QUANT",
+   "text": "the chart says: spit.",
+   "text_v3": "[cackles] the chart says: spit."
+  },
+  {
+   "id": "v3_down",
+   "voice": "v_gremlin",
+   "where": "Level 3: LASER QUANT",
+   "text": "the backtest... lied to me...",
+   "text_v3": "[whining] the backtest... lied to me..."
+  },
+  {
+   "id": "v3_gloat",
+   "voice": "v_gremlin",
+   "where": "Level 3: LASER QUANT",
+   "text": "called it. screenshot that.",
+   "text_v3": "[cackles] called it. screenshot that."
+  },
+  {
+   "id": "f3_0",
+   "voice": "chog_common",
+   "where": "Level 3: fight (SHADES BEAM)",
+   "text": "shades on, villain gone!",
+   "text_v3": "[excited] shades on, villain gone!",
+   "sfx": [
+    {
+     "sfx": "laser_pew",
+     "at": "after",
+     "vol": 0.8
+    }
+   ]
+  },
+  {
+   "id": "f3_1",
+   "voice": "chog_common",
+   "where": "Level 3: fight (WIZARD BLAST)",
+   "text": "hocus pocus, lose your focus!",
+   "text_v3": "[excited] hocus pocus, lose your focus!"
+  },
+  {
+   "id": "f3_2",
+   "voice": "chog_common",
+   "where": "Level 3: fight (AURA BURST)",
+   "text": "aura check: villain's a wreck!",
+   "text_v3": "[excited] aura check: villain's a wreck!"
+  },
+  {
+   "id": "f3_3",
+   "voice": "chog_common",
+   "where": "Level 3: fight (STACK ATTACK)",
+   "text": "from the plate to the moon. villain, you are DOOMED!",
+   "text_v3": "[shouting] from the plate to the moon. villain, you are DOOMED!"
+  },
+  {
+   "id": "l3_free",
+   "voice": "chog_common",
+   "where": "Level 3: the Chog is freed",
+   "text": "thank you. i will stack until i drop. literally.",
+   "text_v3": "[relieved] thank you. i will stack until i drop. literally."
+  },
+  {
+   "id": "l4_say",
+   "voice": "bear",
+   "where": "Level 4 intro",
+   "text": "i swapped your plate for a saucer. good luck.",
+   "text_v3": "[smug] i swapped your plate for a saucer. [chuckles] good luck."
+  },
+  {
+   "id": "l4_jar",
+   "voice": "chog_common",
+   "where": "Level 4: the caged Chog",
+   "text": "she put a bow on my cage and called it 'plating'. i'm not dessert!",
+   "text_v3": "[panicked] she put a bow on my cage and called it 'plating'. i'm not dessert!"
+  },
+  {
+   "id": "v4_intro",
+   "voice": "v_diva",
+   "where": "Level 4: SHORTCAKE SUPREME",
+   "text": "welcome to Monafuku. tonight's special: one chog, served on a saucer.",
+   "text_v3": "[sassy] welcome to Monafuku. tonight's special: one chog, served on a saucer."
+  },
+  {
+   "id": "v4_hook",
+   "voice": "v_diva",
+   "where": "Level 4: SHORTCAKE SUPREME",
+   "text": "Cute café. Tiny plates. Zero refunds.",
+   "text_v3": "[sassy] Cute café. Tiny plates. Zero refunds."
+  },
+  {
+   "id": "v4_spit0",
+   "voice": "v_diva",
+   "where": "Level 4: SHORTCAKE SUPREME",
+   "text": "sprinkles, go! decorate everything.",
+   "text_v3": "[bossy] sprinkles, go! decorate everything."
+  },
+  {
+   "id": "v4_spit1",
+   "voice": "v_diva",
+   "where": "Level 4: SHORTCAKE SUPREME",
+   "text": "service, please.",
+   "text_v3": "[bossy] service, please."
+  },
+  {
+   "id": "v4_down",
+   "voice": "v_diva",
+   "where": "Level 4: SHORTCAKE SUPREME",
+   "text": "my whipped cream... is ruined...",
+   "text_v3": "[gasps] my whipped cream... is ruined..."
+  },
+  {
+   "id": "v4_gloat",
+   "voice": "v_diva",
+   "where": "Level 4: SHORTCAKE SUPREME",
+   "text": "dropped your order? no tip for you.",
+   "text_v3": "[laughs mockingly] dropped your order? no tip for you."
+  },
+  {
+   "id": "f4_0",
+   "voice": "chog_common",
+   "where": "Level 4: fight (CAP SLAP)",
+   "text": "cap on tight, villain, goodnight!",
+   "text_v3": "[excited] cap on tight, villain, goodnight!"
+  },
+  {
+   "id": "f4_1",
+   "voice": "chog_common",
+   "where": "Level 4: fight (DUCK DIVE)",
+   "text": "quack attack, villain flat on its back!",
+   "text_v3": "[excited] quack attack, villain flat on its back!"
+  },
+  {
+   "id": "f4_2",
+   "voice": "chog_common",
+   "where": "Level 4: fight (BELLY BUMP)",
+   "text": "belly bump, villain slump!",
+   "text_v3": "[excited] belly bump, villain slump!"
+  },
+  {
+   "id": "f4_3",
+   "voice": "chog_common",
+   "where": "Level 4: fight (STACK ATTACK)",
+   "text": "from the plate to the moon. villain, you are DOOMED!",
+   "text_v3": "[shouting] from the plate to the moon. villain, you are DOOMED!"
+  },
+  {
+   "id": "l4_free",
+   "voice": "chog_common",
+   "where": "Level 4: the Chog is freed",
+   "text": "freedom tastes like grape jelly.",
+   "text_v3": "[relieved] freedom tastes like grape jelly."
+  },
+  {
+   "id": "l5_say",
+   "voice": "plumpy",
+   "where": "Level 5 intro",
+   "text": "pointy heads cannot hold anyone up. but they make great flagpoles.",
+   "text_v3": "[deadpan] pointy heads cannot hold anyone up. but they make great flagpoles."
+  },
+  {
+   "id": "l5_jar",
+   "voice": "chog_common",
+   "where": "Level 5: the caged Chog",
+   "text": "zzz... snore... is it... snack time... zzz",
+   "text_v3": "[snoring] ... [sleepily] is it... snack time...? [snoring]"
+  },
+  {
+   "id": "v5_intro",
+   "voice": "v_gremlin",
+   "where": "Level 5: PINEAPPLE PUFF",
+   "text": "puff you need a pointy head to plant a flag. i have the pointiest hat. checkmate.",
+   "text_v3": "[exhales] you need a pointy head to plant a flag. i have the pointiest hat. checkmate.",
+   "sfx": [
+    {
+     "sfx": "smoke_puff",
+     "at": "before",
+     "vol": 0.7
+    }
+   ]
+  },
+  {
+   "id": "v5_hook",
+   "voice": "v_gremlin",
+   "where": "Level 5: PINEAPPLE PUFF",
+   "text": "No hat, no flag. No flag, no Chog.",
+   "text_v3": "[mischievously] No hat, no flag. No flag, no Chog."
+  },
+  {
+   "id": "v5_spit0",
+   "voice": "v_gremlin",
+   "where": "Level 5: PINEAPPLE PUFF",
+   "text": "puff puff, little clouds.",
+   "text_v3": "[cackles] puff puff, little clouds.",
+   "sfx": [
+    {
+     "sfx": "smoke_puff",
+     "at": "puff"
+    }
+   ]
+  },
+  {
+   "id": "v5_spit1",
+   "voice": "v_gremlin",
+   "where": "Level 5: PINEAPPLE PUFF",
+   "text": "puff puff... go, babies.",
+   "text_v3": "[exhales] puff puff... go, babies.",
+   "sfx": [
+    {
+     "sfx": "smoke_puff",
+     "at": "puff"
+    }
+   ]
+  },
+  {
+   "id": "v5_down",
+   "voice": "v_gremlin",
+   "where": "Level 5: PINEAPPLE PUFF",
+   "text": "my teddy! somebody save my teddy!",
+   "text_v3": "[whining] my teddy! somebody save my teddy!"
+  },
+  {
+   "id": "v5_gloat",
+   "voice": "v_gremlin",
+   "where": "Level 5: PINEAPPLE PUFF",
+   "text": "skill issue. puff",
+   "text_v3": "[cackles] skill issue. [exhales]",
+   "sfx": [
+    {
+     "sfx": "smoke_puff",
+     "at": "after"
+    }
+   ]
+  },
+  {
+   "id": "f5_0",
+   "voice": "chog_common",
+   "where": "Level 5: fight (LOVE TAP)",
+   "text": "love tap, villain takes a nap!",
+   "text_v3": "[excited] love tap, villain takes a nap!"
+  },
+  {
+   "id": "f5_1",
+   "voice": "chog_common",
+   "where": "Level 5: fight (AURA BURST)",
+   "text": "aura check: villain's a wreck!",
+   "text_v3": "[excited] aura check: villain's a wreck!"
+  },
+  {
+   "id": "f5_2",
+   "voice": "chog_common",
+   "where": "Level 5: fight (CEO SLAP)",
+   "text": "you're fired!",
+   "text_v3": "[excited] you're fired!"
+  },
+  {
+   "id": "f5_3",
+   "voice": "chog_common",
+   "where": "Level 5: fight (STACK ATTACK)",
+   "text": "from the plate to the moon. villain, you are DOOMED!",
+   "text_v3": "[shouting] from the plate to the moon. villain, you are DOOMED!"
+  },
+  {
+   "id": "l5_free",
+   "voice": "chog_common",
+   "where": "Level 5: the Chog is freed",
+   "text": "free chog! free chog! okay i'm calm. i'm calm.",
+   "text_v3": "[excited] free chog! free chog! [calming down] okay i'm calm. i'm calm."
+  },
+  {
+   "id": "l6_say",
+   "voice": "plumpy",
+   "where": "Level 6 intro",
+   "text": "i have been starving for five levels. FEED ME.",
+   "text_v3": "[whining] i have been starving for five levels. [shouting] FEED ME."
+  },
+  {
+   "id": "l6_jar",
+   "voice": "chog_common",
+   "where": "Level 6: the caged Chog",
+   "text": "he ate my snacks. then my lunch. now he's looking at ME.",
+   "text_v3": "[whiny] he ate my snacks. then my lunch. now he's looking at ME."
+  },
+  {
+   "id": "v6_intro",
+   "voice": "v_bro",
+   "where": "Level 6: BIG BACK EGGBERT",
+   "text": "uncle Bear said guard the chog. he never said i couldn't lick it.",
+   "text_v3": "[chuckles] uncle Bear said guard the chog. he never said i couldn't lick it."
+  },
+  {
+   "id": "v6_hook",
+   "voice": "v_bro",
+   "where": "Level 6: BIG BACK EGGBERT",
+   "text": "I eat first. You eat never.",
+   "text_v3": "[smug] I eat first. You eat never."
+  },
+  {
+   "id": "v6_spit0",
+   "voice": "v_bro",
+   "where": "Level 6: BIG BACK EGGBERT",
+   "text": "yolks, go steal their crumbs!",
+   "text_v3": "[hollering] yolks, go steal their crumbs!"
+  },
+  {
+   "id": "v6_spit1",
+   "voice": "v_bro",
+   "where": "Level 6: BIG BACK EGGBERT",
+   "text": "burp reinforcements.",
+   "text_v3": "[burps] reinforcements."
+  },
+  {
+   "id": "v6_down",
+   "voice": "v_bro",
+   "where": "Level 6: BIG BACK EGGBERT",
+   "text": "nooo! my egg! it's... scrambled...",
+   "text_v3": "[groans] nooo! my egg! it's... scrambled..."
+  },
+  {
+   "id": "v6_gloat",
+   "voice": "v_bro",
+   "where": "Level 6: BIG BACK EGGBERT",
+   "text": "more snacks for the big back.",
+   "text_v3": "[chuckles] more snacks for the big back."
+  },
+  {
+   "id": "f6_0",
+   "voice": "chog_common",
+   "where": "Level 6: fight (STAR STRIKE)",
+   "text": "catch a star, fall too far!",
+   "text_v3": "[excited] catch a star, fall too far!"
+  },
+  {
+   "id": "f6_1",
+   "voice": "chog_common",
+   "where": "Level 6: fight (BRAIN FREEZE)",
+   "text": "freeze! say please!",
+   "text_v3": "[excited] freeze! say please!"
+  },
+  {
+   "id": "f6_2",
+   "voice": "chog_common",
+   "where": "Level 6: fight (RED LIGHT KO)",
+   "text": "red light... KO light!",
+   "text_v3": "[excited] red light... KO light!"
+  },
+  {
+   "id": "f6_3",
+   "voice": "chog_common",
+   "where": "Level 6: fight (STACK ATTACK)",
+   "text": "from the plate to the moon. villain, you are DOOMED!",
+   "text_v3": "[shouting] from the plate to the moon. villain, you are DOOMED!"
+  },
+  {
+   "id": "l6_free",
+   "voice": "chog_common",
+   "where": "Level 6: the Chog is freed",
+   "text": "fresh air! it smells like rugs out here. i love it.",
+   "text_v3": "[excited] fresh air! it smells like rugs out here. i love it."
+  },
+  {
+   "id": "l7_say",
+   "voice": "bear",
+   "where": "Level 7 intro",
+   "text": "fine. you got past the kitchen. the fridge is MINE.",
+   "text_v3": "[annoyed] fine. you got past the kitchen. [growls] the fridge is MINE."
+  },
+  {
+   "id": "l7_jar",
+   "voice": "chog_common",
+   "where": "Level 7: the caged Chog",
+   "text": "he breathes fire when he's mad. he's ALWAYS mad.",
+   "text_v3": "[whiny] he breathes fire when he's mad. he's ALWAYS mad.",
+   "sfx": [
+    {
+     "sfx": "fire_breath",
+     "at": "he's",
+     "n": 2,
+     "insert": true,
+     "vol": 0.7
+    }
+   ]
+  },
+  {
+   "id": "v7_intro",
+   "voice": "v_menace",
+   "where": "Level 7: CRASHOUT KAPYSH",
+   "text": "you broke six cages? COOL. i'm the seventh. and i'm FURIOUS.",
+   "text_v3": "[menacing] you broke six cages? COOL. i'm the seventh. and i'm FURIOUS."
+  },
+  {
+   "id": "v7_hook",
+   "voice": "v_menace",
+   "where": "Level 7: CRASHOUT KAPYSH",
+   "text": "I don't calm down. I level up.",
+   "text_v3": "[growls] I don't calm down. I level up."
+  },
+  {
+   "id": "v7_spit0",
+   "voice": "v_menace",
+   "where": "Level 7: CRASHOUT KAPYSH",
+   "text": "hatchlings! BURN IT!",
+   "text_v3": "[shouting] hatchlings! BURN IT!",
+   "sfx": [
+    {
+     "sfx": "fire_breath",
+     "at": "BURN"
+    }
+   ]
+  },
+  {
+   "id": "v7_spit1",
+   "voice": "v_menace",
+   "where": "Level 7: CRASHOUT KAPYSH",
+   "text": "RAAAH! spit fire!",
+   "text_v3": "[roars] RAAAH! spit fire!",
+   "sfx": [
+    {
+     "sfx": "fire_breath",
+     "at": "fire"
+    }
+   ]
+  },
+  {
+   "id": "v7_down",
+   "voice": "v_menace",
+   "where": "Level 7: CRASHOUT KAPYSH",
+   "text": "this... is a... CRASH OUT!",
+   "text_v3": "[roars in pain] this... is a... CRASH OUT!"
+  },
+  {
+   "id": "v7_gloat",
+   "voice": "v_menace",
+   "where": "Level 7: CRASHOUT KAPYSH",
+   "text": "told you. dragons don't lose.",
+   "text_v3": "[laughs darkly] told you. dragons don't lose."
+  },
+  {
+   "id": "f7_0",
+   "voice": "chog_common",
+   "where": "Level 7: fight (PEACE OUT)",
+   "text": "peace out, villain, lights out!",
+   "text_v3": "[excited] peace out, villain, lights out!"
+  },
+  {
+   "id": "f7_1",
+   "voice": "chog_common",
+   "where": "Level 7: fight (FLAME AURA)",
+   "text": "feel the heat, admit defeat!",
+   "text_v3": "[excited] feel the heat, admit defeat!",
+   "sfx": [
+    {
+     "sfx": "fire_breath",
+     "at": "after",
+     "vol": 0.8
+    }
+   ]
+  },
+  {
+   "id": "f7_2",
+   "voice": "chog_common",
+   "where": "Level 7: fight (GOLD GRILL BITE)",
+   "text": "gold tooth bite, lights out tonight!",
+   "text_v3": "[excited] gold tooth bite, lights out tonight!",
+   "sfx": [
+    {
+     "sfx": "big_chomp",
+     "at": "after",
+     "vol": 0.8
+    }
+   ]
+  },
+  {
+   "id": "f7_3",
+   "voice": "chog_common",
+   "where": "Level 7: fight (STACK ATTACK)",
+   "text": "from the plate to the moon. villain, you are DOOMED!",
+   "text_v3": "[shouting] from the plate to the moon. villain, you are DOOMED!"
+  },
+  {
+   "id": "l7_free",
+   "voice": "chog_common",
+   "where": "Level 7: the Chog is freed",
+   "text": "you did it! you knocked that villain flat! hero behaviour.",
+   "text_v3": "[excited] you did it! you knocked that villain flat! hero behaviour."
+  },
+  {
+   "id": "l8_jar",
+   "voice": "chog_common",
+   "where": "Level 8: the caged Chog",
+   "text": "it's so cold my tears are ice cubes. cute ones, but still.",
+   "text_v3": "[whiny] it's so cold my tears are ice cubes. cute ones, but still."
+  },
+  {
+   "id": "v8_intro",
+   "voice": "v_cute",
+   "where": "Level 8: FROSTY POOKIE",
+   "text": "hiii! i froze your friend. it's giving... snow globe.",
+   "text_v3": "[giggles] hiii! i froze your friend. it's giving... snow globe.",
+   "sfx": [
+    {
+     "sfx": "straw_slurp",
+     "at": "before"
+    }
+   ]
+  },
+  {
+   "id": "v8_hook",
+   "voice": "v_cute",
+   "where": "Level 8: FROSTY POOKIE",
+   "text": "Too cute to catch. Too cold to care.",
+   "text_v3": "[sweetly] Too cute to catch. Too cold to care."
+  },
+  {
+   "id": "v8_spit0",
+   "voice": "v_cute",
+   "where": "Level 8: FROSTY POOKIE",
+   "text": "snowflakes! make it slippy!",
+   "text_v3": "[cheerfully] snowflakes! make it slippy!"
+  },
+  {
+   "id": "v8_spit1",
+   "voice": "v_cute",
+   "where": "Level 8: FROSTY POOKIE",
+   "text": "slurp go, babies!",
+   "text_v3": "[cheerfully] go, babies!",
+   "sfx": [
+    {
+     "sfx": "straw_slurp",
+     "at": "before"
+    }
+   ]
+  },
+  {
+   "id": "v8_down",
+   "voice": "v_cute",
+   "where": "Level 8: FROSTY POOKIE",
+   "text": "my juice box... it froze...",
+   "text_v3": "[whimpers] my juice box... it froze..."
+  },
+  {
+   "id": "v8_gloat",
+   "voice": "v_cute",
+   "where": "Level 8: FROSTY POOKIE",
+   "text": "slipped? aww. cute.",
+   "text_v3": "[giggles] slipped? aww. cute."
+  },
+  {
+   "id": "f8_0",
+   "voice": "chog_common",
+   "where": "Level 8: fight (SHADES BEAM)",
+   "text": "shades on, villain gone!",
+   "text_v3": "[excited] shades on, villain gone!",
+   "sfx": [
+    {
+     "sfx": "laser_pew",
+     "at": "after",
+     "vol": 0.8
+    }
+   ]
+  },
+  {
+   "id": "f8_1",
+   "voice": "chog_common",
+   "where": "Level 8: fight (HORN CHARGE)",
+   "text": "horns down, out of town!",
+   "text_v3": "[excited] horns down, out of town!"
+  },
+  {
+   "id": "f8_2",
+   "voice": "chog_common",
+   "where": "Level 8: fight (BELLY BUMP)",
+   "text": "belly bump, villain slump!",
+   "text_v3": "[excited] belly bump, villain slump!"
+  },
+  {
+   "id": "f8_3",
+   "voice": "chog_common",
+   "where": "Level 8: fight (STACK ATTACK)",
+   "text": "from the plate to the moon. villain, you are DOOMED!",
+   "text_v3": "[shouting] from the plate to the moon. villain, you are DOOMED!"
+  },
+  {
+   "id": "l8_free",
+   "voice": "chog_common",
+   "where": "Level 8: the Chog is freed",
+   "text": "squad. i have a squad now.",
+   "text_v3": "[relieved] squad. i have a squad now."
+  },
+  {
+   "id": "l9_say",
+   "voice": "plumpy",
+   "where": "Level 9 intro",
+   "text": "the hot one. use the hot one first. melt the plate.",
+   "text_v3": "[urgently] the hot one. use the hot one first. melt the plate."
+  },
+  {
+   "id": "l9_jar",
+   "voice": "chog_common",
+   "where": "Level 9: the caged Chog",
+   "text": "okay the ice rodeo slaps. but i want OUT.",
+   "text_v3": "[whiny] okay the ice rodeo slaps. but i want OUT."
+  },
+  {
+   "id": "v9_intro",
+   "voice": "v_bro",
+   "where": "Level 9: RODEO WADDLES",
+   "text": "howdy. welcome to the ice rodeo. stay on eight seconds. nobody does.",
+   "text_v3": "[chuckles] howdy. welcome to the ice rodeo. stay on eight seconds. nobody does."
+  },
+  {
+   "id": "v9_hook",
+   "voice": "v_bro",
+   "where": "Level 9: RODEO WADDLES",
+   "text": "Eight seconds on ice. Nobody lasts.",
+   "text_v3": "[smug] Eight seconds on ice. Nobody lasts."
+  },
+  {
+   "id": "v9_spit0",
+   "voice": "v_bro",
+   "where": "Level 9: RODEO WADDLES",
+   "text": "giddy-up, little wranglers!",
+   "text_v3": "[hollering] giddy-up, little wranglers!"
+  },
+  {
+   "id": "v9_spit1",
+   "voice": "v_bro",
+   "where": "Level 9: RODEO WADDLES",
+   "text": "yeehaw, babies!",
+   "text_v3": "[hollering] yeehaw, babies!"
+  },
+  {
+   "id": "v9_down",
+   "voice": "v_bro",
+   "where": "Level 9: RODEO WADDLES",
+   "text": "bucked off... by a chog...",
+   "text_v3": "[groans] bucked off... by a chog..."
+  },
+  {
+   "id": "v9_gloat",
+   "voice": "v_bro",
+   "where": "Level 9: RODEO WADDLES",
+   "text": "two seconds. a record... for losing.",
+   "text_v3": "[chuckles] two seconds. a record... for losing."
+  },
+  {
+   "id": "f9_0",
+   "voice": "chog_common",
+   "where": "Level 9: fight (LASER GLARE)",
+   "text": "laser eyes, villain fries!",
+   "text_v3": "[excited] laser eyes, villain fries!",
+   "sfx": [
+    {
+     "sfx": "laser_pew",
+     "at": "after",
+     "vol": 0.8
+    }
+   ]
+  },
+  {
+   "id": "f9_1",
+   "voice": "chog_common",
+   "where": "Level 9: fight (WINTER WALLOP)",
+   "text": "winter's here, villain, fear!",
+   "text_v3": "[excited] winter's here, villain, fear!"
+  },
+  {
+   "id": "f9_2",
+   "voice": "chog_common",
+   "where": "Level 9: fight (RED LIGHT KO)",
+   "text": "red light... KO light!",
+   "text_v3": "[excited] red light... KO light!"
+  },
+  {
+   "id": "f9_3",
+   "voice": "chog_common",
+   "where": "Level 9: fight (STACK ATTACK)",
+   "text": "from the plate to the moon. villain, you are DOOMED!",
+   "text_v3": "[shouting] from the plate to the moon. villain, you are DOOMED!"
+  },
+  {
+   "id": "l9_free",
+   "voice": "chog_common",
+   "where": "Level 9: the Chog is freed",
+   "text": "out of the cage and into the tower. let's go.",
+   "text_v3": "[relieved] out of the cage and into the tower. let's go."
+  },
+  {
+   "id": "l10_say",
+   "voice": "bear",
+   "where": "Level 10 intro",
+   "text": "perfect landings? on ice? i will wait.",
+   "text_v3": "[mocking] perfect landings? on ice? [chuckles] i will wait."
+  },
+  {
+   "id": "l10_jar",
+   "voice": "chog_common",
+   "where": "Level 10: the caged Chog",
+   "text": "he says he's not short, he's 'early'. please get me out.",
+   "text_v3": "[pleading] he says he's not short, he's 'early'. please get me out."
+  },
+  {
+   "id": "v10_intro",
+   "voice": "v_regal",
+   "where": "Level 10: BITCOINAPARTE",
+   "text": "i conquered the arctic with one coin and a hat. your chog is next.",
+   "text_v3": "[proudly] i conquered the arctic with one coin and a hat. your chog is next."
+  },
+  {
+   "id": "v10_hook",
+   "voice": "v_regal",
+   "where": "Level 10: BITCOINAPARTE",
+   "text": "Short king. Long position. Cold heart.",
+   "text_v3": "[grandly] Short king. Long position. Cold heart."
+  },
+  {
+   "id": "v10_spit0",
+   "voice": "v_regal",
+   "where": "Level 10: BITCOINAPARTE",
+   "text": "soldiers! march on the page!",
+   "text_v3": "[commanding] soldiers! march on the page!"
+  },
+  {
+   "id": "v10_spit1",
+   "voice": "v_regal",
+   "where": "Level 10: BITCOINAPARTE",
+   "text": "for the empire! spit!",
+   "text_v3": "[commanding] for the empire! spit!"
+  },
+  {
+   "id": "v10_down",
+   "voice": "v_regal",
+   "where": "Level 10: BITCOINAPARTE",
+   "text": "this... is my Waterloo...",
+   "text_v3": "[gasps] this... is my Waterloo..."
+  },
+  {
+   "id": "v10_gloat",
+   "voice": "v_regal",
+   "where": "Level 10: BITCOINAPARTE",
+   "text": "liquidated. like all my enemies.",
+   "text_v3": "[laughs smugly] liquidated. like all my enemies."
+  },
+  {
+   "id": "f10_0",
+   "voice": "chog_common",
+   "where": "Level 10: fight (LASER GLARE)",
+   "text": "laser eyes, villain fries!",
+   "text_v3": "[excited] laser eyes, villain fries!",
+   "sfx": [
+    {
+     "sfx": "laser_pew",
+     "at": "after",
+     "vol": 0.8
+    }
+   ]
+  },
+  {
+   "id": "f10_1",
+   "voice": "chog_common",
+   "where": "Level 10: fight (NINJA CHOP)",
+   "text": "ninja chop, villain drop!",
+   "text_v3": "[excited] ninja chop, villain drop!"
+  },
+  {
+   "id": "f10_2",
+   "voice": "chog_common",
+   "where": "Level 10: fight (AURA BURST)",
+   "text": "aura check: villain's a wreck!",
+   "text_v3": "[excited] aura check: villain's a wreck!"
+  },
+  {
+   "id": "f10_3",
+   "voice": "chog_common",
+   "where": "Level 10: fight (STACK ATTACK)",
+   "text": "from the plate to the moon. villain, you are DOOMED!",
+   "text_v3": "[shouting] from the plate to the moon. villain, you are DOOMED!"
+  },
+  {
+   "id": "l10_free",
+   "voice": "chog_common",
+   "where": "Level 10: the Chog is freed",
+   "text": "i'm out. put me on the tower. i'm ready.",
+   "text_v3": "[relieved] i'm out. put me on the tower. i'm ready."
+  },
+  {
+   "id": "l11_jar",
+   "voice": "chog_common",
+   "where": "Level 11: the caged Chog",
+   "text": "he mopped my cage four times. cleanest prison in the galaxy.",
+   "text_v3": "[whiny] he mopped my cage four times. cleanest prison in the galaxy.",
+   "sfx": [
+    {
+     "sfx": "mop_squeak",
+     "at": "cleanest",
+     "insert": true
+    }
+   ]
+  },
+  {
+   "id": "v11_intro",
+   "voice": "v_bot",
+   "where": "Level 11: SLIPPY ZORP",
+   "text": "beep. i am the janitor. i wax the fridge. i wax the plate. i wax your hopes.",
+   "text_v3": "[robotic] beep. i am the janitor. i wax the fridge. i wax the plate. i wax your hopes.",
+   "sfx": [
+    {
+     "sfx": "robot_beep",
+     "at": "beep",
+     "vol": 0.7
+    }
+   ]
+  },
+  {
+   "id": "v11_hook",
+   "voice": "v_bot",
+   "where": "Level 11: SLIPPY ZORP",
+   "text": "Caution: wet floor. Caution: me.",
+   "text_v3": "[robotic] Caution: wet floor. Caution: me."
+  },
+  {
+   "id": "v11_spit0",
+   "voice": "v_bot",
+   "where": "Level 11: SLIPPY ZORP",
+   "text": "spray bottles, deploy!",
+   "text_v3": "[robotic] spray bottles, deploy!"
+  },
+  {
+   "id": "v11_spit1",
+   "voice": "v_bot",
+   "where": "Level 11: SLIPPY ZORP",
+   "text": "squeegee squad, go!",
+   "text_v3": "[robotic] squeegee squad, go!"
+  },
+  {
+   "id": "v11_down",
+   "voice": "v_bot",
+   "where": "Level 11: SLIPPY ZORP",
+   "text": "slipped... on my own... floor...",
+   "text_v3": "[glitching] slipped... on my own... floor..."
+  },
+  {
+   "id": "v11_gloat",
+   "voice": "v_bot",
+   "where": "Level 11: SLIPPY ZORP",
+   "text": "clean-up on aisle you.",
+   "text_v3": "[robotic laugh] clean-up on aisle you."
+  },
+  {
+   "id": "f11_0",
+   "voice": "chog_common",
+   "where": "Level 11: fight (SHADES BEAM)",
+   "text": "shades on, villain gone!",
+   "text_v3": "[excited] shades on, villain gone!",
+   "sfx": [
+    {
+     "sfx": "laser_pew",
+     "at": "after",
+     "vol": 0.8
+    }
+   ]
+  },
+  {
+   "id": "f11_1",
+   "voice": "chog_common",
+   "where": "Level 11: fight (WAVE CHECK)",
+   "text": "wave check! villain wrecked!",
+   "text_v3": "[excited] wave check! villain wrecked!"
+  },
+  {
+   "id": "f11_2",
+   "voice": "chog_common",
+   "where": "Level 11: fight (AURA BURST)",
+   "text": "aura check: villain's a wreck!",
+   "text_v3": "[excited] aura check: villain's a wreck!"
+  },
+  {
+   "id": "f11_3",
+   "voice": "chog_common",
+   "where": "Level 11: fight (STACK ATTACK)",
+   "text": "from the plate to the moon. villain, you are DOOMED!",
+   "text_v3": "[shouting] from the plate to the moon. villain, you are DOOMED!"
+  },
+  {
+   "id": "l11_free",
+   "voice": "chog_common",
+   "where": "Level 11: the Chog is freed",
+   "text": "no more pickle smell. thank you, truly.",
+   "text_v3": "[relieved] no more pickle smell. thank you, truly."
+  },
+  {
+   "id": "l12_say",
+   "voice": "bear",
+   "where": "Level 12 intro",
+   "text": "i put everyone on a diet. no fat chogs today.",
+   "text_v3": "[smug] i put everyone on a diet. no fat chogs today."
+  },
+  {
+   "id": "l12_jar",
+   "voice": "chog_common",
+   "where": "Level 12: the caged Chog",
+   "text": "he put me on rations. one crumb. per WEEK.",
+   "text_v3": "[whiny] he put me on rations. one crumb. per WEEK."
+  },
+  {
+   "id": "v12_intro",
+   "voice": "v_menace",
+   "where": "Level 12: COMRADE ROT",
+   "text": "comrade. in this freezer everyone is skinny. equally. forever.",
+   "text_v3": "[menacing] comrade. in this freezer everyone is skinny. equally. forever."
+  },
+  {
+   "id": "v12_hook",
+   "voice": "v_menace",
+   "where": "Level 12: COMRADE ROT",
+   "text": "Your snacks? Our snacks. Your Chog? Our Chog.",
+   "text_v3": "[growls] Your snacks? Our snacks. Your Chog? Our Chog."
+  },
+  {
+   "id": "v12_spit0",
+   "voice": "v_menace",
+   "where": "Level 12: COMRADE ROT",
+   "text": "comrades! seize the page!",
+   "text_v3": "[shouting] comrades! seize the page!"
+  },
+  {
+   "id": "v12_spit1",
+   "voice": "v_menace",
+   "where": "Level 12: COMRADE ROT",
+   "text": "workers of the page, unite!",
+   "text_v3": "[shouting] workers of the page, unite!"
+  },
+  {
+   "id": "v12_down",
+   "voice": "v_menace",
+   "where": "Level 12: COMRADE ROT",
+   "text": "the revolution... is cancelled...",
+   "text_v3": "[weakly] the revolution... is cancelled..."
+  },
+  {
+   "id": "v12_gloat",
+   "voice": "v_menace",
+   "where": "Level 12: COMRADE ROT",
+   "text": "the tower belongs to the people. the people are me.",
+   "text_v3": "[laughs darkly] the tower belongs to the people. the people are me."
+  },
+  {
+   "id": "f12_0",
+   "voice": "chog_common",
+   "where": "Level 12: fight (LASER GLARE)",
+   "text": "laser eyes, villain fries!",
+   "text_v3": "[excited] laser eyes, villain fries!",
+   "sfx": [
+    {
+     "sfx": "laser_pew",
+     "at": "after",
+     "vol": 0.8
+    }
+   ]
+  },
+  {
+   "id": "f12_1",
+   "voice": "chog_common",
+   "where": "Level 12: fight (CHOG POWER)",
+   "text": "chog power, villain's final hour!",
+   "text_v3": "[excited] chog power, villain's final hour!"
+  },
+  {
+   "id": "f12_2",
+   "voice": "chog_common",
+   "where": "Level 12: fight (AURA BURST)",
+   "text": "aura check: villain's a wreck!",
+   "text_v3": "[excited] aura check: villain's a wreck!"
+  },
+  {
+   "id": "f12_3",
+   "voice": "chog_common",
+   "where": "Level 12: fight (STACK ATTACK)",
+   "text": "from the plate to the moon. villain, you are DOOMED!",
+   "text_v3": "[shouting] from the plate to the moon. villain, you are DOOMED!"
+  },
+  {
+   "id": "l12_free",
+   "voice": "chog_common",
+   "where": "Level 12: the Chog is freed",
+   "text": "i owe you a snack. a big one.",
+   "text_v3": "[relieved] i owe you a snack. a big one."
+  },
+  {
+   "id": "l13_say",
+   "voice": "bear",
+   "where": "Level 13 intro",
+   "text": "only round heads allowed on my ice. hehe.",
+   "text_v3": "[smug] only round heads allowed on my ice. [giggles]"
+  },
+  {
+   "id": "l13_jar",
+   "voice": "chog_common",
+   "where": "Level 13: the caged Chog",
+   "text": "it's just a penguin in a pillowcase. it's just a penguin in a pill- AAAA!",
+   "text_v3": "[nervous] it's just a penguin in a pillowcase. it's just a penguin in a pill- [screams] AAAA!"
+  },
+  {
+   "id": "v13_intro",
+   "voice": "v_creep",
+   "where": "Level 13: TRICK OR SHEET",
+   "text": "boooo. i'm a ghost. don't look under the sheet. round heads only tonight.",
+   "text_v3": "[whispers] boooo. i'm a ghost. don't look under the sheet. [creepy giggle] round heads only tonight."
+  },
+  {
+   "id": "v13_hook",
+   "voice": "v_creep",
+   "where": "Level 13: TRICK OR SHEET",
+   "text": "Trick or treat? I'm the trick. You're the treat.",
+   "text_v3": "[whispers] Trick or treat? I'm the trick. You're the treat."
+  },
+  {
+   "id": "v13_spit0",
+   "voice": "v_creep",
+   "where": "Level 13: TRICK OR SHEET",
+   "text": "boo-lets, haunt the page!",
+   "text_v3": "[whispers] boo-lets, haunt the page!"
+  },
+  {
+   "id": "v13_spit1",
+   "voice": "v_creep",
+   "where": "Level 13: TRICK OR SHEET",
+   "text": "trick! trick! trick!",
+   "text_v3": "[whispers] trick! trick! trick!"
+  },
+  {
+   "id": "v13_down",
+   "voice": "v_creep",
+   "where": "Level 13: TRICK OR SHEET",
+   "text": "my sheet! you saw my flippers!",
+   "text_v3": "[wails] my sheet! you saw my flippers!"
+  },
+  {
+   "id": "v13_gloat",
+   "voice": "v_creep",
+   "where": "Level 13: TRICK OR SHEET",
+   "text": "tricked ya. happy Chogtober.",
+   "text_v3": "[creepy laugh] tricked ya. happy Chogtober."
+  },
+  {
+   "id": "f13_0",
+   "voice": "chog_common",
+   "where": "Level 13: fight (ROYAL SMACK)",
+   "text": "bow to the crown, villain goes down!",
+   "text_v3": "[excited] bow to the crown, villain goes down!"
+  },
+  {
+   "id": "f13_1",
+   "voice": "chog_common",
+   "where": "Level 13: fight (BUBBLEGUM BOMB)",
+   "text": "bubblegum pop, villain flop!",
+   "text_v3": "[excited] bubblegum pop, villain flop!",
+   "sfx": [
+    {
+     "sfx": "bubble_pop",
+     "at": "after",
+     "vol": 0.8
+    }
+   ]
+  },
+  {
+   "id": "f13_2",
+   "voice": "chog_common",
+   "where": "Level 13: fight (BELLY BUMP)",
+   "text": "belly bump, villain slump!",
+   "text_v3": "[excited] belly bump, villain slump!"
+  },
+  {
+   "id": "f13_3",
+   "voice": "chog_common",
+   "where": "Level 13: fight (STACK ATTACK)",
+   "text": "from the plate to the moon. villain, you are DOOMED!",
+   "text_v3": "[shouting] from the plate to the moon. villain, you are DOOMED!"
+  },
+  {
+   "id": "l13_free",
+   "voice": "chog_common",
+   "where": "Level 13: the Chog is freed",
+   "text": "the bear is going to be SO mad. good.",
+   "text_v3": "[relieved] the bear is going to be SO mad. good."
+  },
+  {
+   "id": "l14_say",
+   "voice": "bear",
+   "where": "Level 14 intro",
+   "text": "nom i am eating your plate. one bite per drop.",
+   "text_v3": "[chewing] i am eating your plate. one bite per drop.",
+   "sfx": [
+    {
+     "sfx": "big_chomp",
+     "at": "before"
+    }
+   ]
+  },
+  {
+   "id": "l14_jar",
+   "voice": "chog_common",
+   "where": "Level 14: the caged Chog",
+   "text": "he takes 'tax bites' out of the plate. i think i'm next. i'm the tax!",
+   "text_v3": "[panicked] he takes 'tax bites' out of the plate. i think i'm next. i'm the tax!",
+   "sfx": [
+    {
+     "sfx": "big_chomp",
+     "at": "out",
+     "insert": true
+    }
+   ]
+  },
+  {
+   "id": "v14_intro",
+   "voice": "v_menace",
+   "where": "Level 14: FANUM SHARK",
+   "text": "chomp this plate is mine now. that's the fanum tax, little chog.",
+   "text_v3": "[menacing] this plate is mine now. that's the fanum tax, little chog.",
+   "sfx": [
+    {
+     "sfx": "big_chomp",
+     "at": "before"
+    }
+   ]
+  },
+  {
+   "id": "v14_hook",
+   "voice": "v_menace",
+   "where": "Level 14: FANUM SHARK",
+   "text": "Fanum tax. One bite. Every drop.",
+   "text_v3": "[growls] Fanum tax. One bite. Every drop.",
+   "sfx": [
+    {
+     "sfx": "big_chomp",
+     "at": "Every",
+     "insert": true
+    }
+   ]
+  },
+  {
+   "id": "v14_spit0",
+   "voice": "v_menace",
+   "where": "Level 14: FANUM SHARK",
+   "text": "sharklets, tax their crumbs!",
+   "text_v3": "[shouting] sharklets, tax their crumbs!"
+  },
+  {
+   "id": "v14_spit1",
+   "voice": "v_menace",
+   "where": "Level 14: FANUM SHARK",
+   "text": "chomp go, babies.",
+   "text_v3": "[shouting] go, babies.",
+   "sfx": [
+    {
+     "sfx": "big_chomp",
+     "at": "before"
+    }
+   ]
+  },
+  {
+   "id": "v14_down",
+   "voice": "v_menace",
+   "where": "Level 14: FANUM SHARK",
+   "text": "brain... FREEZE!",
+   "text_v3": "[yelling in pain] brain... FREEZE!"
+  },
+  {
+   "id": "v14_gloat",
+   "voice": "v_menace",
+   "where": "Level 14: FANUM SHARK",
+   "text": "taxed. and collected.",
+   "text_v3": "[laughs darkly] taxed. and collected."
+  },
+  {
+   "id": "f14_0",
+   "voice": "chog_common",
+   "where": "Level 14: fight (DOLLAR DROP)",
+   "text": "make it rain, feel the pain!",
+   "text_v3": "[excited] make it rain, feel the pain!",
+   "sfx": [
+    {
+     "sfx": "coins_rain",
+     "at": "after",
+     "vol": 0.8
+    }
+   ]
+  },
+  {
+   "id": "f14_1",
+   "voice": "chog_common",
+   "where": "Level 14: fight (AURA BURST)",
+   "text": "aura check: villain's a wreck!",
+   "text_v3": "[excited] aura check: villain's a wreck!"
+  },
+  {
+   "id": "f14_2",
+   "voice": "chog_common",
+   "where": "Level 14: fight (GOLD GRILL BITE)",
+   "text": "gold tooth bite, lights out tonight!",
+   "text_v3": "[excited] gold tooth bite, lights out tonight!",
+   "sfx": [
+    {
+     "sfx": "big_chomp",
+     "at": "after",
+     "vol": 0.8
+    }
+   ]
+  },
+  {
+   "id": "f14_3",
+   "voice": "chog_common",
+   "where": "Level 14: fight (STACK ATTACK)",
+   "text": "from the plate to the moon. villain, you are DOOMED!",
+   "text_v3": "[shouting] from the plate to the moon. villain, you are DOOMED!"
+  },
+  {
+   "id": "l14_free",
+   "voice": "chog_common",
+   "where": "Level 14: the Chog is freed",
+   "text": "i'm free! i'm FREE! okay. where are the snacks.",
+   "text_v3": "[excited] i'm free! i'm FREE! [calming down] okay. where are the snacks."
+  },
+  {
+   "id": "l15_jar",
+   "voice": "chog_cool",
+   "where": "Level 15: the caged Chog",
+   "text": "every flap shatters something. lowkey iconic. still, let me out.",
+   "text_v3": "[unimpressed] every flap shatters something. lowkey iconic. still, let me out.",
+   "sfx": [
+    {
+     "sfx": "glass_shatter",
+     "at": "lowkey",
+     "insert": true,
+     "vol": 0.7
+    }
+   ]
+  },
+  {
+   "id": "v15_intro",
+   "voice": "v_gremlin",
+   "where": "Level 15: GLASS MOUCH",
+   "text": "bzzz. i'm made of glass. one flap and the draft takes your tower. bzz.",
+   "text_v3": "[giggles] bzzz. i'm made of glass. one flap and the draft takes your tower. bzz."
+  },
+  {
+   "id": "v15_hook",
+   "voice": "v_gremlin",
+   "where": "Level 15: GLASS MOUCH",
+   "text": "Fragile? Yes. Breakable? Never.",
+   "text_v3": "[mischievously] Fragile? Yes. Breakable? Never."
+  },
+  {
+   "id": "v15_spit0",
+   "voice": "v_gremlin",
+   "where": "Level 15: GLASS MOUCH",
+   "text": "shardlings, sparkle!",
+   "text_v3": "[cackles] shardlings, sparkle!"
+  },
+  {
+   "id": "v15_spit1",
+   "voice": "v_gremlin",
+   "where": "Level 15: GLASS MOUCH",
+   "text": "bzz bzz, babies.",
+   "text_v3": "[cackles] bzz bzz, babies."
+  },
+  {
+   "id": "v15_down",
+   "voice": "v_gremlin",
+   "where": "Level 15: GLASS MOUCH",
+   "text": "crack oh no. i'm... shattered.",
+   "text_v3": "[whining] oh no. i'm... shattered.",
+   "sfx": [
+    {
+     "sfx": "glass_shatter",
+     "at": "shattered",
+     "insert": true
+    }
+   ]
+  },
+  {
+   "id": "v15_gloat",
+   "voice": "v_gremlin",
+   "where": "Level 15: GLASS MOUCH",
+   "text": "bzz. that's what glass houses do.",
+   "text_v3": "[cackles] bzz. that's what glass houses do."
+  },
+  {
+   "id": "f15_0",
+   "voice": "chog_cool",
+   "where": "Level 15: fight (BITCOIN BONK)",
+   "text": "number go up, villain go down!",
+   "text_v3": "[confidently] number go up, villain go down!"
+  },
+  {
+   "id": "f15_1",
+   "voice": "chog_cool",
+   "where": "Level 15: fight (TORNADO SPIN)",
+   "text": "gust of air, villain? where?",
+   "text_v3": "[confidently] gust of air, villain? where?",
+   "sfx": [
+    {
+     "sfx": "wind_blow",
+     "at": "after",
+     "vol": 0.8
+    }
+   ]
+  },
+  {
+   "id": "f15_2",
+   "voice": "chog_cool",
+   "where": "Level 15: fight (COIN TOSS)",
+   "text": "heads i win, tails you lose!",
+   "text_v3": "[confidently] heads i win, tails you lose!"
+  },
+  {
+   "id": "f15_3",
+   "voice": "chog_cool",
+   "where": "Level 15: fight (STACK ATTACK)",
+   "text": "from the plate to the moon. villain, you are DOOMED!",
+   "text_v3": "[shouting] from the plate to the moon. villain, you are DOOMED!"
+  },
+  {
+   "id": "l15_free",
+   "voice": "chog_cool",
+   "where": "Level 15: the Chog is freed",
+   "text": "that cage was mid. this squad is not.",
+   "text_v3": "[chill] that cage was mid. this squad is not."
+  },
+  {
+   "id": "l16_say",
+   "voice": "plumpy",
+   "where": "Level 16 intro",
+   "text": "the windproof one. bring the windproof one.",
+   "text_v3": "[urgently] the windproof one. bring the windproof one."
+  },
+  {
+   "id": "l16_jar",
+   "voice": "chog_cool",
+   "where": "Level 16: the caged Chog",
+   "text": "my fur's doing a wind tunnel ad. not mad at it. kinda mad at it.",
+   "text_v3": "[unimpressed] my fur's doing a wind tunnel ad. not mad at it. kinda mad at it."
+  },
+  {
+   "id": "v16_intro",
+   "voice": "v_cute",
+   "where": "Level 16: PEANUT GALE",
+   "text": "ronin beast, reporting! three feathers, two horns, zero chill. WHOOSH.",
+   "text_v3": "[giggles] ronin beast, reporting! three feathers, two horns, zero chill. WHOOSH.",
+   "sfx": [
+    {
+     "sfx": "whoosh",
+     "at": "WHOOSH"
+    }
+   ]
+  },
+  {
+   "id": "v16_hook",
+   "voice": "v_cute",
+   "where": "Level 16: PEANUT GALE",
+   "text": "Small beast. Big breath. Bye tower.",
+   "text_v3": "[sweetly] Small beast. Big breath. Bye tower."
+  },
+  {
+   "id": "v16_spit0",
+   "voice": "v_cute",
+   "where": "Level 16: PEANUT GALE",
+   "text": "gustlings, blow it away!",
+   "text_v3": "[cheerfully] gustlings, blow it away!",
+   "sfx": [
+    {
+     "sfx": "wind_blow",
+     "at": "after",
+     "vol": 0.8
+    }
+   ]
+  },
+  {
+   "id": "v16_spit1",
+   "voice": "v_cute",
+   "where": "Level 16: PEANUT GALE",
+   "text": "whoosh babies!",
+   "text_v3": "[cheerfully] whoosh! babies!",
+   "sfx": [
+    {
+     "sfx": "whoosh",
+     "at": "whoosh"
+    }
+   ]
+  },
+  {
+   "id": "v16_down",
+   "voice": "v_cute",
+   "where": "Level 16: PEANUT GALE",
+   "text": "out of... breath...",
+   "text_v3": "[whimpers] out of... breath..."
+  },
+  {
+   "id": "v16_gloat",
+   "voice": "v_cute",
+   "where": "Level 16: PEANUT GALE",
+   "text": "blown away. like your hopes.",
+   "text_v3": "[giggles] blown away. like your hopes.",
+   "sfx": [
+    {
+     "sfx": "whoosh",
+     "at": "like",
+     "insert": true
+    }
+   ]
+  },
+  {
+   "id": "f16_0",
+   "voice": "chog_cool",
+   "where": "Level 16: fight (CLOWN STARE)",
+   "text": "clown eyes, big surprise!",
+   "text_v3": "[confidently] clown eyes, big surprise!"
+  },
+  {
+   "id": "f16_1",
+   "voice": "chog_cool",
+   "where": "Level 16: fight (BITCOIN BONK)",
+   "text": "number go up, villain go down!",
+   "text_v3": "[confidently] number go up, villain go down!"
+  },
+  {
+   "id": "f16_2",
+   "voice": "chog_cool",
+   "where": "Level 16: fight (COIN SPIT)",
+   "text": "coin spit, villain quit!",
+   "text_v3": "[confidently] coin spit, villain quit!",
+   "sfx": [
+    {
+     "sfx": "coins_rain",
+     "at": "after",
+     "vol": 0.8
+    }
+   ]
+  },
+  {
+   "id": "f16_3",
+   "voice": "chog_cool",
+   "where": "Level 16: fight (STACK ATTACK)",
+   "text": "from the plate to the moon. villain, you are DOOMED!",
+   "text_v3": "[shouting] from the plate to the moon. villain, you are DOOMED!"
+  },
+  {
+   "id": "l16_free",
+   "voice": "chog_cool",
+   "where": "Level 16: the Chog is freed",
+   "text": "the bear thought he could hold me. he could not.",
+   "text_v3": "[chill] the bear thought he could hold me. he could not."
+  },
+  {
+   "id": "l17_say",
+   "voice": "bear",
+   "where": "Level 17 intro",
+   "text": "tick tock. tick tock.",
+   "text_v3": "[taunting] tick tock. tick tock.",
+   "sfx": [
+    {
+     "sfx": "clock_tick",
+     "at": "under",
+     "vol": 0.5
+    }
+   ]
+  },
+  {
+   "id": "l17_jar",
+   "voice": "chog_cool",
+   "where": "Level 17: the caged Chog",
+   "text": "he counts down from four. out loud. all day. i'm cooked.",
+   "text_v3": "[unimpressed] he counts down from four. out loud. all day. i'm cooked."
+  },
+  {
+   "id": "v17_intro",
+   "voice": "v_bot",
+   "where": "Level 17: NPC-5391",
+   "text": "COUNTDOWN STARTED. four seconds per chog. i have infinite seconds. you do not.",
+   "text_v3": "[robotic] COUNTDOWN STARTED. four seconds per chog. i have infinite seconds. you do not."
+  },
+  {
+   "id": "v17_hook",
+   "voice": "v_bot",
+   "where": "Level 17: NPC-5391",
+   "text": "Tick tock. I don't stop. You flop.",
+   "text_v3": "[robotic] Tick tock. I don't stop. You flop.",
+   "sfx": [
+    {
+     "sfx": "clock_tick",
+     "at": "under",
+     "vol": 0.5
+    }
+   ]
+  },
+  {
+   "id": "v17_spit0",
+   "voice": "v_bot",
+   "where": "Level 17: NPC-5391",
+   "text": "DEPLOYING UNITS. tick. tock.",
+   "text_v3": "[robotic] DEPLOYING UNITS. tick. tock."
+  },
+  {
+   "id": "v17_spit1",
+   "voice": "v_bot",
+   "where": "Level 17: NPC-5391",
+   "text": "UNIT SPAWN. HA. HA.",
+   "text_v3": "[robotic] UNIT SPAWN. HA. HA."
+  },
+  {
+   "id": "v17_down",
+   "voice": "v_bot",
+   "where": "Level 17: NPC-5391",
+   "text": "SYSTEM... FAILURE... bzzt.",
+   "text_v3": "[glitching] SYSTEM... FAILURE... bzzt.",
+   "sfx": [
+    {
+     "sfx": "robot_powerdown",
+     "at": "FAILURE",
+     "lead": 0.2
+    }
+   ]
+  },
+  {
+   "id": "v17_gloat",
+   "voice": "v_bot",
+   "where": "Level 17: NPC-5391",
+   "text": "time's up. human error detected.",
+   "text_v3": "[robotic laugh] time's up. human error detected."
+  },
+  {
+   "id": "f17_0",
+   "voice": "chog_cool",
+   "where": "Level 17: fight (10K TPS FLURRY)",
+   "text": "ten thousand hits per second!",
+   "text_v3": "[confidently] ten thousand hits per second!"
+  },
+  {
+   "id": "f17_1",
+   "voice": "chog_cool",
+   "where": "Level 17: fight (HONK ATTACK)",
+   "text": "honk honk, villain conked!",
+   "text_v3": "[confidently] honk honk, villain conked!",
+   "sfx": [
+    {
+     "sfx": "clown_honk",
+     "at": "after",
+     "vol": 0.8
+    }
+   ]
+  },
+  {
+   "id": "f17_2",
+   "voice": "chog_cool",
+   "where": "Level 17: fight (CIGAR SMOKE)",
+   "text": "cigar smoke, villain's broke!",
+   "text_v3": "[confidently] cigar smoke, villain's broke!",
+   "sfx": [
+    {
+     "sfx": "smoke_puff",
+     "at": "after",
+     "vol": 0.8
+    }
+   ]
+  },
+  {
+   "id": "f17_3",
+   "voice": "chog_cool",
+   "where": "Level 17: fight (STACK ATTACK)",
+   "text": "from the plate to the moon. villain, you are DOOMED!",
+   "text_v3": "[shouting] from the plate to the moon. villain, you are DOOMED!"
+  },
+  {
+   "id": "l17_free",
+   "voice": "chog_cool",
+   "where": "Level 17: the Chog is freed",
+   "text": "free. cool. very cool. i'm cool.",
+   "text_v3": "[trying to stay cool] free. cool. very cool. i'm cool."
+  },
+  {
+   "id": "l18_jar",
+   "voice": "chog_cool",
+   "where": "Level 18: the caged Chog",
+   "text": "he keeps calling me his pawn. i'm at LEAST a knight, bro.",
+   "text_v3": "[unimpressed] he keeps calling me his pawn. i'm at LEAST a knight, bro."
+  },
+  {
+   "id": "v18_intro",
+   "voice": "v_regal",
+   "where": "Level 18: SIGMA DAK",
+   "text": "you play checkers. i play chess. in a hurricane. with wings.",
+   "text_v3": "[proudly] you play checkers. i play chess. in a hurricane. with wings."
+  },
+  {
+   "id": "v18_hook",
+   "voice": "v_regal",
+   "where": "Level 18: SIGMA DAK",
+   "text": "Three moves ahead. Checkmate, Chog.",
+   "text_v3": "[grandly] Three moves ahead. Checkmate, Chog."
+  },
+  {
+   "id": "v18_spit0",
+   "voice": "v_regal",
+   "where": "Level 18: SIGMA DAK",
+   "text": "pawns, advance!",
+   "text_v3": "[commanding] pawns, advance!"
+  },
+  {
+   "id": "v18_spit1",
+   "voice": "v_regal",
+   "where": "Level 18: SIGMA DAK",
+   "text": "sacrifice the babies. it's strategy.",
+   "text_v3": "[commanding] sacrifice the babies. it's strategy."
+  },
+  {
+   "id": "v18_down",
+   "voice": "v_regal",
+   "where": "Level 18: SIGMA DAK",
+   "text": "...not stalemate... checkmate...",
+   "text_v3": "[gasps] ...not stalemate... checkmate..."
+  },
+  {
+   "id": "v18_gloat",
+   "voice": "v_regal",
+   "where": "Level 18: SIGMA DAK",
+   "text": "gg. no re.",
+   "text_v3": "[laughs smugly] gg. no re."
+  },
+  {
+   "id": "f18_0",
+   "voice": "chog_cool",
+   "where": "Level 18: fight (CAP SLAP)",
+   "text": "cap on tight, villain, goodnight!",
+   "text_v3": "[confidently] cap on tight, villain, goodnight!"
+  },
+  {
+   "id": "f18_1",
+   "voice": "chog_cool",
+   "where": "Level 18: fight (TORNADO SPIN)",
+   "text": "gust of air, villain? where?",
+   "text_v3": "[confidently] gust of air, villain? where?",
+   "sfx": [
+    {
+     "sfx": "wind_blow",
+     "at": "after",
+     "vol": 0.8
+    }
+   ]
+  },
+  {
+   "id": "f18_2",
+   "voice": "chog_cool",
+   "where": "Level 18: fight (BELLY BUMP)",
+   "text": "belly bump, villain slump!",
+   "text_v3": "[confidently] belly bump, villain slump!"
+  },
+  {
+   "id": "f18_3",
+   "voice": "chog_cool",
+   "where": "Level 18: fight (STACK ATTACK)",
+   "text": "from the plate to the moon. villain, you are DOOMED!",
+   "text_v3": "[shouting] from the plate to the moon. villain, you are DOOMED!"
+  },
+  {
+   "id": "l18_free",
+   "voice": "chog_cool",
+   "where": "Level 18: the Chog is freed",
+   "text": "i'm free and i'm hungry. classic.",
+   "text_v3": "[chill] i'm free and i'm hungry. classic."
+  },
+  {
+   "id": "l19_say",
+   "voice": "bear",
+   "where": "Level 19 intro",
+   "text": "i sawed off one leg of the table. oops.",
+   "text_v3": "[innocently] i sawed off one leg of the table. oops."
+  },
+  {
+   "id": "l19_jar",
+   "voice": "chog_cool",
+   "where": "Level 19: the caged Chog",
+   "text": "he sawed the table leg and called it 'rustic'. that's not rustic, that's sabotage.",
+   "text_v3": "[unimpressed] he sawed the table leg and called it 'rustic'. that's not rustic, that's sabotage."
+  },
+  {
+   "id": "v19_intro",
+   "voice": "v_menace",
+   "where": "Level 19: CHOPPED CHAD",
+   "text": "saws oops. one leg shorter. now everything slides downhill. like your bags.",
+   "text_v3": "[menacing] oops. one leg shorter. now everything slides downhill. like your bags.",
+   "sfx": [
+    {
+     "sfx": "hand_saw",
+     "at": "before"
+    }
+   ]
+  },
+  {
+   "id": "v19_hook",
+   "voice": "v_menace",
+   "where": "Level 19: CHOPPED CHAD",
+   "text": "Timber! Your table's chopped. So are you.",
+   "text_v3": "[growls] Timber! Your table's chopped. So are you."
+  },
+  {
+   "id": "v19_spit0",
+   "voice": "v_menace",
+   "where": "Level 19: CHOPPED CHAD",
+   "text": "splinters, go!",
+   "text_v3": "[shouting] splinters, go!"
+  },
+  {
+   "id": "v19_spit1",
+   "voice": "v_menace",
+   "where": "Level 19: CHOPPED CHAD",
+   "text": "TIMBER, babies!",
+   "text_v3": "[shouting] TIMBER, babies!"
+  },
+  {
+   "id": "v19_down",
+   "voice": "v_menace",
+   "where": "Level 19: CHOPPED CHAD",
+   "text": "TIMBERRR... wait, that's me...",
+   "text_v3": "[yelling] TIMBERRR... [realizing] wait, that's me..."
+  },
+  {
+   "id": "v19_gloat",
+   "voice": "v_menace",
+   "where": "Level 19: CHOPPED CHAD",
+   "text": "chopped. told ya.",
+   "text_v3": "[laughs darkly] chopped. told ya."
+  },
+  {
+   "id": "f19_0",
+   "voice": "chog_cool",
+   "where": "Level 19: fight (BITCOIN BONK)",
+   "text": "number go up, villain go down!",
+   "text_v3": "[confidently] number go up, villain go down!"
+  },
+  {
+   "id": "f19_1",
+   "voice": "chog_cool",
+   "where": "Level 19: fight (GLITCH HIT)",
+   "text": "glitch in the code, villain explode!",
+   "text_v3": "[confidently] glitch in the code, villain explode!",
+   "sfx": [
+    {
+     "sfx": "glitch_zap",
+     "at": "after",
+     "vol": 0.8
+    }
+   ]
+  },
+  {
+   "id": "f19_2",
+   "voice": "chog_cool",
+   "where": "Level 19: fight (BELLY BUMP)",
+   "text": "belly bump, villain slump!",
+   "text_v3": "[confidently] belly bump, villain slump!"
+  },
+  {
+   "id": "f19_3",
+   "voice": "chog_cool",
+   "where": "Level 19: fight (STACK ATTACK)",
+   "text": "from the plate to the moon. villain, you are DOOMED!",
+   "text_v3": "[shouting] from the plate to the moon. villain, you are DOOMED!"
+  },
+  {
+   "id": "l19_free",
+   "voice": "chog_cool",
+   "where": "Level 19: the Chog is freed",
+   "text": "free at last. wagmi.",
+   "text_v3": "[chill] free at last. wagmi."
+  },
+  {
+   "id": "l20_say",
+   "voice": "bear",
+   "where": "Level 20 intro",
+   "text": "i choose your chogs now. hehe.",
+   "text_v3": "[mischievously] i choose your chogs now. [giggles]"
+  },
+  {
+   "id": "l20_jar",
+   "voice": "chog_cool",
+   "where": "Level 20: the caged Chog",
+   "text": "he juggles me when he's bored. i'm not a prop. i'm a whole chog.",
+   "text_v3": "[unimpressed] he juggles me when he's bored. i'm not a prop. i'm a whole chog."
+  },
+  {
+   "id": "v20_intro",
+   "voice": "v_gremlin",
+   "where": "Level 20: JESTERMAXXER",
+   "text": "uncle Bear lets me pick your chogs today. eeny, meeny... chaos.",
+   "text_v3": "[giggles] uncle Bear lets me pick your chogs today. eeny, meeny... chaos."
+  },
+  {
+   "id": "v20_hook",
+   "voice": "v_gremlin",
+   "where": "Level 20: JESTERMAXXER",
+   "text": "Pick a Chog, any Chog... not that one.",
+   "text_v3": "[mischievously] Pick a Chog, any Chog... not that one."
+  },
+  {
+   "id": "v20_spit0",
+   "voice": "v_gremlin",
+   "where": "Level 20: JESTERMAXXER",
+   "text": "clowns, go flip stuff!",
+   "text_v3": "[cackles] clowns, go flip stuff!"
+  },
+  {
+   "id": "v20_spit1",
+   "voice": "v_gremlin",
+   "where": "Level 20: JESTERMAXXER",
+   "text": "honk honk, babies!",
+   "text_v3": "[cackles] honk honk, babies!",
+   "sfx": [
+    {
+     "sfx": "clown_honk",
+     "at": "honk"
+    }
+   ]
+  },
+  {
+   "id": "v20_down",
+   "voice": "v_gremlin",
+   "where": "Level 20: JESTERMAXXER",
+   "text": "the joke... was on... me?",
+   "text_v3": "[whining] the joke... was on... me?"
+  },
+  {
+   "id": "v20_gloat",
+   "voice": "v_gremlin",
+   "where": "Level 20: JESTERMAXXER",
+   "text": "HONK. you're the punchline.",
+   "text_v3": "[cackles] HONK. you're the punchline.",
+   "sfx": [
+    {
+     "sfx": "clown_honk",
+     "at": "HONK"
+    }
+   ]
+  },
+  {
+   "id": "f20_0",
+   "voice": "chog_cool",
+   "where": "Level 20: fight (ANGRY STARE)",
+   "text": "angry eyes, villain cries!",
+   "text_v3": "[confidently] angry eyes, villain cries!"
+  },
+  {
+   "id": "f20_1",
+   "voice": "chog_cool",
+   "where": "Level 20: fight (CHOG POWER)",
+   "text": "chog power, villain's final hour!",
+   "text_v3": "[confidently] chog power, villain's final hour!"
+  },
+  {
+   "id": "f20_2",
+   "voice": "chog_cool",
+   "where": "Level 20: fight (SMOKE BOMB)",
+   "text": "smoke screen, villain unseen!",
+   "text_v3": "[confidently] smoke screen, villain unseen!",
+   "sfx": [
+    {
+     "sfx": "smoke_puff",
+     "at": "after",
+     "vol": 0.8
+    }
+   ]
+  },
+  {
+   "id": "f20_3",
+   "voice": "chog_cool",
+   "where": "Level 20: fight (STACK ATTACK)",
+   "text": "from the plate to the moon. villain, you are DOOMED!",
+   "text_v3": "[shouting] from the plate to the moon. villain, you are DOOMED!"
+  },
+  {
+   "id": "l20_free",
+   "voice": "chog_cool",
+   "where": "Level 20: the Chog is freed",
+   "text": "appreciate you. now let's go get the bear.",
+   "text_v3": "[chill] appreciate you. now let's go get the bear."
+  },
+  {
+   "id": "l21_say",
+   "voice": "bear",
+   "where": "Level 21 intro",
+   "text": "HOOOOOOOOOO.",
+   "text_v3": "[blows air] HOOOOOOOOOO.",
+   "sfx": [
+    {
+     "sfx": "wind_blow",
+     "at": "HOOOOOOOOOO",
+     "vol": 0.7
+    }
+   ]
+  },
+  {
+   "id": "l21_jar",
+   "voice": "chog_cool",
+   "where": "Level 21: the caged Chog",
+   "text": "she cackles every time it thunders. which is every second.",
+   "text_v3": "[unimpressed] she cackles every time it thunders. which is every second.",
+   "sfx": [
+    {
+     "sfx": "thunder",
+     "at": "which",
+     "insert": true,
+     "vol": 0.7
+    }
+   ]
+  },
+  {
+   "id": "v21_intro",
+   "voice": "v_creep",
+   "where": "Level 21: HEXA SLICE",
+   "text": "mwahaha! a skinless witch with a pizza and a storm. what could go right?",
+   "text_v3": "[cackles] mwahaha! a skinless witch with a pizza and a storm. what could go right?"
+  },
+  {
+   "id": "v21_hook",
+   "voice": "v_creep",
+   "where": "Level 21: HEXA SLICE",
+   "text": "Hold the anchovies. Unleash the storm.",
+   "text_v3": "[whispers] Hold the anchovies. Unleash the storm."
+  },
+  {
+   "id": "v21_spit0",
+   "voice": "v_creep",
+   "where": "Level 21: HEXA SLICE",
+   "text": "slices, fly!",
+   "text_v3": "[whispers] slices, fly!"
+  },
+  {
+   "id": "v21_spit1",
+   "voice": "v_creep",
+   "where": "Level 21: HEXA SLICE",
+   "text": "hex hex, little crusts!",
+   "text_v3": "[whispers] hex hex, little crusts!"
+  },
+  {
+   "id": "v21_down",
+   "voice": "v_creep",
+   "where": "Level 21: HEXA SLICE",
+   "text": "i'm melting... no wait, that's the cheese...",
+   "text_v3": "[wails] i'm melting... no wait, that's the cheese..."
+  },
+  {
+   "id": "v21_gloat",
+   "voice": "v_creep",
+   "where": "Level 21: HEXA SLICE",
+   "text": "delivered: one fallen tower. no tip needed.",
+   "text_v3": "[creepy laugh] delivered: one fallen tower. no tip needed."
+  },
+  {
+   "id": "f21_0",
+   "voice": "chog_cool",
+   "where": "Level 21: fight (CHOG POWER)",
+   "text": "chog power, villain's final hour!",
+   "text_v3": "[confidently] chog power, villain's final hour!"
+  },
+  {
+   "id": "f21_1",
+   "voice": "chog_cool",
+   "where": "Level 21: fight (SMOKE BOMB)",
+   "text": "smoke screen, villain unseen!",
+   "text_v3": "[confidently] smoke screen, villain unseen!",
+   "sfx": [
+    {
+     "sfx": "smoke_puff",
+     "at": "after",
+     "vol": 0.8
+    }
+   ]
+  },
+  {
+   "id": "f21_2",
+   "voice": "chog_cool",
+   "where": "Level 21: fight (DROOL FLOOD)",
+   "text": "drool flood, villain's mud!",
+   "text_v3": "[confidently] drool flood, villain's mud!",
+   "sfx": [
+    {
+     "sfx": "drool_drip",
+     "at": "after",
+     "vol": 0.8
+    }
+   ]
+  },
+  {
+   "id": "f21_3",
+   "voice": "chog_cool",
+   "where": "Level 21: fight (STACK ATTACK)",
+   "text": "from the plate to the moon. villain, you are DOOMED!",
+   "text_v3": "[shouting] from the plate to the moon. villain, you are DOOMED!"
+  },
+  {
+   "id": "l21_free",
+   "voice": "chog_cool",
+   "where": "Level 21: the Chog is freed",
+   "text": "gee em. it's a good morning now.",
+   "text_v3": "[chill] gee em. it's a good morning now."
+  },
+  {
+   "id": "l22_jar",
+   "voice": "chog_cool",
+   "where": "Level 22: the caged Chog",
+   "text": "the clouds are cotton candy. i licked one. no regrets.",
+   "text_v3": "[unimpressed] the clouds are cotton candy. i licked one. no regrets."
+  },
+  {
+   "id": "v22_intro",
+   "voice": "v_cute",
+   "where": "Level 22: FLUFFY BLADES",
+   "text": "floaty floaty! in my garden gravity is a suggestion and chogs are snacks.",
+   "text_v3": "[giggles] floaty floaty! in my garden gravity is a suggestion and chogs are snacks."
+  },
+  {
+   "id": "v22_hook",
+   "voice": "v_cute",
+   "where": "Level 22: FLUFFY BLADES",
+   "text": "Soft tail. Sharp horns. Sweet revenge.",
+   "text_v3": "[sweetly] Soft tail. Sharp horns. Sweet revenge."
+  },
+  {
+   "id": "v22_spit0",
+   "voice": "v_cute",
+   "where": "Level 22: FLUFFY BLADES",
+   "text": "sproutlings, bloop bloop!",
+   "text_v3": "[cheerfully] sproutlings, bloop bloop!"
+  },
+  {
+   "id": "v22_spit1",
+   "voice": "v_cute",
+   "where": "Level 22: FLUFFY BLADES",
+   "text": "float, babies!",
+   "text_v3": "[cheerfully] float, babies!"
+  },
+  {
+   "id": "v22_down",
+   "voice": "v_cute",
+   "where": "Level 22: FLUFFY BLADES",
+   "text": "my cotton candy... dissolving...",
+   "text_v3": "[whimpers] my cotton candy... dissolving..."
+  },
+  {
+   "id": "v22_gloat",
+   "voice": "v_cute",
+   "where": "Level 22: FLUFFY BLADES",
+   "text": "sweet. sweet defeat. yours.",
+   "text_v3": "[giggles] sweet. sweet defeat. yours."
+  },
+  {
+   "id": "f22_0",
+   "voice": "chog_cool",
+   "where": "Level 22: fight (PIPE STOMP)",
+   "text": "pipe down! stomp town!",
+   "text_v3": "[confidently] pipe down! stomp town!"
+  },
+  {
+   "id": "f22_1",
+   "voice": "chog_cool",
+   "where": "Level 22: fight (DROOL FLOOD)",
+   "text": "drool flood, villain's mud!",
+   "text_v3": "[confidently] drool flood, villain's mud!",
+   "sfx": [
+    {
+     "sfx": "drool_drip",
+     "at": "after",
+     "vol": 0.8
+    }
+   ]
+  },
+  {
+   "id": "f22_2",
+   "voice": "chog_cool",
+   "where": "Level 22: fight (BELLY BUMP)",
+   "text": "belly bump, villain slump!",
+   "text_v3": "[confidently] belly bump, villain slump!"
+  },
+  {
+   "id": "f22_3",
+   "voice": "chog_cool",
+   "where": "Level 22: fight (STACK ATTACK)",
+   "text": "from the plate to the moon. villain, you are DOOMED!",
+   "text_v3": "[shouting] from the plate to the moon. villain, you are DOOMED!"
+  },
+  {
+   "id": "l22_free",
+   "voice": "chog_cool",
+   "where": "Level 22: the Chog is freed",
+   "text": "let's run it. me, you, the tower.",
+   "text_v3": "[chill] let's run it. me, you, the tower."
+  },
+  {
+   "id": "l23_jar",
+   "voice": "chog_cool",
+   "where": "Level 23: the caged Chog",
+   "text": "she fell asleep holding my cage. i'm scared to wake her up.",
+   "text_v3": "[unimpressed] she fell asleep holding my cage. i'm scared to wake her up."
+  },
+  {
+   "id": "v23_intro",
+   "voice": "v_creep",
+   "where": "Level 23: SLEEPMAXXER",
+   "text": "yawn shh. i'm sleepmaxxing. plumpy is fast because i dream fast.",
+   "text_v3": "[yawns] shh. i'm sleepmaxxing. plumpy is fast because i dream fast."
+  },
+  {
+   "id": "v23_hook",
+   "voice": "v_creep",
+   "where": "Level 23: SLEEPMAXXER",
+   "text": "Eyes closed. Still faster than you.",
+   "text_v3": "[whispers] Eyes closed. Still faster than you."
+  },
+  {
+   "id": "v23_spit0",
+   "voice": "v_creep",
+   "where": "Level 23: SLEEPMAXXER",
+   "text": "dozelings... go... zzz",
+   "text_v3": "[sleepily] dozelings... go... [snoring]"
+  },
+  {
+   "id": "v23_spit1",
+   "voice": "v_creep",
+   "where": "Level 23: SLEEPMAXXER",
+   "text": "snore spit... zzz",
+   "text_v3": "[snoring] spit... [snoring]"
+  },
+  {
+   "id": "v23_down",
+   "voice": "v_creep",
+   "where": "Level 23: SLEEPMAXXER",
+   "text": "five more minutes... thud",
+   "text_v3": "[sleepily] five more minutes...",
+   "sfx": [
+    {
+     "sfx": "tumble_thud",
+     "at": "after",
+     "vol": 0.7
+    }
+   ]
+  },
+  {
+   "id": "v23_gloat",
+   "voice": "v_creep",
+   "where": "Level 23: SLEEPMAXXER",
+   "text": "mumbles ...told you... in my dream...",
+   "text_v3": "[mumbles] ...told you... in my dream..."
+  },
+  {
+   "id": "f23_0",
+   "voice": "chog_cool",
+   "where": "Level 23: fight (WAGMI WAVE)",
+   "text": "we're all gonna make it. you're not.",
+   "text_v3": "[confidently] we're all gonna make it. you're not."
+  },
+  {
+   "id": "f23_1",
+   "voice": "chog_cool",
+   "where": "Level 23: fight (SMOKE BOMB)",
+   "text": "smoke screen, villain unseen!",
+   "text_v3": "[confidently] smoke screen, villain unseen!",
+   "sfx": [
+    {
+     "sfx": "smoke_puff",
+     "at": "after",
+     "vol": 0.8
+    }
+   ]
+  },
+  {
+   "id": "f23_2",
+   "voice": "chog_cool",
+   "where": "Level 23: fight (BUBBLEGUM BOMB)",
+   "text": "bubblegum pop, villain flop!",
+   "text_v3": "[confidently] bubblegum pop, villain flop!",
+   "sfx": [
+    {
+     "sfx": "bubble_pop",
+     "at": "after",
+     "vol": 0.8
+    }
+   ]
+  },
+  {
+   "id": "f23_3",
+   "voice": "chog_cool",
+   "where": "Level 23: fight (STACK ATTACK)",
+   "text": "from the plate to the moon. villain, you are DOOMED!",
+   "text_v3": "[shouting] from the plate to the moon. villain, you are DOOMED!"
+  },
+  {
+   "id": "l23_free",
+   "voice": "chog_cool",
+   "where": "Level 23: the Chog is freed",
+   "text": "stack me up. i was born for this.",
+   "text_v3": "[chill] stack me up. i was born for this."
+  },
+  {
+   "id": "l24_say",
+   "voice": "plumpy",
+   "where": "Level 24 intro",
+   "text": "i cannot see. i can only feel. and i feel hungry.",
+   "text_v3": "[whispers] i cannot see. i can only feel. [deadpan] and i feel hungry."
+  },
+  {
+   "id": "l24_jar",
+   "voice": "chog_cool",
+   "where": "Level 24: the caged Chog",
+   "text": "she keeps texting me 'u up?' i'm in a cage. obviously i'm up.",
+   "text_v3": "[unimpressed] she keeps texting me 'u up?' i'm in a cage. obviously i'm up."
+  },
+  {
+   "id": "v24_intro",
+   "voice": "v_diva",
+   "where": "Level 24: GHOSTED BETTY",
+   "text": "heyyy. i ghosted my last crush. now i'm ghosting your tower. can't see me?",
+   "text_v3": "[sassy] heyyy. i ghosted my last crush. now i'm ghosting your tower. can't see me?"
+  },
+  {
+   "id": "v24_hook",
+   "voice": "v_diva",
+   "where": "Level 24: GHOSTED BETTY",
+   "text": "Left on read. Lost in the fog.",
+   "text_v3": "[sassy] Left on read. Lost in the fog."
+  },
+  {
+   "id": "v24_spit0",
+   "voice": "v_diva",
+   "where": "Level 24: GHOSTED BETTY",
+   "text": "lil boos, slide into their DMs.",
+   "text_v3": "[bossy] lil boos, slide into their DMs."
+  },
+  {
+   "id": "v24_spit1",
+   "voice": "v_diva",
+   "where": "Level 24: GHOSTED BETTY",
+   "text": "seen. spit.",
+   "text_v3": "[bossy] seen. spit."
+  },
+  {
+   "id": "v24_down",
+   "voice": "v_diva",
+   "where": "Level 24: GHOSTED BETTY",
+   "text": "you... saw me? nobody sees me...",
+   "text_v3": "[gasps] you... saw me? nobody sees me..."
+  },
+  {
+   "id": "v24_gloat",
+   "voice": "v_diva",
+   "where": "Level 24: GHOSTED BETTY",
+   "text": "ghosted. don't text back.",
+   "text_v3": "[laughs mockingly] ghosted. don't text back."
+  },
+  {
+   "id": "f24_0",
+   "voice": "chog_cool",
+   "where": "Level 24: fight (CHOG POWER)",
+   "text": "chog power, villain's final hour!",
+   "text_v3": "[confidently] chog power, villain's final hour!"
+  },
+  {
+   "id": "f24_1",
+   "voice": "chog_cool",
+   "where": "Level 24: fight (FLAME AURA)",
+   "text": "feel the heat, admit defeat!",
+   "text_v3": "[confidently] feel the heat, admit defeat!",
+   "sfx": [
+    {
+     "sfx": "fire_breath",
+     "at": "after",
+     "vol": 0.8
+    }
+   ]
+  },
+  {
+   "id": "f24_2",
+   "voice": "chog_cool",
+   "where": "Level 24: fight (BUBBLEGUM BOMB)",
+   "text": "bubblegum pop, villain flop!",
+   "text_v3": "[confidently] bubblegum pop, villain flop!",
+   "sfx": [
+    {
+     "sfx": "bubble_pop",
+     "at": "after",
+     "vol": 0.8
+    }
+   ]
+  },
+  {
+   "id": "f24_3",
+   "voice": "chog_cool",
+   "where": "Level 24: fight (STACK ATTACK)",
+   "text": "from the plate to the moon. villain, you are DOOMED!",
+   "text_v3": "[shouting] from the plate to the moon. villain, you are DOOMED!"
+  },
+  {
+   "id": "l24_free",
+   "voice": "chog_cool",
+   "where": "Level 24: the Chog is freed",
+   "text": "yeah. i knew you'd come. took you long enough.",
+   "text_v3": "[chill] yeah. i knew you'd come. took you long enough."
+  },
+  {
+   "id": "l25_say",
+   "voice": "bear",
+   "where": "Level 25 intro",
+   "text": "my waiter will carry your tower. he is clumsy.",
+   "text_v3": "[smug] my waiter will carry your tower. [chuckles] he is clumsy."
+  },
+  {
+   "id": "l25_jar",
+   "voice": "chog_cool",
+   "where": "Level 25: the caged Chog",
+   "text": "he rocks the boat on purpose. i've been seasick for three days.",
+   "text_v3": "[unimpressed] he rocks the boat on purpose. i've been seasick for three days."
+  },
+  {
+   "id": "v25_intro",
+   "voice": "v_bot",
+   "where": "Level 25: DECKHAND DEATHBOT",
+   "text": "ahoy. i serve the drinks. i steer the ship. badly. the plate rocks. so do you.",
+   "text_v3": "[robotic] ahoy. i serve the drinks. i steer the ship. badly. the plate rocks. so do you."
+  },
+  {
+   "id": "v25_hook",
+   "voice": "v_bot",
+   "where": "Level 25: DECKHAND DEATHBOT",
+   "text": "Rock the boat. Drop the Chog.",
+   "text_v3": "[robotic] Rock the boat. Drop the Chog."
+  },
+  {
+   "id": "v25_spit0",
+   "voice": "v_bot",
+   "where": "Level 25: DECKHAND DEATHBOT",
+   "text": "bilge bots, overboard!",
+   "text_v3": "[robotic] bilge bots, overboard!"
+  },
+  {
+   "id": "v25_spit1",
+   "voice": "v_bot",
+   "where": "Level 25: DECKHAND DEATHBOT",
+   "text": "bloop. bots away.",
+   "text_v3": "[robotic] bloop. bots away."
+  },
+  {
+   "id": "v25_down",
+   "voice": "v_bot",
+   "where": "Level 25: DECKHAND DEATHBOT",
+   "text": "man... overboard... it's me...",
+   "text_v3": "[glitching] man... overboard... it's me..."
+  },
+  {
+   "id": "v25_gloat",
+   "voice": "v_bot",
+   "where": "Level 25: DECKHAND DEATHBOT",
+   "text": "you sank. i'm still bored.",
+   "text_v3": "[robotic laugh] you sank. i'm still bored."
+  },
+  {
+   "id": "f25_0",
+   "voice": "chog_cool",
+   "where": "Level 25: fight (CLOWN STARE)",
+   "text": "clown eyes, big surprise!",
+   "text_v3": "[confidently] clown eyes, big surprise!"
+  },
+  {
+   "id": "f25_1",
+   "voice": "chog_cool",
+   "where": "Level 25: fight (CHOG POWER)",
+   "text": "chog power, villain's final hour!",
+   "text_v3": "[confidently] chog power, villain's final hour!"
+  },
+  {
+   "id": "f25_2",
+   "voice": "chog_cool",
+   "where": "Level 25: fight (BUBBLEGUM BOMB)",
+   "text": "bubblegum pop, villain flop!",
+   "text_v3": "[confidently] bubblegum pop, villain flop!",
+   "sfx": [
+    {
+     "sfx": "bubble_pop",
+     "at": "after",
+     "vol": 0.8
+    }
+   ]
+  },
+  {
+   "id": "f25_3",
+   "voice": "chog_cool",
+   "where": "Level 25: fight (STACK ATTACK)",
+   "text": "from the plate to the moon. villain, you are DOOMED!",
+   "text_v3": "[shouting] from the plate to the moon. villain, you are DOOMED!"
+  },
+  {
+   "id": "l25_free",
+   "voice": "chog_cool",
+   "where": "Level 25: the Chog is freed",
+   "text": "out of the cage. into the alpha.",
+   "text_v3": "[chill] out of the cage. into the alpha."
+  },
+  {
+   "id": "l26_jar",
+   "voice": "chog_cool",
+   "where": "Level 26: the caged Chog",
+   "text": "she rated my outfit a C. i'm literally in a cage. what did she expect.",
+   "text_v3": "[unimpressed] she rated my outfit a C. i'm literally in a cage. what did she expect."
+  },
+  {
+   "id": "v26_intro",
+   "voice": "v_diva",
+   "where": "Level 26: DELULU MILADY",
+   "text": "sniff your drip is a C-minus. combos are the only drip that counts.",
+   "text_v3": "[sniffs] your drip is a C-minus. combos are the only drip that counts."
+  },
+  {
+   "id": "v26_hook",
+   "voice": "v_diva",
+   "where": "Level 26: DELULU MILADY",
+   "text": "Cry pretty. Combo or cope.",
+   "text_v3": "[sassy] Cry pretty. Combo or cope."
+  },
+  {
+   "id": "v26_spit0",
+   "voice": "v_diva",
+   "where": "Level 26: DELULU MILADY",
+   "text": "lil miladies, go cry on things.",
+   "text_v3": "[bossy] lil miladies, go cry on things."
+  },
+  {
+   "id": "v26_spit1",
+   "voice": "v_diva",
+   "where": "Level 26: DELULU MILADY",
+   "text": "sob go, babies.",
+   "text_v3": "[sobs] go, babies."
+  },
+  {
+   "id": "v26_down",
+   "voice": "v_diva",
+   "where": "Level 26: DELULU MILADY",
+   "text": "my mascara... it's so over...",
+   "text_v3": "[gasps] my mascara... it's so over..."
+  },
+  {
+   "id": "v26_gloat",
+   "voice": "v_diva",
+   "where": "Level 26: DELULU MILADY",
+   "text": "mid combo. mid tower. mid you.",
+   "text_v3": "[laughs mockingly] mid combo. mid tower. mid you."
+  },
+  {
+   "id": "f26_0",
+   "voice": "chog_cool",
+   "where": "Level 26: fight (CLOWN STARE)",
+   "text": "clown eyes, big surprise!",
+   "text_v3": "[confidently] clown eyes, big surprise!"
+  },
+  {
+   "id": "f26_1",
+   "voice": "chog_cool",
+   "where": "Level 26: fight (CHOG POWER)",
+   "text": "chog power, villain's final hour!",
+   "text_v3": "[confidently] chog power, villain's final hour!"
+  },
+  {
+   "id": "f26_2",
+   "voice": "chog_cool",
+   "where": "Level 26: fight (FLAME AURA)",
+   "text": "feel the heat, admit defeat!",
+   "text_v3": "[confidently] feel the heat, admit defeat!",
+   "sfx": [
+    {
+     "sfx": "fire_breath",
+     "at": "after",
+     "vol": 0.8
+    }
+   ]
+  },
+  {
+   "id": "f26_3",
+   "voice": "chog_cool",
+   "where": "Level 26: fight (STACK ATTACK)",
+   "text": "from the plate to the moon. villain, you are DOOMED!",
+   "text_v3": "[shouting] from the plate to the moon. villain, you are DOOMED!"
+  },
+  {
+   "id": "l26_free",
+   "voice": "chog_cool",
+   "where": "Level 26: the Chog is freed",
+   "text": "no cap, you're a legend.",
+   "text_v3": "[chill] no cap, you're a legend."
+  },
+  {
+   "id": "l27_say",
+   "voice": "bear",
+   "where": "Level 27 intro",
+   "text": "i gave plumpy an energy drink.",
+   "text_v3": "[mischievously] i gave plumpy an energy drink."
+  },
+  {
+   "id": "l27_jar",
+   "voice": "chog_skull",
+   "where": "Level 27: the caged Chog",
+   "text": "he chugged nine energy drinks. my bones are rattling from the vibrations.",
+   "text_v3": "[spooky] he chugged nine energy drinks. my bones are rattling from the vibrations.",
+   "sfx": [
+    {
+     "sfx": "bone_rattle",
+     "at": "from",
+     "insert": true
+    }
+   ]
+  },
+  {
+   "id": "v27_intro",
+   "voice": "v_gremlin",
+   "where": "Level 27: TWEAKIN' SNAKE",
+   "text": "twitch WHAT. oh. you. i spiked plumpy's coffee. it's tweaking. so am i.",
+   "text_v3": "[twitchy] WHAT. oh. you. i spiked plumpy's coffee. it's tweaking. so am i."
+  },
+  {
+   "id": "v27_hook",
+   "voice": "v_gremlin",
+   "where": "Level 27: TWEAKIN' SNAKE",
+   "text": "Shook, not stirred. Wired, not tired.",
+   "text_v3": "[mischievously] Shook, not stirred. Wired, not tired."
+  },
+  {
+   "id": "v27_spit0",
+   "voice": "v_gremlin",
+   "where": "Level 27: TWEAKIN' SNAKE",
+   "text": "snakelets, GO GO GO!",
+   "text_v3": "[cackles] snakelets, GO GO GO!"
+  },
+  {
+   "id": "v27_spit1",
+   "voice": "v_gremlin",
+   "where": "Level 27: TWEAKIN' SNAKE",
+   "text": "hiss hehehe!",
+   "text_v3": "[hisses] hehehe!"
+  },
+  {
+   "id": "v27_down",
+   "voice": "v_gremlin",
+   "where": "Level 27: TWEAKIN' SNAKE",
+   "text": "crashing... from my sugar high...",
+   "text_v3": "[whining] crashing... from my sugar high..."
+  },
+  {
+   "id": "v27_gloat",
+   "voice": "v_gremlin",
+   "where": "Level 27: TWEAKIN' SNAKE",
+   "text": "fock it. you lost.",
+   "text_v3": "[cackles] fock it. you lost."
+  },
+  {
+   "id": "f27_0",
+   "voice": "chog_skull",
+   "where": "Level 27: fight (LASER GLARE)",
+   "text": "laser eyes, villain fries!",
+   "text_v3": "[growls] laser eyes, villain fries!",
+   "sfx": [
+    {
+     "sfx": "laser_pew",
+     "at": "after",
+     "vol": 0.8
+    }
+   ]
+  },
+  {
+   "id": "f27_1",
+   "voice": "chog_skull",
+   "where": "Level 27: fight (CAP SLAP)",
+   "text": "cap on tight, villain, goodnight!",
+   "text_v3": "[growls] cap on tight, villain, goodnight!"
+  },
+  {
+   "id": "f27_2",
+   "voice": "chog_skull",
+   "where": "Level 27: fight (ROSE THORNS)",
+   "text": "roses are red, villain's in bed!",
+   "text_v3": "[growls] roses are red, villain's in bed!"
+  },
+  {
+   "id": "f27_3",
+   "voice": "chog_skull",
+   "where": "Level 27: fight (STACK ATTACK)",
+   "text": "from the plate to the moon. villain, you are DOOMED!",
+   "text_v3": "[shouting] from the plate to the moon. villain, you are DOOMED!"
+  },
+  {
+   "id": "l27_free",
+   "voice": "chog_skull",
+   "where": "Level 27: the Chog is freed",
+   "text": "the cage could not hold my bones.",
+   "text_v3": "[spooky] the cage could not hold my bones.",
+   "sfx": [
+    {
+     "sfx": "bone_rattle",
+     "at": "after",
+     "vol": 0.8
+    }
+   ]
+  },
+  {
+   "id": "l28_jar",
+   "voice": "chog_skull",
+   "where": "Level 28: the caged Chog",
+   "text": "he smells like custard. i have no stomach. and yet... i'm hungry.",
+   "text_v3": "[spooky] he smells like custard. i have no stomach. and yet... i'm hungry."
+  },
+  {
+   "id": "v28_intro",
+   "voice": "v_regal",
+   "where": "Level 28: CAPTAIN NATA",
+   "text": "behold! a pastry with a cape and burning eyes. welcome to my buffet of fog.",
+   "text_v3": "[proudly] behold! a pastry with a cape and burning eyes. welcome to my buffet of fog."
+  },
+  {
+   "id": "v28_hook",
+   "voice": "v_regal",
+   "where": "Level 28: CAPTAIN NATA",
+   "text": "Crispy outside. Evil inside. Bussin'.",
+   "text_v3": "[grandly] Crispy outside. Evil inside. Bussin'."
+  },
+  {
+   "id": "v28_spit0",
+   "voice": "v_regal",
+   "where": "Level 28: CAPTAIN NATA",
+   "text": "tartlets, assemble!",
+   "text_v3": "[commanding] tartlets, assemble!"
+  },
+  {
+   "id": "v28_spit1",
+   "voice": "v_regal",
+   "where": "Level 28: CAPTAIN NATA",
+   "text": "custard rain! go!",
+   "text_v3": "[commanding] custard rain! go!"
+  },
+  {
+   "id": "v28_down",
+   "voice": "v_regal",
+   "where": "Level 28: CAPTAIN NATA",
+   "text": "my crust... crumbled...",
+   "text_v3": "[gasps] my crust... crumbled..."
+  },
+  {
+   "id": "v28_gloat",
+   "voice": "v_regal",
+   "where": "Level 28: CAPTAIN NATA",
+   "text": "dessert is served. you're the leftovers.",
+   "text_v3": "[laughs smugly] dessert is served. you're the leftovers."
+  },
+  {
+   "id": "f28_0",
+   "voice": "chog_skull",
+   "where": "Level 28: fight (WIZARD BLAST)",
+   "text": "hocus pocus, lose your focus!",
+   "text_v3": "[growls] hocus pocus, lose your focus!"
+  },
+  {
+   "id": "f28_1",
+   "voice": "chog_skull",
+   "where": "Level 28: fight (BRAIN FREEZE)",
+   "text": "freeze! say please!",
+   "text_v3": "[growls] freeze! say please!"
+  },
+  {
+   "id": "f28_2",
+   "voice": "chog_skull",
+   "where": "Level 28: fight (BONE RATTLE)",
+   "text": "bone zone! villain's thrown!",
+   "text_v3": "[growls] bone zone! villain's thrown!",
+   "sfx": [
+    {
+     "sfx": "bone_rattle",
+     "at": "after",
+     "vol": 0.8
+    }
+   ]
+  },
+  {
+   "id": "f28_3",
+   "voice": "chog_skull",
+   "where": "Level 28: fight (STACK ATTACK)",
+   "text": "from the plate to the moon. villain, you are DOOMED!",
+   "text_v3": "[shouting] from the plate to the moon. villain, you are DOOMED!"
+  },
+  {
+   "id": "l28_free",
+   "voice": "chog_skull",
+   "where": "Level 28: the Chog is freed",
+   "text": "the dead rise. and they stack.",
+   "text_v3": "[spooky] the dead rise. and they stack.",
+   "sfx": [
+    {
+     "sfx": "bone_rattle",
+     "at": "and",
+     "insert": true,
+     "vol": 0.8
+    }
+   ]
+  },
+  {
+   "id": "l29_jar",
+   "voice": "chog_skull",
+   "where": "Level 29: the caged Chog",
+   "text": "he sold my bones twice. bought them back higher. rattle... rattle...",
+   "text_v3": "[spooky] he sold my bones twice. bought them back higher. rattle... rattle...",
+   "sfx": [
+    {
+     "sfx": "bone_rattle",
+     "at": "rattle",
+     "n": 1
+    },
+    {
+     "sfx": "bone_rattle",
+     "at": "rattle",
+     "n": 2
+    }
+   ]
+  },
+  {
+   "id": "v29_intro",
+   "voice": "v_gremlin",
+   "where": "Level 29: SUS JEET",
+   "text": "i sell every third block. don't ask why. it's... strategy.",
+   "text_v3": "[suspicious] i sell every third block. don't ask why. it's... strategy."
+  },
+  {
+   "id": "v29_hook",
+   "voice": "v_gremlin",
+   "where": "Level 29: SUS JEET",
+   "text": "Paper hands. Sus eyes. I sell, you cry.",
+   "text_v3": "[mischievously] Paper hands. Sus eyes. I sell, you cry."
+  },
+  {
+   "id": "v29_spit0",
+   "voice": "v_gremlin",
+   "where": "Level 29: SUS JEET",
+   "text": "jeets, dump it!",
+   "text_v3": "[cackles] jeets, dump it!"
+  },
+  {
+   "id": "v29_spit1",
+   "voice": "v_gremlin",
+   "where": "Level 29: SUS JEET",
+   "text": "sell sell sell, babies!",
+   "text_v3": "[cackles] sell sell sell, babies!"
+  },
+  {
+   "id": "v29_down",
+   "voice": "v_gremlin",
+   "where": "Level 29: SUS JEET",
+   "text": "sold the bottom... again...",
+   "text_v3": "[whining] sold the bottom... again..."
+  },
+  {
+   "id": "v29_gloat",
+   "voice": "v_gremlin",
+   "where": "Level 29: SUS JEET",
+   "text": "sold. bought back higher. still won.",
+   "text_v3": "[cackles] sold. bought back higher. still won."
+  },
+  {
+   "id": "f29_0",
+   "voice": "chog_skull",
+   "where": "Level 29: fight (HORN CHARGE)",
+   "text": "horns down, out of town!",
+   "text_v3": "[growls] horns down, out of town!"
+  },
+  {
+   "id": "f29_1",
+   "voice": "chog_skull",
+   "where": "Level 29: fight (ROSE THORNS)",
+   "text": "roses are red, villain's in bed!",
+   "text_v3": "[growls] roses are red, villain's in bed!"
+  },
+  {
+   "id": "f29_2",
+   "voice": "chog_skull",
+   "where": "Level 29: fight (BONE RATTLE)",
+   "text": "bone zone! villain's thrown!",
+   "text_v3": "[growls] bone zone! villain's thrown!",
+   "sfx": [
+    {
+     "sfx": "bone_rattle",
+     "at": "after",
+     "vol": 0.8
+    }
+   ]
+  },
+  {
+   "id": "f29_3",
+   "voice": "chog_skull",
+   "where": "Level 29: fight (STACK ATTACK)",
+   "text": "from the plate to the moon. villain, you are DOOMED!",
+   "text_v3": "[shouting] from the plate to the moon. villain, you are DOOMED!"
+  },
+  {
+   "id": "l29_free",
+   "voice": "chog_skull",
+   "where": "Level 29: the Chog is freed",
+   "text": "the cage could not hold my bones.",
+   "text_v3": "[spooky] the cage could not hold my bones.",
+   "sfx": [
+    {
+     "sfx": "bone_rattle",
+     "at": "after",
+     "vol": 0.8
+    }
+   ]
+  },
+  {
+   "id": "l30_jar",
+   "voice": "chog_skull",
+   "where": "Level 30: the caged Chog",
+   "text": "he dumps a truckload every two drops. my skull is full of gravel.",
+   "text_v3": "[spooky] he dumps a truckload every two drops. my skull is full of gravel."
+  },
+  {
+   "id": "v30_intro",
+   "voice": "v_bro",
+   "where": "Level 30: DUMP TRUCK DALE",
+   "text": "clocked in. i dump every two drops. nothin' personal. it's my shift.",
+   "text_v3": "[chuckles] clocked in. i dump every two drops. nothin' personal. it's my shift."
+  },
+  {
+   "id": "v30_hook",
+   "voice": "v_bro",
+   "where": "Level 30: DUMP TRUCK DALE",
+   "text": "Beep beep. That's the sound of your bags.",
+   "text_v3": "[smug] Beep beep. That's the sound of your bags.",
+   "sfx": [
+    {
+     "sfx": "truck_reverse",
+     "at": "That's",
+     "insert": true,
+     "vol": 0.7
+    }
+   ]
+  },
+  {
+   "id": "v30_spit0",
+   "voice": "v_bro",
+   "where": "Level 30: DUMP TRUCK DALE",
+   "text": "crew, unload!",
+   "text_v3": "[hollering] crew, unload!"
+  },
+  {
+   "id": "v30_spit1",
+   "voice": "v_bro",
+   "where": "Level 30: DUMP TRUCK DALE",
+   "text": "comin' through!",
+   "text_v3": "[hollering] comin' through!",
+   "sfx": [
+    {
+     "sfx": "truck_reverse",
+     "at": "before",
+     "vol": 0.7
+    }
+   ]
+  },
+  {
+   "id": "v30_down",
+   "voice": "v_bro",
+   "where": "Level 30: DUMP TRUCK DALE",
+   "text": "workplace... accident...",
+   "text_v3": "[groans] workplace... accident..."
+  },
+  {
+   "id": "v30_gloat",
+   "voice": "v_bro",
+   "where": "Level 30: DUMP TRUCK DALE",
+   "text": "shift's over. tower's dumped.",
+   "text_v3": "[chuckles] shift's over. tower's dumped."
+  },
+  {
+   "id": "f30_0",
+   "voice": "chog_skull",
+   "where": "Level 30: fight (GAS FEE PUNCH)",
+   "text": "gas fee? paid by thee!",
+   "text_v3": "[growls] gas fee? paid by thee!"
+  },
+  {
+   "id": "f30_1",
+   "voice": "chog_skull",
+   "where": "Level 30: fight (ROYAL AURA)",
+   "text": "bow to the crown, villain goes down!",
+   "text_v3": "[growls] bow to the crown, villain goes down!"
+  },
+  {
+   "id": "f30_2",
+   "voice": "chog_skull",
+   "where": "Level 30: fight (CEO SLAP)",
+   "text": "you're fired!",
+   "text_v3": "[growls] you're fired!"
+  },
+  {
+   "id": "f30_3",
+   "voice": "chog_skull",
+   "where": "Level 30: fight (STACK ATTACK)",
+   "text": "from the plate to the moon. villain, you are DOOMED!",
+   "text_v3": "[shouting] from the plate to the moon. villain, you are DOOMED!"
+  },
+  {
+   "id": "l30_free",
+   "voice": "chog_skull",
+   "where": "Level 30: the Chog is freed",
+   "text": "the dead rise. and they stack.",
+   "text_v3": "[spooky] the dead rise. and they stack.",
+   "sfx": [
+    {
+     "sfx": "bone_rattle",
+     "at": "and",
+     "insert": true,
+     "vol": 0.8
+    }
+   ]
+  },
+  {
+   "id": "l31_say",
+   "voice": "bear",
+   "where": "Level 31 intro",
+   "text": "i cranked the diner gravity. sit DOWN.",
+   "text_v3": "[growls] i cranked the diner gravity. sit DOWN."
+  },
+  {
+   "id": "l31_jar",
+   "voice": "chog_skull",
+   "where": "Level 31: the caged Chog",
+   "text": "a fellow skeleton. playing air guitar. on my cage. i respect it.",
+   "text_v3": "[spooky] a fellow skeleton. playing air guitar. on my cage. i respect it.",
+   "sfx": [
+    {
+     "sfx": "guitar_riff",
+     "at": "on",
+     "insert": true,
+     "vol": 0.7
+    }
+   ]
+  },
+  {
+   "id": "v31_intro",
+   "voice": "v_menace",
+   "where": "Level 31: CHROME BONES",
+   "text": "gravity's cranked to eleven. sit DOWN. this is heavy metal.",
+   "text_v3": "[menacing] gravity's cranked to eleven. sit DOWN. this is heavy metal.",
+   "sfx": [
+    {
+     "sfx": "guitar_riff",
+     "at": "before",
+     "vol": 0.7
+    }
+   ]
+  },
+  {
+   "id": "v31_hook",
+   "voice": "v_menace",
+   "where": "Level 31: CHROME BONES",
+   "text": "Heavy bones. Heavy metal. Heavy L.",
+   "text_v3": "[growls] Heavy bones. Heavy metal. Heavy L."
+  },
+  {
+   "id": "v31_spit0",
+   "voice": "v_menace",
+   "where": "Level 31: CHROME BONES",
+   "text": "headbangers, mosh!",
+   "text_v3": "[shouting] headbangers, mosh!"
+  },
+  {
+   "id": "v31_spit1",
+   "voice": "v_menace",
+   "where": "Level 31: CHROME BONES",
+   "text": "riff go, babies!",
+   "text_v3": "[shouting] go, babies!",
+   "sfx": [
+    {
+     "sfx": "guitar_riff",
+     "at": "before",
+     "vol": 0.7
+    }
+   ]
+  },
+  {
+   "id": "v31_down",
+   "voice": "v_menace",
+   "where": "Level 31: CHROME BONES",
+   "text": "encore... cancelled...",
+   "text_v3": "[groans in pain] encore... cancelled..."
+  },
+  {
+   "id": "v31_gloat",
+   "voice": "v_menace",
+   "where": "Level 31: CHROME BONES",
+   "text": "that's what heavy sounds like.",
+   "text_v3": "[laughs darkly] that's what heavy sounds like."
+  },
+  {
+   "id": "f31_0",
+   "voice": "chog_skull",
+   "where": "Level 31: fight (ROYAL SMACK)",
+   "text": "bow to the crown, villain goes down!",
+   "text_v3": "[growls] bow to the crown, villain goes down!"
+  },
+  {
+   "id": "f31_1",
+   "voice": "chog_skull",
+   "where": "Level 31: fight (SMOKE BOMB)",
+   "text": "smoke screen, villain unseen!",
+   "text_v3": "[growls] smoke screen, villain unseen!",
+   "sfx": [
+    {
+     "sfx": "smoke_puff",
+     "at": "after",
+     "vol": 0.8
+    }
+   ]
+  },
+  {
+   "id": "f31_2",
+   "voice": "chog_skull",
+   "where": "Level 31: fight (SPIRIT BLAST)",
+   "text": "spirit blast, villain's past!",
+   "text_v3": "[growls] spirit blast, villain's past!"
+  },
+  {
+   "id": "f31_3",
+   "voice": "chog_skull",
+   "where": "Level 31: fight (STACK ATTACK)",
+   "text": "from the plate to the moon. villain, you are DOOMED!",
+   "text_v3": "[shouting] from the plate to the moon. villain, you are DOOMED!"
+  },
+  {
+   "id": "l31_free",
+   "voice": "chog_skull",
+   "where": "Level 31: the Chog is freed",
+   "text": "the cage could not hold my bones.",
+   "text_v3": "[spooky] the cage could not hold my bones.",
+   "sfx": [
+    {
+     "sfx": "bone_rattle",
+     "at": "after",
+     "vol": 0.8
+    }
+   ]
+  },
+  {
+   "id": "l32_jar",
+   "voice": "chog_skull",
+   "where": "Level 32: the caged Chog",
+   "text": "she welds my cage while humming. the sparks tickle my ribs.",
+   "text_v3": "[spooky] she welds my cage while humming. the sparks tickle my ribs.",
+   "sfx": [
+    {
+     "sfx": "welding",
+     "at": "the",
+     "insert": true,
+     "vol": 0.7
+    }
+   ]
+  },
+  {
+   "id": "v32_intro",
+   "voice": "v_bot",
+   "where": "Level 32: BUILT-DIFF BETTY",
+   "text": "assembly line online. i build towers. then i tip them. built different.",
+   "text_v3": "[robotic] assembly line online. i build towers. then i tip them. built different."
+  },
+  {
+   "id": "v32_hook",
+   "voice": "v_bot",
+   "where": "Level 32: BUILT-DIFF BETTY",
+   "text": "Built different. Breaks you.",
+   "text_v3": "[robotic] Built different. Breaks you."
+  },
+  {
+   "id": "v32_spit0",
+   "voice": "v_bot",
+   "where": "Level 32: BUILT-DIFF BETTY",
+   "text": "rivets, roll out!",
+   "text_v3": "[robotic] rivets, roll out!"
+  },
+  {
+   "id": "v32_spit1",
+   "voice": "v_bot",
+   "where": "Level 32: BUILT-DIFF BETTY",
+   "text": "conveyor babies, go!",
+   "text_v3": "[robotic] conveyor babies, go!"
+  },
+  {
+   "id": "v32_down",
+   "voice": "v_bot",
+   "where": "Level 32: BUILT-DIFF BETTY",
+   "text": "malfunction... reassembling... later...",
+   "text_v3": "[glitching] malfunction... reassembling... later..."
+  },
+  {
+   "id": "v32_gloat",
+   "voice": "v_bot",
+   "where": "Level 32: BUILT-DIFF BETTY",
+   "text": "quality control: you failed.",
+   "text_v3": "[robotic laugh] quality control: you failed."
+  },
+  {
+   "id": "f32_0",
+   "voice": "chog_skull",
+   "where": "Level 32: fight (MAFIA SLAP)",
+   "text": "mafia slap, take a nap!",
+   "text_v3": "[growls] mafia slap, take a nap!"
+  },
+  {
+   "id": "f32_1",
+   "voice": "chog_skull",
+   "where": "Level 32: fight (ROYAL AURA)",
+   "text": "bow to the crown, villain goes down!",
+   "text_v3": "[growls] bow to the crown, villain goes down!"
+  },
+  {
+   "id": "f32_2",
+   "voice": "chog_skull",
+   "where": "Level 32: fight (BONE RATTLE)",
+   "text": "bone zone! villain's thrown!",
+   "text_v3": "[growls] bone zone! villain's thrown!",
+   "sfx": [
+    {
+     "sfx": "bone_rattle",
+     "at": "after",
+     "vol": 0.8
+    }
+   ]
+  },
+  {
+   "id": "f32_3",
+   "voice": "chog_skull",
+   "where": "Level 32: fight (STACK ATTACK)",
+   "text": "from the plate to the moon. villain, you are DOOMED!",
+   "text_v3": "[shouting] from the plate to the moon. villain, you are DOOMED!"
+  },
+  {
+   "id": "l32_free",
+   "voice": "chog_skull",
+   "where": "Level 32: the Chog is freed",
+   "text": "the dead rise. and they stack.",
+   "text_v3": "[spooky] the dead rise. and they stack.",
+   "sfx": [
+    {
+     "sfx": "bone_rattle",
+     "at": "and",
+     "insert": true,
+     "vol": 0.8
+    }
+   ]
+  },
+  {
+   "id": "l33_jar",
+   "voice": "chog_skull",
+   "where": "Level 33: the caged Chog",
+   "text": "he's never sold anything. including me. please... someone... list me.",
+   "text_v3": "[pleading] he's never sold anything. including me. please... someone... list me."
+  },
+  {
+   "id": "v33_intro",
+   "voice": "v_regal",
+   "where": "Level 33: KING DARIUS",
+   "text": "i am a one of one. i do not sell. i do not fold. survive my sell-offs, if you can.",
+   "text_v3": "[proudly] i am a one of one. i do not sell. i do not fold. survive my sell-offs, if you can."
+  },
+  {
+   "id": "v33_hook",
+   "voice": "v_regal",
+   "where": "Level 33: KING DARIUS",
+   "text": "One of one. Never sold. Never folding.",
+   "text_v3": "[grandly] One of one. Never sold. Never folding."
+  },
+  {
+   "id": "v33_spit0",
+   "voice": "v_regal",
+   "where": "Level 33: KING DARIUS",
+   "text": "heirs, go forth!",
+   "text_v3": "[commanding] heirs, go forth!"
+  },
+  {
+   "id": "v33_spit1",
+   "voice": "v_regal",
+   "where": "Level 33: KING DARIUS",
+   "text": "royal guard, sparkle!",
+   "text_v3": "[commanding] royal guard, sparkle!"
+  },
+  {
+   "id": "v33_down",
+   "voice": "v_regal",
+   "where": "Level 33: KING DARIUS",
+   "text": "a king... felled by a CHOG?",
+   "text_v3": "[gasps] a king... felled by a CHOG?"
+  },
+  {
+   "id": "v33_gloat",
+   "voice": "v_regal",
+   "where": "Level 33: KING DARIUS",
+   "text": "kneel. diamond hands only.",
+   "text_v3": "[laughs smugly] kneel. diamond hands only."
+  },
+  {
+   "id": "f33_0",
+   "voice": "chog_skull",
+   "where": "Level 33: fight (HORN CHARGE)",
+   "text": "horns down, out of town!",
+   "text_v3": "[growls] horns down, out of town!"
+  },
+  {
+   "id": "f33_1",
+   "voice": "chog_skull",
+   "where": "Level 33: fight (SMOKE BOMB)",
+   "text": "smoke screen, villain unseen!",
+   "text_v3": "[growls] smoke screen, villain unseen!",
+   "sfx": [
+    {
+     "sfx": "smoke_puff",
+     "at": "after",
+     "vol": 0.8
+    }
+   ]
+  },
+  {
+   "id": "f33_2",
+   "voice": "chog_skull",
+   "where": "Level 33: fight (BONE RATTLE)",
+   "text": "bone zone! villain's thrown!",
+   "text_v3": "[growls] bone zone! villain's thrown!",
+   "sfx": [
+    {
+     "sfx": "bone_rattle",
+     "at": "after",
+     "vol": 0.8
+    }
+   ]
+  },
+  {
+   "id": "f33_3",
+   "voice": "chog_skull",
+   "where": "Level 33: fight (STACK ATTACK)",
+   "text": "from the plate to the moon. villain, you are DOOMED!",
+   "text_v3": "[shouting] from the plate to the moon. villain, you are DOOMED!"
+  },
+  {
+   "id": "l33_free",
+   "voice": "chog_skull",
+   "where": "Level 33: the Chog is freed",
+   "text": "the cage could not hold my bones.",
+   "text_v3": "[spooky] the cage could not hold my bones.",
+   "sfx": [
+    {
+     "sfx": "bone_rattle",
+     "at": "after",
+     "vol": 0.8
+    }
+   ]
+  },
+  {
+   "id": "l34_say",
+   "voice": "bear",
+   "where": "Level 34 intro",
+   "text": "commons? in MY diner? no.",
+   "text_v3": "[disgusted] commons? in MY diner? no."
+  },
+  {
+   "id": "l34_jar",
+   "voice": "chog_skull",
+   "where": "Level 34: the caged Chog",
+   "text": "she made me wear a corsage. on my ribcage. i'm a hostage with a corsage.",
+   "text_v3": "[spooky] she made me wear a corsage. on my ribcage. i'm a hostage with a corsage."
+  },
+  {
+   "id": "v34_intro",
+   "voice": "v_diva",
+   "where": "Level 34: SLAY QUEEN BETTY",
+   "text": "welcome to my prom. VIP only. commons? ew. wait outside, sweetie.",
+   "text_v3": "[sassy] welcome to my prom. VIP only. commons? ew. wait outside, sweetie."
+  },
+  {
+   "id": "v34_hook",
+   "voice": "v_diva",
+   "where": "Level 34: SLAY QUEEN BETTY",
+   "text": "Not on the list? Not in the tower.",
+   "text_v3": "[sassy] Not on the list? Not in the tower."
+  },
+  {
+   "id": "v34_spit0",
+   "voice": "v_diva",
+   "where": "Level 34: SLAY QUEEN BETTY",
+   "text": "my court! go slay!",
+   "text_v3": "[bossy] my court! go slay!"
+  },
+  {
+   "id": "v34_spit1",
+   "voice": "v_diva",
+   "where": "Level 34: SLAY QUEEN BETTY",
+   "text": "kiss kiss, babies.",
+   "text_v3": "[bossy] kiss kiss, babies."
+  },
+  {
+   "id": "v34_down",
+   "voice": "v_diva",
+   "where": "Level 34: SLAY QUEEN BETTY",
+   "text": "my crown... my night... ruined...",
+   "text_v3": "[gasps] my crown... my night... ruined..."
+  },
+  {
+   "id": "v34_gloat",
+   "voice": "v_diva",
+   "where": "Level 34: SLAY QUEEN BETTY",
+   "text": "she ate. you didn't.",
+   "text_v3": "[laughs mockingly] she ate. you didn't."
+  },
+  {
+   "id": "f34_0",
+   "voice": "chog_skull",
+   "where": "Level 34: fight (CAP SLAP)",
+   "text": "cap on tight, villain, goodnight!",
+   "text_v3": "[growls] cap on tight, villain, goodnight!"
+  },
+  {
+   "id": "f34_1",
+   "voice": "chog_skull",
+   "where": "Level 34: fight (FLAME AURA)",
+   "text": "feel the heat, admit defeat!",
+   "text_v3": "[growls] feel the heat, admit defeat!",
+   "sfx": [
+    {
+     "sfx": "fire_breath",
+     "at": "after",
+     "vol": 0.8
+    }
+   ]
+  },
+  {
+   "id": "f34_2",
+   "voice": "chog_skull",
+   "where": "Level 34: fight (WIZARD BLAST)",
+   "text": "hocus pocus, lose your focus!",
+   "text_v3": "[growls] hocus pocus, lose your focus!"
+  },
+  {
+   "id": "f34_3",
+   "voice": "chog_skull",
+   "where": "Level 34: fight (STACK ATTACK)",
+   "text": "from the plate to the moon. villain, you are DOOMED!",
+   "text_v3": "[shouting] from the plate to the moon. villain, you are DOOMED!"
+  },
+  {
+   "id": "l34_free",
+   "voice": "chog_skull",
+   "where": "Level 34: the Chog is freed",
+   "text": "the dead rise. and they stack.",
+   "text_v3": "[spooky] the dead rise. and they stack.",
+   "sfx": [
+    {
+     "sfx": "bone_rattle",
+     "at": "and",
+     "insert": true,
+     "vol": 0.8
+    }
+   ]
+  },
+  {
+   "id": "l35_say",
+   "voice": "bear",
+   "where": "Level 35 intro",
+   "text": "the diner freezer broke. everything is ice. and my goons are selling.",
+   "text_v3": "[laughs] the diner freezer broke. everything is ice. and my goons are selling."
+  },
+  {
+   "id": "l35_jar",
+   "voice": "chog_skull",
+   "where": "Level 35: the caged Chog",
+   "text": "he narrates everything. 'the skull sighed.' i didn't sigh. i have no lungs.",
+   "text_v3": "[spooky] he narrates everything. 'the skull sighed.' i didn't sigh. i have no lungs."
+  },
+  {
+   "id": "v35_intro",
+   "voice": "v_menace",
+   "where": "Level 35: DETECTIVE 4K",
+   "text": "rain on the diner window. a frozen floor. a chog in a cage. and you... a suspect.",
+   "text_v3": "[menacing] rain on the diner window. a frozen floor. a chog in a cage. and you... a suspect."
+  },
+  {
+   "id": "v35_hook",
+   "voice": "v_menace",
+   "where": "Level 35: DETECTIVE 4K",
+   "text": "Case closed. You're caught in four K.",
+   "text_v3": "[growls] Case closed. You're caught in four K."
+  },
+  {
+   "id": "v35_spit0",
+   "voice": "v_menace",
+   "where": "Level 35: DETECTIVE 4K",
+   "text": "informants, tail them.",
+   "text_v3": "[shouting] informants, tail them."
+  },
+  {
+   "id": "v35_spit1",
+   "voice": "v_menace",
+   "where": "Level 35: DETECTIVE 4K",
+   "text": "exhales go, babies.",
+   "text_v3": "[exhales] go, babies."
+  },
+  {
+   "id": "v35_down",
+   "voice": "v_menace",
+   "where": "Level 35: DETECTIVE 4K",
+   "text": "my deductions... were wrong...",
+   "text_v3": "[groans in pain] my deductions... were wrong..."
+  },
+  {
+   "id": "v35_gloat",
+   "voice": "v_menace",
+   "where": "Level 35: DETECTIVE 4K",
+   "text": "elementary. you fell.",
+   "text_v3": "[laughs darkly] elementary. you fell."
+  },
+  {
+   "id": "f35_0",
+   "voice": "chog_skull",
+   "where": "Level 35: fight (ANGRY STARE)",
+   "text": "angry eyes, villain cries!",
+   "text_v3": "[growls] angry eyes, villain cries!"
+  },
+  {
+   "id": "f35_1",
+   "voice": "chog_skull",
+   "where": "Level 35: fight (NINJA CHOP)",
+   "text": "ninja chop, villain drop!",
+   "text_v3": "[growls] ninja chop, villain drop!"
+  },
+  {
+   "id": "f35_2",
+   "voice": "chog_skull",
+   "where": "Level 35: fight (ROSE THORNS)",
+   "text": "roses are red, villain's in bed!",
+   "text_v3": "[growls] roses are red, villain's in bed!"
+  },
+  {
+   "id": "f35_3",
+   "voice": "chog_skull",
+   "where": "Level 35: fight (STACK ATTACK)",
+   "text": "from the plate to the moon. villain, you are DOOMED!",
+   "text_v3": "[shouting] from the plate to the moon. villain, you are DOOMED!"
+  },
+  {
+   "id": "l35_free",
+   "voice": "chog_skull",
+   "where": "Level 35: the Chog is freed",
+   "text": "the cage could not hold my bones.",
+   "text_v3": "[spooky] the cage could not hold my bones.",
+   "sfx": [
+    {
+     "sfx": "bone_rattle",
+     "at": "after",
+     "vol": 0.8
+    }
+   ]
+  },
+  {
+   "id": "l36_jar",
+   "voice": "chog_skull",
+   "where": "Level 36: the caged Chog",
+   "text": "he stole the rug, the plate and my femur. then he winked.",
+   "text_v3": "[spooky] he stole the rug, the plate and my femur. then he winked."
+  },
+  {
+   "id": "v36_intro",
+   "voice": "v_bro",
+   "where": "Level 36: SLIMEBEARD",
+   "text": "arr! a pirate, a ninja AND a slime. every third drop, i yank the rug. arr!",
+   "text_v3": "[chuckles] arr! a pirate, a ninja AND a slime. every third drop, i yank the rug. arr!"
+  },
+  {
+   "id": "v36_hook",
+   "voice": "v_bro",
+   "where": "Level 36: SLIMEBEARD",
+   "text": "Yo ho, yo ho, the rug's gotta go!",
+   "text_v3": "[smug] Yo ho, yo ho, the rug's gotta go!"
+  },
+  {
+   "id": "v36_spit0",
+   "voice": "v_bro",
+   "where": "Level 36: SLIMEBEARD",
+   "text": "swabbies, plunder!",
+   "text_v3": "[hollering] swabbies, plunder!"
+  },
+  {
+   "id": "v36_spit1",
+   "voice": "v_bro",
+   "where": "Level 36: SLIMEBEARD",
+   "text": "arr, little slimes!",
+   "text_v3": "[hollering] arr, little slimes!"
+  },
+  {
+   "id": "v36_down",
+   "voice": "v_bro",
+   "where": "Level 36: SLIMEBEARD",
+   "text": "abandon... ship...",
+   "text_v3": "[groans] abandon... ship..."
+  },
+  {
+   "id": "v36_gloat",
+   "voice": "v_bro",
+   "where": "Level 36: SLIMEBEARD",
+   "text": "yo ho! rugged ya!",
+   "text_v3": "[chuckles] yo ho! rugged ya!"
+  },
+  {
+   "id": "f36_0",
+   "voice": "chog_skull",
+   "where": "Level 36: fight (LASER GLARE)",
+   "text": "laser eyes, villain fries!",
+   "text_v3": "[growls] laser eyes, villain fries!",
+   "sfx": [
+    {
+     "sfx": "laser_pew",
+     "at": "after",
+     "vol": 0.8
+    }
+   ]
+  },
+  {
+   "id": "f36_1",
+   "voice": "chog_skull",
+   "where": "Level 36: fight (BANANA BONK)",
+   "text": "banana bonk! villain, honk!",
+   "text_v3": "[growls] banana bonk! villain, honk!",
+   "sfx": [
+    {
+     "sfx": "clown_honk",
+     "at": "after",
+     "vol": 0.8
+    }
+   ]
+  },
+  {
+   "id": "f36_2",
+   "voice": "chog_skull",
+   "where": "Level 36: fight (FLAME AURA)",
+   "text": "feel the heat, admit defeat!",
+   "text_v3": "[growls] feel the heat, admit defeat!",
+   "sfx": [
+    {
+     "sfx": "fire_breath",
+     "at": "after",
+     "vol": 0.8
+    }
+   ]
+  },
+  {
+   "id": "f36_3",
+   "voice": "chog_skull",
+   "where": "Level 36: fight (STACK ATTACK)",
+   "text": "from the plate to the moon. villain, you are DOOMED!",
+   "text_v3": "[shouting] from the plate to the moon. villain, you are DOOMED!"
+  },
+  {
+   "id": "l36_free",
+   "voice": "chog_skull",
+   "where": "Level 36: the Chog is freed",
+   "text": "the dead rise. and they stack.",
+   "text_v3": "[spooky] the dead rise. and they stack.",
+   "sfx": [
+    {
+     "sfx": "bone_rattle",
+     "at": "and",
+     "insert": true,
+     "vol": 0.8
+    }
+   ]
+  },
+  {
+   "id": "l37_jar",
+   "voice": "chog_toxic",
+   "where": "Level 37: the caged Chog",
+   "text": "the music goes HARD in here. my atoms are dancing. still kidnapped though!",
+   "text_v3": "[hyper] the music goes HARD in here. my atoms are dancing. still kidnapped though!",
+   "sfx": [
+    {
+     "sfx": "club_beat",
+     "at": "under",
+     "vol": 0.4
+    }
+   ]
+  },
+  {
+   "id": "v37_intro",
+   "voice": "v_bro",
+   "where": "Level 37: DISCO KOI",
+   "text": "welcome to Studio five-thirteen. the carpet's shag, there's a koi on my head, and the rug... pulls.",
+   "text_v3": "[chuckles] welcome to Studio five-thirteen. the carpet's shag, there's a koi on my head, and the rug... pulls."
+  },
+  {
+   "id": "v37_hook",
+   "voice": "v_bro",
+   "where": "Level 37: DISCO KOI",
+   "text": "Disco never died. Your tower will.",
+   "text_v3": "[smug] Disco never died. Your tower will."
+  },
+  {
+   "id": "v37_spit0",
+   "voice": "v_bro",
+   "where": "Level 37: DISCO KOI",
+   "text": "koi kids, boogie!",
+   "text_v3": "[hollering] koi kids, boogie!"
+  },
+  {
+   "id": "v37_spit1",
+   "voice": "v_bro",
+   "where": "Level 37: DISCO KOI",
+   "text": "strut, babies!",
+   "text_v3": "[hollering] strut, babies!"
+  },
+  {
+   "id": "v37_down",
+   "voice": "v_bro",
+   "where": "Level 37: DISCO KOI",
+   "text": "the music... stopped...",
+   "text_v3": "[groans] the music... stopped...",
+   "sfx": [
+    {
+     "sfx": "record_scratch",
+     "at": "before"
+    }
+   ]
+  },
+  {
+   "id": "v37_gloat",
+   "voice": "v_bro",
+   "where": "Level 37: DISCO KOI",
+   "text": "groovy. you fell on beat.",
+   "text_v3": "[chuckles] groovy. you fell on beat."
+  },
+  {
+   "id": "f37_0",
+   "voice": "chog_toxic",
+   "where": "Level 37: fight (NINJA CHOP)",
+   "text": "ninja chop, villain drop!",
+   "text_v3": "[hyper] ninja chop, villain drop!"
+  },
+  {
+   "id": "f37_1",
+   "voice": "chog_toxic",
+   "where": "Level 37: fight (TORNADO SPIN)",
+   "text": "gust of air, villain? where?",
+   "text_v3": "[hyper] gust of air, villain? where?",
+   "sfx": [
+    {
+     "sfx": "wind_blow",
+     "at": "after",
+     "vol": 0.8
+    }
+   ]
+  },
+  {
+   "id": "f37_2",
+   "voice": "chog_toxic",
+   "where": "Level 37: fight (SLAM DUNK)",
+   "text": "slam dunk, villain's sunk!",
+   "text_v3": "[hyper] slam dunk, villain's sunk!"
+  },
+  {
+   "id": "f37_3",
+   "voice": "chog_toxic",
+   "where": "Level 37: fight (STACK ATTACK)",
+   "text": "from the plate to the moon. villain, you are DOOMED!",
+   "text_v3": "[shouting] from the plate to the moon. villain, you are DOOMED!"
+  },
+  {
+   "id": "l37_free",
+   "voice": "chog_toxic",
+   "where": "Level 37: the Chog is freed",
+   "text": "free! free! my atoms are vibrating!",
+   "text_v3": "[hyper] free! free! my atoms are vibrating!"
+  },
+  {
+   "id": "l38_jar",
+   "voice": "chog_toxic",
+   "where": "Level 38: the caged Chog",
+   "text": "he plays one sad song on loop. i'm glowing... sadly.",
+   "text_v3": "[hyper] he plays one sad song on loop. i'm glowing... sadly.",
+   "sfx": [
+    {
+     "sfx": "sad_violin",
+     "at": "under",
+     "vol": 0.4
+    }
+   ]
+  },
+  {
+   "id": "v38_intro",
+   "voice": "v_creep",
+   "where": "Level 38: MOODSWING",
+   "text": "it's not a phase. the plate leans because the world is tilted. like my heart.",
+   "text_v3": "[whispers] it's not a phase. the plate leans because the world is tilted. like my heart."
+  },
+  {
+   "id": "v38_hook",
+   "voice": "v_creep",
+   "where": "Level 38: MOODSWING",
+   "text": "My mood swings. So does your plate.",
+   "text_v3": "[whispers] My mood swings. So does your plate."
+  },
+  {
+   "id": "v38_spit0",
+   "voice": "v_creep",
+   "where": "Level 38: MOODSWING",
+   "text": "sad babies, go cry somewhere.",
+   "text_v3": "[whispers] sad babies, go cry somewhere."
+  },
+  {
+   "id": "v38_spit1",
+   "voice": "v_creep",
+   "where": "Level 38: MOODSWING",
+   "text": "sigh spit.",
+   "text_v3": "[sighs] spit."
+  },
+  {
+   "id": "v38_down",
+   "voice": "v_creep",
+   "where": "Level 38: MOODSWING",
+   "text": "finally... something real...",
+   "text_v3": "[sighs] finally... something real..."
+  },
+  {
+   "id": "v38_gloat",
+   "voice": "v_creep",
+   "where": "Level 38: MOODSWING",
+   "text": "you fell. same.",
+   "text_v3": "[creepy laugh] you fell. same."
+  },
+  {
+   "id": "f38_0",
+   "voice": "chog_toxic",
+   "where": "Level 38: fight (SMOKE BOMB)",
+   "text": "smoke screen, villain unseen!",
+   "text_v3": "[hyper] smoke screen, villain unseen!",
+   "sfx": [
+    {
+     "sfx": "smoke_puff",
+     "at": "after",
+     "vol": 0.8
+    }
+   ]
+  },
+  {
+   "id": "f38_1",
+   "voice": "chog_toxic",
+   "where": "Level 38: fight (GOO NUKE)",
+   "text": "goo nuke! villain, puke!",
+   "text_v3": "[hyper] goo nuke! villain, puke!",
+   "sfx": [
+    {
+     "sfx": "cartoon_boom",
+     "at": "after",
+     "vol": 0.8
+    }
+   ]
+  },
+  {
+   "id": "f38_2",
+   "voice": "chog_toxic",
+   "where": "Level 38: fight (GOO ON YOU)",
+   "text": "goo on you, now you're glued!",
+   "text_v3": "[hyper] goo on you, now you're glued!",
+   "sfx": [
+    {
+     "sfx": "goo_gurgle",
+     "at": "after",
+     "vol": 0.8
+    }
+   ]
+  },
+  {
+   "id": "f38_3",
+   "voice": "chog_toxic",
+   "where": "Level 38: fight (STACK ATTACK)",
+   "text": "from the plate to the moon. villain, you are DOOMED!",
+   "text_v3": "[shouting] from the plate to the moon. villain, you are DOOMED!"
+  },
+  {
+   "id": "l38_free",
+   "voice": "chog_toxic",
+   "where": "Level 38: the Chog is freed",
+   "text": "the goo is with you now.",
+   "text_v3": "[hyper] the goo is with you now."
+  },
+  {
+   "id": "l39_jar",
+   "voice": "chog_toxic",
+   "where": "Level 39: the caged Chog",
+   "text": "she keeps exploding! then UN-exploding! my atoms can't keep up!",
+   "text_v3": "[hyper] she keeps exploding! then UN-exploding! my atoms can't keep up!",
+   "sfx": [
+    {
+     "sfx": "cartoon_boom",
+     "at": "then",
+     "insert": true,
+     "vol": 0.7
+    }
+   ]
+  },
+  {
+   "id": "v39_intro",
+   "voice": "v_gremlin",
+   "where": "Level 39: NOVAH",
+   "text": "i'm a supernova. i pump so bright you'll go blind. then i dump. hehe.",
+   "text_v3": "[giggles] i'm a supernova. i pump so bright you'll go blind. then i dump. [giggles]"
+  },
+  {
+   "id": "v39_hook",
+   "voice": "v_gremlin",
+   "where": "Level 39: NOVAH",
+   "text": "I pump. I dump. I go boom.",
+   "text_v3": "[mischievously] I pump. I dump. I go boom.",
+   "sfx": [
+    {
+     "sfx": "cartoon_boom",
+     "at": "boom"
+    }
+   ]
+  },
+  {
+   "id": "v39_spit0",
+   "voice": "v_gremlin",
+   "where": "Level 39: NOVAH",
+   "text": "stardust, scatter!",
+   "text_v3": "[cackles] stardust, scatter!"
+  },
+  {
+   "id": "v39_spit1",
+   "voice": "v_gremlin",
+   "where": "Level 39: NOVAH",
+   "text": "boom babies!",
+   "text_v3": "[cackles] boom! babies!",
+   "sfx": [
+    {
+     "sfx": "cartoon_boom",
+     "at": "boom"
+    }
+   ]
+  },
+  {
+   "id": "v39_down",
+   "voice": "v_gremlin",
+   "where": "Level 39: NOVAH",
+   "text": "collapsing... into a black hole...",
+   "text_v3": "[whining] collapsing... into a black hole..."
+  },
+  {
+   "id": "v39_gloat",
+   "voice": "v_gremlin",
+   "where": "Level 39: NOVAH",
+   "text": "boom. you're stardust now.",
+   "text_v3": "[cackles] boom. you're stardust now.",
+   "sfx": [
+    {
+     "sfx": "cartoon_boom",
+     "at": "boom"
+    }
+   ]
+  },
+  {
+   "id": "f39_0",
+   "voice": "chog_toxic",
+   "where": "Level 39: fight (HORN CHARGE)",
+   "text": "horns down, out of town!",
+   "text_v3": "[hyper] horns down, out of town!"
+  },
+  {
+   "id": "f39_1",
+   "voice": "chog_toxic",
+   "where": "Level 39: fight (FLAME AURA)",
+   "text": "feel the heat, admit defeat!",
+   "text_v3": "[hyper] feel the heat, admit defeat!",
+   "sfx": [
+    {
+     "sfx": "fire_breath",
+     "at": "after",
+     "vol": 0.8
+    }
+   ]
+  },
+  {
+   "id": "f39_2",
+   "voice": "chog_toxic",
+   "where": "Level 39: fight (SPIRIT BLAST)",
+   "text": "spirit blast, villain's past!",
+   "text_v3": "[hyper] spirit blast, villain's past!"
+  },
+  {
+   "id": "f39_3",
+   "voice": "chog_toxic",
+   "where": "Level 39: fight (STACK ATTACK)",
+   "text": "from the plate to the moon. villain, you are DOOMED!",
+   "text_v3": "[shouting] from the plate to the moon. villain, you are DOOMED!"
+  },
+  {
+   "id": "l39_free",
+   "voice": "chog_toxic",
+   "where": "Level 39: the Chog is freed",
+   "text": "i stick to everything. including this squad.",
+   "text_v3": "[hyper] i stick to everything. including this squad."
+  },
+  {
+   "id": "l40_say",
+   "voice": "bear",
+   "where": "Level 40 intro",
+   "text": "only the scary ones tonight.",
+   "text_v3": "[ominously] only the scary ones tonight."
+  },
+  {
+   "id": "l40_jar",
+   "voice": "chog_toxic",
+   "where": "Level 40: the caged Chog",
+   "text": "he vapes blueberry in a purple hat. honestly? glowing review.",
+   "text_v3": "[hyper] he vapes blueberry in a purple hat. honestly? glowing review.",
+   "sfx": [
+    {
+     "sfx": "smoke_puff",
+     "at": "honestly",
+     "insert": true
+    }
+   ]
+  },
+  {
+   "id": "v40_intro",
+   "voice": "v_creep",
+   "where": "Level 40: DIOR BONES",
+   "text": "puff skulls only tonight. no bones, no drip, no entry.",
+   "text_v3": "[exhales] skulls only tonight. no bones, no drip, no entry.",
+   "sfx": [
+    {
+     "sfx": "smoke_puff",
+     "at": "before",
+     "vol": 0.7
+    }
+   ]
+  },
+  {
+   "id": "v40_hook",
+   "voice": "v_creep",
+   "where": "Level 40: DIOR BONES",
+   "text": "Skulls only. Drip mandatory.",
+   "text_v3": "[whispers] Skulls only. Drip mandatory."
+  },
+  {
+   "id": "v40_spit0",
+   "voice": "v_creep",
+   "where": "Level 40: DIOR BONES",
+   "text": "skelings, puff puff!",
+   "text_v3": "[whispers] skelings, puff puff!",
+   "sfx": [
+    {
+     "sfx": "smoke_puff",
+     "at": "puff"
+    }
+   ]
+  },
+  {
+   "id": "v40_spit1",
+   "voice": "v_creep",
+   "where": "Level 40: DIOR BONES",
+   "text": "dior babies, go!",
+   "text_v3": "[whispers] dior babies, go!"
+  },
+  {
+   "id": "v40_down",
+   "voice": "v_creep",
+   "where": "Level 40: DIOR BONES",
+   "text": "my... drip... cough",
+   "text_v3": "[wails] my... drip... [coughs]"
+  },
+  {
+   "id": "v40_gloat",
+   "voice": "v_creep",
+   "where": "Level 40: DIOR BONES",
+   "text": "dripped on you.",
+   "text_v3": "[creepy laugh] dripped on you."
+  },
+  {
+   "id": "f40_0",
+   "voice": "chog_toxic",
+   "where": "Level 40: fight (HORN CHARGE)",
+   "text": "horns down, out of town!",
+   "text_v3": "[hyper] horns down, out of town!"
+  },
+  {
+   "id": "f40_1",
+   "voice": "chog_toxic",
+   "where": "Level 40: fight (BRAIN FREEZE)",
+   "text": "freeze! say please!",
+   "text_v3": "[hyper] freeze! say please!"
+  },
+  {
+   "id": "f40_2",
+   "voice": "chog_toxic",
+   "where": "Level 40: fight (GOO NUKE)",
+   "text": "goo nuke! villain, puke!",
+   "text_v3": "[hyper] goo nuke! villain, puke!",
+   "sfx": [
+    {
+     "sfx": "cartoon_boom",
+     "at": "after",
+     "vol": 0.8
+    }
+   ]
+  },
+  {
+   "id": "f40_3",
+   "voice": "chog_toxic",
+   "where": "Level 40: fight (STACK ATTACK)",
+   "text": "from the plate to the moon. villain, you are DOOMED!",
+   "text_v3": "[shouting] from the plate to the moon. villain, you are DOOMED!"
+  },
+  {
+   "id": "l40_free",
+   "voice": "chog_toxic",
+   "where": "Level 40: the Chog is freed",
+   "text": "i'm GLOWING with gratitude. literally glowing.",
+   "text_v3": "[hyper] i'm GLOWING with gratitude. literally glowing."
+  },
+  {
+   "id": "l41_jar",
+   "voice": "chog_toxic",
+   "where": "Level 41: the caged Chog",
+   "text": "she flies me around on a carpet. no snacks. no wifi. just vibes and wind.",
+   "text_v3": "[hyper] she flies me around on a carpet. no snacks. no wifi. just vibes and wind."
+  },
+  {
+   "id": "v41_intro",
+   "voice": "v_creep",
+   "where": "Level 41: ENOLA",
+   "text": "my name is 'alone' backwards. i fly alone. and soon your tower falls... alone.",
+   "text_v3": "[whispers] my name is 'alone' backwards. i fly alone. and soon your tower falls... alone."
+  },
+  {
+   "id": "v41_hook",
+   "voice": "v_creep",
+   "where": "Level 41: ENOLA",
+   "text": "Enola is 'alone' backwards. So's your tower.",
+   "text_v3": "[whispers] Enola is 'alone' backwards. So's your tower."
+  },
+  {
+   "id": "v41_spit0",
+   "voice": "v_creep",
+   "where": "Level 41: ENOLA",
+   "text": "rug rats, fly!",
+   "text_v3": "[whispers] rug rats, fly!"
+  },
+  {
+   "id": "v41_spit1",
+   "voice": "v_creep",
+   "where": "Level 41: ENOLA",
+   "text": "solo mission, babies.",
+   "text_v3": "[whispers] solo mission, babies."
+  },
+  {
+   "id": "v41_down",
+   "voice": "v_creep",
+   "where": "Level 41: ENOLA",
+   "text": "at least... i fell... alone...",
+   "text_v3": "[sighs] at least... i fell... alone..."
+  },
+  {
+   "id": "v41_gloat",
+   "voice": "v_creep",
+   "where": "Level 41: ENOLA",
+   "text": "alone again. as planned.",
+   "text_v3": "[creepy laugh] alone again. as planned."
+  },
+  {
+   "id": "f41_0",
+   "voice": "chog_toxic",
+   "where": "Level 41: fight (HORN CHARGE)",
+   "text": "horns down, out of town!",
+   "text_v3": "[hyper] horns down, out of town!"
+  },
+  {
+   "id": "f41_1",
+   "voice": "chog_toxic",
+   "where": "Level 41: fight (FLAME AURA)",
+   "text": "feel the heat, admit defeat!",
+   "text_v3": "[hyper] feel the heat, admit defeat!",
+   "sfx": [
+    {
+     "sfx": "fire_breath",
+     "at": "after",
+     "vol": 0.8
+    }
+   ]
+  },
+  {
+   "id": "f41_2",
+   "voice": "chog_toxic",
+   "where": "Level 41: fight (GOO NUKE)",
+   "text": "goo nuke! villain, puke!",
+   "text_v3": "[hyper] goo nuke! villain, puke!",
+   "sfx": [
+    {
+     "sfx": "cartoon_boom",
+     "at": "after",
+     "vol": 0.8
+    }
+   ]
+  },
+  {
+   "id": "f41_3",
+   "voice": "chog_toxic",
+   "where": "Level 41: fight (STACK ATTACK)",
+   "text": "from the plate to the moon. villain, you are DOOMED!",
+   "text_v3": "[shouting] from the plate to the moon. villain, you are DOOMED!"
+  },
+  {
+   "id": "l41_free",
+   "voice": "chog_toxic",
+   "where": "Level 41: the Chog is freed",
+   "text": "i'm free and i'm sticky. let's stack.",
+   "text_v3": "[hyper] i'm free and i'm sticky. let's stack."
+  },
+  {
+   "id": "l42_say",
+   "voice": "bear",
+   "where": "Level 42 intro",
+   "text": "Rugzilla. ALL the rugs.",
+   "text_v3": "[shouting] Rugzilla! ALL the rugs!"
+  },
+  {
+   "id": "l42_jar",
+   "voice": "chog_toxic",
+   "where": "Level 42: the caged Chog",
+   "text": "one eye. one toothpick. zero chill. i'll glow at him harder.",
+   "text_v3": "[hyper] one eye. one toothpick. zero chill. i'll glow at him harder."
+  },
+  {
+   "id": "v42_intro",
+   "voice": "v_menace",
+   "where": "Level 42: TOOTHPICK ONI",
+   "text": "Rugzilla sent me. every second drop, my blade pulls the rug. bow down.",
+   "text_v3": "[menacing] Rugzilla sent me. every second drop, my blade pulls the rug. bow down."
+  },
+  {
+   "id": "v42_hook",
+   "voice": "v_menace",
+   "where": "Level 42: TOOTHPICK ONI",
+   "text": "Bow down, or get swept.",
+   "text_v3": "[growls] Bow down, or get swept."
+  },
+  {
+   "id": "v42_spit0",
+   "voice": "v_menace",
+   "where": "Level 42: TOOTHPICK ONI",
+   "text": "onilings, strike!",
+   "text_v3": "[shouting] onilings, strike!"
+  },
+  {
+   "id": "v42_spit1",
+   "voice": "v_menace",
+   "where": "Level 42: TOOTHPICK ONI",
+   "text": "clack go, babies.",
+   "text_v3": "[shouting] go, babies."
+  },
+  {
+   "id": "v42_down",
+   "voice": "v_menace",
+   "where": "Level 42: TOOTHPICK ONI",
+   "text": "my toothpick... snap",
+   "text_v3": "[groans in pain] my toothpick..."
+  },
+  {
+   "id": "v42_gloat",
+   "voice": "v_menace",
+   "where": "Level 42: TOOTHPICK ONI",
+   "text": "swept. like the floor.",
+   "text_v3": "[laughs darkly] swept. like the floor."
+  },
+  {
+   "id": "f42_0",
+   "voice": "chog_toxic",
+   "where": "Level 42: fight (HORN CHARGE)",
+   "text": "horns down, out of town!",
+   "text_v3": "[hyper] horns down, out of town!"
+  },
+  {
+   "id": "f42_1",
+   "voice": "chog_toxic",
+   "where": "Level 42: fight (TORNADO SPIN)",
+   "text": "gust of air, villain? where?",
+   "text_v3": "[hyper] gust of air, villain? where?",
+   "sfx": [
+    {
+     "sfx": "wind_blow",
+     "at": "after",
+     "vol": 0.8
+    }
+   ]
+  },
+  {
+   "id": "f42_2",
+   "voice": "chog_toxic",
+   "where": "Level 42: fight (GOO NUKE)",
+   "text": "goo nuke! villain, puke!",
+   "text_v3": "[hyper] goo nuke! villain, puke!",
+   "sfx": [
+    {
+     "sfx": "cartoon_boom",
+     "at": "after",
+     "vol": 0.8
+    }
+   ]
+  },
+  {
+   "id": "f42_3",
+   "voice": "chog_toxic",
+   "where": "Level 42: fight (STACK ATTACK)",
+   "text": "from the plate to the moon. villain, you are DOOMED!",
+   "text_v3": "[shouting] from the plate to the moon. villain, you are DOOMED!"
+  },
+  {
+   "id": "l42_free",
+   "voice": "chog_toxic",
+   "where": "Level 42: the Chog is freed",
+   "text": "warning: radioactive chog released. stand back. or don't.",
+   "text_v3": "[hyper] warning: radioactive chog released. stand back. or don't."
+  },
+  {
+   "id": "l43_jar",
+   "voice": "chog_toxic",
+   "where": "Level 43: the caged Chog",
+   "text": "he lets me press the launch button! it does nothing! still fun!",
+   "text_v3": "[hyper] he lets me press the launch button! it does nothing! still fun!",
+   "sfx": [
+    {
+     "sfx": "button_fizzle",
+     "at": "it",
+     "insert": true,
+     "vol": 0.7
+    }
+   ]
+  },
+  {
+   "id": "v43_intro",
+   "voice": "v_gremlin",
+   "where": "Level 43: RAGE ROCKET",
+   "text": "i rage-quit three planets. the moon is next. your chog is my co-pilot now.",
+   "text_v3": "[giggles] i rage-quit three planets. the moon is next. your chog is my co-pilot now."
+  },
+  {
+   "id": "v43_hook",
+   "voice": "v_gremlin",
+   "where": "Level 43: RAGE ROCKET",
+   "text": "Earth? Rage-quit. Moon? Mine.",
+   "text_v3": "[mischievously] Earth? Rage-quit. Moon? Mine."
+  },
+  {
+   "id": "v43_spit0",
+   "voice": "v_gremlin",
+   "where": "Level 43: RAGE ROCKET",
+   "text": "probes, launch!",
+   "text_v3": "[cackles] probes, launch!",
+   "sfx": [
+    {
+     "sfx": "rocket_launch",
+     "at": "launch"
+    }
+   ]
+  },
+  {
+   "id": "v43_spit1",
+   "voice": "v_gremlin",
+   "where": "Level 43: RAGE ROCKET",
+   "text": "three, two, one... SPIT!",
+   "text_v3": "[cackles] three, two, one... SPIT!"
+  },
+  {
+   "id": "v43_down",
+   "voice": "v_gremlin",
+   "where": "Level 43: RAGE ROCKET",
+   "text": "houston... i am the problem...",
+   "text_v3": "[whining] houston... i am the problem..."
+  },
+  {
+   "id": "v43_gloat",
+   "voice": "v_gremlin",
+   "where": "Level 43: RAGE ROCKET",
+   "text": "mission failed. yours.",
+   "text_v3": "[cackles] mission failed. yours."
+  },
+  {
+   "id": "f43_0",
+   "voice": "chog_toxic",
+   "where": "Level 43: fight (ROYAL SMACK)",
+   "text": "bow to the crown, villain goes down!",
+   "text_v3": "[hyper] bow to the crown, villain goes down!"
+  },
+  {
+   "id": "f43_1",
+   "voice": "chog_toxic",
+   "where": "Level 43: fight (FLAME AURA)",
+   "text": "feel the heat, admit defeat!",
+   "text_v3": "[hyper] feel the heat, admit defeat!",
+   "sfx": [
+    {
+     "sfx": "fire_breath",
+     "at": "after",
+     "vol": 0.8
+    }
+   ]
+  },
+  {
+   "id": "f43_2",
+   "voice": "chog_toxic",
+   "where": "Level 43: fight (GOO NUKE)",
+   "text": "goo nuke! villain, puke!",
+   "text_v3": "[hyper] goo nuke! villain, puke!",
+   "sfx": [
+    {
+     "sfx": "cartoon_boom",
+     "at": "after",
+     "vol": 0.8
+    }
+   ]
+  },
+  {
+   "id": "f43_3",
+   "voice": "chog_toxic",
+   "where": "Level 43: fight (STACK ATTACK)",
+   "text": "from the plate to the moon. villain, you are DOOMED!",
+   "text_v3": "[shouting] from the plate to the moon. villain, you are DOOMED!"
+  },
+  {
+   "id": "l43_free",
+   "voice": "chog_toxic",
+   "where": "Level 43: the Chog is freed",
+   "text": "ten out of ten would glow again.",
+   "text_v3": "[hyper] ten out of ten would glow again."
+  },
+  {
+   "id": "l44_say",
+   "voice": "plumpy",
+   "where": "Level 44 intro",
+   "text": "the moon is made of ice?? i thought it was grape jelly.",
+   "text_v3": "[confused] the moon is made of ice?? i thought it was grape jelly."
+  },
+  {
+   "id": "l44_jar",
+   "voice": "chog_toxic",
+   "where": "Level 44: the caged Chog",
+   "text": "he says i'm 'just stardust in a cage'. deep. still a cage.",
+   "text_v3": "[hyper] he says i'm 'just stardust in a cage'. deep. still a cage."
+  },
+  {
+   "id": "v44_intro",
+   "voice": "v_regal",
+   "where": "Level 44: GALAXY BRAIN",
+   "text": "i am the cosmos in a windsor tie. the moon is ice because i thought it so.",
+   "text_v3": "[proudly] i am the cosmos in a windsor tie. the moon is ice because i thought it so."
+  },
+  {
+   "id": "v44_hook",
+   "voice": "v_regal",
+   "where": "Level 44: GALAXY BRAIN",
+   "text": "I contain multitudes. You contain mistakes.",
+   "text_v3": "[grandly] I contain multitudes. You contain mistakes."
+  },
+  {
+   "id": "v44_spit0",
+   "voice": "v_regal",
+   "where": "Level 44: GALAXY BRAIN",
+   "text": "comets, go!",
+   "text_v3": "[commanding] comets, go!"
+  },
+  {
+   "id": "v44_spit1",
+   "voice": "v_regal",
+   "where": "Level 44: GALAXY BRAIN",
+   "text": "big bang, babies.",
+   "text_v3": "[commanding] big bang, babies."
+  },
+  {
+   "id": "v44_down",
+   "voice": "v_regal",
+   "where": "Level 44: GALAXY BRAIN",
+   "text": "the universe... expanding... away from me...",
+   "text_v3": "[gasps] the universe... expanding... away from me..."
+  },
+  {
+   "id": "v44_gloat",
+   "voice": "v_regal",
+   "where": "Level 44: GALAXY BRAIN",
+   "text": "galaxy brain. you? asteroid brain.",
+   "text_v3": "[laughs smugly] galaxy brain. you? asteroid brain."
+  },
+  {
+   "id": "f44_0",
+   "voice": "chog_toxic",
+   "where": "Level 44: fight (HORN CHARGE)",
+   "text": "horns down, out of town!",
+   "text_v3": "[hyper] horns down, out of town!"
+  },
+  {
+   "id": "f44_1",
+   "voice": "chog_toxic",
+   "where": "Level 44: fight (TORNADO SPIN)",
+   "text": "gust of air, villain? where?",
+   "text_v3": "[hyper] gust of air, villain? where?",
+   "sfx": [
+    {
+     "sfx": "wind_blow",
+     "at": "after",
+     "vol": 0.8
+    }
+   ]
+  },
+  {
+   "id": "f44_2",
+   "voice": "chog_toxic",
+   "where": "Level 44: fight (SPIRIT BLAST)",
+   "text": "spirit blast, villain's past!",
+   "text_v3": "[hyper] spirit blast, villain's past!"
+  },
+  {
+   "id": "f44_3",
+   "voice": "chog_toxic",
+   "where": "Level 44: fight (STACK ATTACK)",
+   "text": "from the plate to the moon. villain, you are DOOMED!",
+   "text_v3": "[shouting] from the plate to the moon. villain, you are DOOMED!"
+  },
+  {
+   "id": "l44_free",
+   "voice": "chog_toxic",
+   "where": "Level 44: the Chog is freed",
+   "text": "half-life of a cage: zero. you did that.",
+   "text_v3": "[hyper] half-life of a cage: zero. you did that."
+  },
+  {
+   "id": "l45_say",
+   "voice": "bear",
+   "where": "Level 45 intro",
+   "text": "nom moon cheese plate. delicious.",
+   "text_v3": "[chewing] moon cheese plate. [satisfied] delicious.",
+   "sfx": [
+    {
+     "sfx": "big_chomp",
+     "at": "before"
+    }
+   ]
+  },
+  {
+   "id": "l45_jar",
+   "voice": "legend_scream",
+   "where": "Level 45: the caged Chog",
+   "text": "AAAAAAA! he crunches the plate like a cookie! AAAA! ... that means help.",
+   "text_v3": "[screaming] AAAAAAA! he crunches the plate like a cookie! AAAA! [suddenly calm] that means help.",
+   "sfx": [
+    {
+     "sfx": "cookie_crunch",
+     "at": "AAAA",
+     "insert": true
+    }
+   ]
+  },
+  {
+   "id": "v45_intro",
+   "voice": "v_gremlin",
+   "where": "Level 45: VILLAIN ERA",
+   "text": "every skrump was cute. then i entered my villain era. crunch tasty plate.",
+   "text_v3": "[giggles] every skrump was cute. then i entered my villain era. tasty plate.",
+   "sfx": [
+    {
+     "sfx": "cookie_crunch",
+     "at": "tasty",
+     "lead": 0.9
+    }
+   ]
+  },
+  {
+   "id": "v45_hook",
+   "voice": "v_gremlin",
+   "where": "Level 45: VILLAIN ERA",
+   "text": "Not a phase. A villain era.",
+   "text_v3": "[mischievously] Not a phase. A villain era."
+  },
+  {
+   "id": "v45_spit0",
+   "voice": "v_gremlin",
+   "where": "Level 45: VILLAIN ERA",
+   "text": "lil evils, chew!",
+   "text_v3": "[cackles] lil evils, chew!"
+  },
+  {
+   "id": "v45_spit1",
+   "voice": "v_gremlin",
+   "where": "Level 45: VILLAIN ERA",
+   "text": "crunch go!",
+   "text_v3": "[cackles] go!",
+   "sfx": [
+    {
+     "sfx": "cookie_crunch",
+     "at": "before"
+    }
+   ]
+  },
+  {
+   "id": "v45_down",
+   "voice": "v_gremlin",
+   "where": "Level 45: VILLAIN ERA",
+   "text": "my era... is over...",
+   "text_v3": "[whining] my era... is over..."
+  },
+  {
+   "id": "v45_gloat",
+   "voice": "v_gremlin",
+   "where": "Level 45: VILLAIN ERA",
+   "text": "villain wins. as is tradition.",
+   "text_v3": "[cackles] villain wins. as is tradition."
+  },
+  {
+   "id": "f45_0",
+   "voice": "legend_scream",
+   "where": "Level 45: fight (MEGA SCREAM)",
+   "text": "AAAAAAAAAAAAA!",
+   "text_v3": "[screaming] AAAAAAAAAAAAA!"
+  },
+  {
+   "id": "f45_1",
+   "voice": "legend_scream",
+   "where": "Level 45: fight (BELLY BUMP)",
+   "text": "belly bump, villain slump!",
+   "text_v3": "[screaming] belly bump, villain slump!"
+  },
+  {
+   "id": "f45_2",
+   "voice": "legend_scream",
+   "where": "Level 45: fight (CHOG CHARGE)",
+   "text": "chog charge, villain's not so large!",
+   "text_v3": "[screaming] chog charge, villain's not so large!"
+  },
+  {
+   "id": "f45_3",
+   "voice": "legend_scream",
+   "where": "Level 45: fight (MEGA SCREAM x STACK ATTACK)",
+   "text": "from the plate to the moon. villain, you are DOOMED!",
+   "text_v3": "[shouting] from the plate to the moon. villain, you are DOOMED!"
+  },
+  {
+   "id": "l45_free",
+   "voice": "legend_scream",
+   "where": "Level 45: the Chog is freed",
+   "text": "AAAAAAAAA! ... that means thank you.",
+   "text_v3": "[screaming] AAAAAAAAA! [suddenly calm] that means thank you."
+  },
+  {
+   "id": "l46_jar",
+   "voice": "legend_grim",
+   "where": "Level 46: the caged Chog",
+   "text": "i am death itself. he painted 'NO CHOGS' on my cage. rude.",
+   "text_v3": "[ominously] i am death itself. [annoyed] he painted 'NO CHOGS' on my cage. rude."
+  },
+  {
+   "id": "v46_intro",
+   "voice": "v_menace",
+   "where": "Level 46: THE CHOG OPP",
+   "text": "a solar flare with demon wings and a ninja on my shoulder. i hate chogs. ALL of them.",
+   "text_v3": "[menacing] a solar flare with demon wings and a ninja on my shoulder. i hate chogs. ALL of them."
+  },
+  {
+   "id": "v46_hook",
+   "voice": "v_menace",
+   "where": "Level 46: THE CHOG OPP",
+   "text": "Hater by nature. Opp by choice.",
+   "text_v3": "[growls] Hater by nature. Opp by choice."
+  },
+  {
+   "id": "v46_spit0",
+   "voice": "v_menace",
+   "where": "Level 46: THE CHOG OPP",
+   "text": "opplings, burn it!",
+   "text_v3": "[shouting] opplings, burn it!"
+  },
+  {
+   "id": "v46_spit1",
+   "voice": "v_menace",
+   "where": "Level 46: THE CHOG OPP",
+   "text": "go hate, babies!",
+   "text_v3": "[shouting] go hate, babies!"
+  },
+  {
+   "id": "v46_down",
+   "voice": "v_menace",
+   "where": "Level 46: THE CHOG OPP",
+   "text": "fine... chogs are... kinda ok...",
+   "text_v3": "[grudgingly] fine... chogs are... kinda ok..."
+  },
+  {
+   "id": "v46_gloat",
+   "voice": "v_menace",
+   "where": "Level 46: THE CHOG OPP",
+   "text": "L. ratio. tower fell.",
+   "text_v3": "[laughs darkly] L. ratio. tower fell."
+  },
+  {
+   "id": "f46_0",
+   "voice": "legend_grim",
+   "where": "Level 46: fight (REAPER SWING)",
+   "text": "your time is up.",
+   "text_v3": "[deep and slow] your time is up."
+  },
+  {
+   "id": "f46_1",
+   "voice": "legend_grim",
+   "where": "Level 46: fight (BONE CRUSHER)",
+   "text": "sticks and stones break villain bones!",
+   "text_v3": "[deep and slow] sticks and stones break villain bones!",
+   "sfx": [
+    {
+     "sfx": "bone_rattle",
+     "at": "after",
+     "vol": 0.8
+    }
+   ]
+  },
+  {
+   "id": "f46_2",
+   "voice": "legend_grim",
+   "where": "Level 46: fight (BELLY BUMP)",
+   "text": "belly bump, villain slump!",
+   "text_v3": "[deep and slow] belly bump, villain slump!"
+  },
+  {
+   "id": "f46_3",
+   "voice": "legend_grim",
+   "where": "Level 46: fight (REAPER SWING x STACK ATTACK)",
+   "text": "from the plate to the moon. villain, you are DOOMED!",
+   "text_v3": "[shouting] from the plate to the moon. villain, you are DOOMED!"
+  },
+  {
+   "id": "l46_free",
+   "voice": "legend_grim",
+   "where": "Level 46: the Chog is freed",
+   "text": "death took a holiday. i'll take the tower.",
+   "text_v3": "[deep and slow] death took a holiday. i'll take the tower."
+  },
+  {
+   "id": "l47_jar",
+   "voice": "legend_abom",
+   "where": "Level 47: the caged Chog",
+   "text": "gurgle. he says 'it's so over' every five minutes. i've been over since the forbidden snack.",
+   "text_v3": "[gurgles] [gloomy] he says 'it's so over' every five minutes. i've been over since the forbidden snack.",
+   "sfx": [
+    {
+     "sfx": "goo_gurgle",
+     "at": "before"
+    }
+   ]
+  },
+  {
+   "id": "v47_intro",
+   "voice": "v_menace",
+   "where": "Level 47: IT'S SO OVER",
+   "text": "...the dark side. no light. no guide. no hope. it's so over.",
+   "text_v3": "[menacing] ...the dark side. no light. no guide. no hope. it's so over."
+  },
+  {
+   "id": "v47_hook",
+   "voice": "v_menace",
+   "where": "Level 47: IT'S SO OVER",
+   "text": "It's so over. It was always over.",
+   "text_v3": "[growls] It's so over. It was always over."
+  },
+  {
+   "id": "v47_spit0",
+   "voice": "v_menace",
+   "where": "Level 47: IT'S SO OVER",
+   "text": "...shades... go.",
+   "text_v3": "[shouting] ...shades... go."
+  },
+  {
+   "id": "v47_spit1",
+   "voice": "v_menace",
+   "where": "Level 47: IT'S SO OVER",
+   "text": "...rise.",
+   "text_v3": "[shouting] ...rise."
+  },
+  {
+   "id": "v47_down",
+   "voice": "v_menace",
+   "where": "Level 47: IT'S SO OVER",
+   "text": "...we're... so back...?",
+   "text_v3": "[weakly] ...we're... so back...?"
+  },
+  {
+   "id": "v47_gloat",
+   "voice": "v_menace",
+   "where": "Level 47: IT'S SO OVER",
+   "text": "...over.",
+   "text_v3": "[laughs darkly] ...over."
+  },
+  {
+   "id": "f47_0",
+   "voice": "legend_abom",
+   "where": "Level 47: fight (ABOMINATION HUG)",
+   "text": "hug me, villain... forever.",
+   "text_v3": "[growls] hug me, villain... forever."
+  },
+  {
+   "id": "f47_1",
+   "voice": "legend_abom",
+   "where": "Level 47: fight (BELLY BUMP)",
+   "text": "belly bump, villain slump!",
+   "text_v3": "[growls] belly bump, villain slump!"
+  },
+  {
+   "id": "f47_2",
+   "voice": "legend_abom",
+   "where": "Level 47: fight (CHOG CHARGE)",
+   "text": "chog charge, villain's not so large!",
+   "text_v3": "[growls] chog charge, villain's not so large!"
+  },
+  {
+   "id": "f47_3",
+   "voice": "legend_abom",
+   "where": "Level 47: fight (ABOMINATION HUG x STACK ATTACK)",
+   "text": "from the plate to the moon. villain, you are DOOMED!",
+   "text_v3": "[shouting] from the plate to the moon. villain, you are DOOMED!"
+  },
+  {
+   "id": "l47_free",
+   "voice": "legend_abom",
+   "where": "Level 47: the Chog is freed",
+   "text": "i'm free... i'm gross... i'm yours.",
+   "text_v3": "[gurgling] i'm free... i'm gross... [warmly] i'm yours.",
+   "sfx": [
+    {
+     "sfx": "goo_gurgle",
+     "at": "before",
+     "vol": 0.6
+    }
+   ]
+  },
+  {
+   "id": "l48_jar",
+   "voice": "legend_blaze",
+   "where": "Level 48: the caged Chog",
+   "text": "he goes BOO every time i doze off. i'm on FIRE and still jumpy.",
+   "text_v3": "[agitated] he goes BOO every time i doze off. i'm on FIRE and still jumpy."
+  },
+  {
+   "id": "v48_intro",
+   "voice": "v_creep",
+   "where": "Level 48: BOO SKRUMP",
+   "text": "boooo. three perfects in a row, or i haunt your combo forever. boooo.",
+   "text_v3": "[whispers] boooo. three perfects in a row, or i haunt your combo forever. [creepy laugh] boooo."
+  },
+  {
+   "id": "v48_hook",
+   "voice": "v_creep",
+   "where": "Level 48: BOO SKRUMP",
+   "text": "Miss once and you're ghosted.",
+   "text_v3": "[whispers] Miss once and you're ghosted."
+  },
+  {
+   "id": "v48_spit0",
+   "voice": "v_creep",
+   "where": "Level 48: BOO SKRUMP",
+   "text": "wisps, haunt!",
+   "text_v3": "[whispers] wisps, haunt!"
+  },
+  {
+   "id": "v48_spit1",
+   "voice": "v_creep",
+   "where": "Level 48: BOO SKRUMP",
+   "text": "booooo, babies.",
+   "text_v3": "[whispers] booooo, babies."
+  },
+  {
+   "id": "v48_down",
+   "voice": "v_creep",
+   "where": "Level 48: BOO SKRUMP",
+   "text": "i'm... dead... again...",
+   "text_v3": "[wails] i'm... dead... again..."
+  },
+  {
+   "id": "v48_gloat",
+   "voice": "v_creep",
+   "where": "Level 48: BOO SKRUMP",
+   "text": "boo. you're ghosted.",
+   "text_v3": "[creepy laugh] boo. you're ghosted."
+  },
+  {
+   "id": "f48_0",
+   "voice": "legend_blaze",
+   "where": "Level 48: fight (INFERNO)",
+   "text": "burn it ALL down!",
+   "text_v3": "[fired up] burn it ALL down!",
+   "sfx": [
+    {
+     "sfx": "fire_breath",
+     "at": "after",
+     "vol": 0.8
+    }
+   ]
+  },
+  {
+   "id": "f48_1",
+   "voice": "legend_blaze",
+   "where": "Level 48: fight (HOT BELLY SLAM)",
+   "text": "hot, hot, hot! take that shot!",
+   "text_v3": "[fired up] hot, hot, hot! take that shot!",
+   "sfx": [
+    {
+     "sfx": "fire_breath",
+     "at": "after",
+     "vol": 0.8
+    }
+   ]
+  },
+  {
+   "id": "f48_2",
+   "voice": "legend_blaze",
+   "where": "Level 48: fight (BELLY BUMP)",
+   "text": "belly bump, villain slump!",
+   "text_v3": "[fired up] belly bump, villain slump!"
+  },
+  {
+   "id": "f48_3",
+   "voice": "legend_blaze",
+   "where": "Level 48: fight (INFERNO x STACK ATTACK)",
+   "text": "from the plate to the moon. villain, you are DOOMED!",
+   "text_v3": "[shouting] from the plate to the moon. villain, you are DOOMED!"
+  },
+  {
+   "id": "l48_free",
+   "voice": "legend_blaze",
+   "where": "Level 48: the Chog is freed",
+   "text": "i'm out and i'm ON FIRE. let's burn this tower up!",
+   "text_v3": "[fired up] i'm out and i'm ON FIRE. let's burn this tower up!"
+  },
+  {
+   "id": "l49_say",
+   "voice": "plumpy",
+   "where": "Level 49 intro",
+   "text": "practice run. nineteen tall, then a pointy head on top.",
+   "text_v3": "[focused] practice run. nineteen tall... then a pointy head on top."
+  },
+  {
+   "id": "l49_jar",
+   "voice": "legend_skully",
+   "where": "Level 49: the caged Chog",
+   "text": "unc keeps saying flaming skeletons weren't a thing in twenty seventeen. i'm a thing NOW.",
+   "text_v3": "[annoyed] unc keeps saying flaming skeletons weren't a thing in twenty seventeen. i'm a thing NOW."
+  },
+  {
+   "id": "v49_intro",
+   "voice": "v_bro",
+   "where": "Level 49: UNC V1",
+   "text": "minted before you were born, kid. twenty seventeen. the Bear's door? i'm the bouncer.",
+   "text_v3": "[chuckles] minted before you were born, kid. twenty seventeen. the Bear's door? i'm the bouncer."
+  },
+  {
+   "id": "v49_hook",
+   "voice": "v_bro",
+   "where": "Level 49: UNC V1",
+   "text": "Been here since twenty seventeen. You're late.",
+   "text_v3": "[smug] Been here since twenty seventeen. You're late."
+  },
+  {
+   "id": "v49_spit0",
+   "voice": "v_bro",
+   "where": "Level 49: UNC V1",
+   "text": "pixels, go!",
+   "text_v3": "[hollering] pixels, go!"
+  },
+  {
+   "id": "v49_spit1",
+   "voice": "v_bro",
+   "where": "Level 49: UNC V1",
+   "text": "spawning.",
+   "text_v3": "[hollering] spawning.",
+   "sfx": [
+    {
+     "sfx": "vr_boot",
+     "at": "before",
+     "vol": 0.7
+    }
+   ]
+  },
+  {
+   "id": "v49_down",
+   "voice": "v_bro",
+   "where": "Level 49: UNC V1",
+   "text": "unc... is cooked...",
+   "text_v3": "[groans] unc... is cooked..."
+  },
+  {
+   "id": "v49_gloat",
+   "voice": "v_bro",
+   "where": "Level 49: UNC V1",
+   "text": "skill issue. since twenty seventeen.",
+   "text_v3": "[chuckles] skill issue. since twenty seventeen."
+  },
+  {
+   "id": "f49_0",
+   "voice": "legend_skully",
+   "where": "Level 49: fight (SKULL FIREBALL)",
+   "text": "flaming bones, coming home!",
+   "text_v3": "[fierce] flaming bones, coming home!",
+   "sfx": [
+    {
+     "sfx": "fire_breath",
+     "at": "after",
+     "vol": 0.8
+    }
+   ]
+  },
+  {
+   "id": "f49_1",
+   "voice": "legend_skully",
+   "where": "Level 49: fight (HOT BELLY SLAM)",
+   "text": "hot, hot, hot! take that shot!",
+   "text_v3": "[fierce] hot, hot, hot! take that shot!",
+   "sfx": [
+    {
+     "sfx": "fire_breath",
+     "at": "after",
+     "vol": 0.8
+    }
+   ]
+  },
+  {
+   "id": "f49_2",
+   "voice": "legend_skully",
+   "where": "Level 49: fight (BONE CRUSHER)",
+   "text": "sticks and stones break villain bones!",
+   "text_v3": "[fierce] sticks and stones break villain bones!",
+   "sfx": [
+    {
+     "sfx": "bone_rattle",
+     "at": "after",
+     "vol": 0.8
+    }
+   ]
+  },
+  {
+   "id": "f49_3",
+   "voice": "legend_skully",
+   "where": "Level 49: fight (SKULL FIREBALL x STACK ATTACK)",
+   "text": "from the plate to the moon. villain, you are DOOMED!",
+   "text_v3": "[shouting] from the plate to the moon. villain, you are DOOMED!"
+  },
+  {
+   "id": "l49_free",
+   "voice": "legend_skully",
+   "where": "Level 49: the Chog is freed",
+   "text": "flaming bones, at your service.",
+   "text_v3": "[proudly] flaming bones, at your service."
+  },
+  {
+   "id": "l50_jar",
+   "voice": "legend_midas",
+   "where": "Level 50: the caged Chog",
+   "text": "darling, he's older than gold. and he smells like it.",
+   "text_v3": "[haughty] darling, he's older than gold. [whispers] and he smells like it."
+  },
+  {
+   "id": "v50_intro",
+   "voice": "v_menace",
+   "where": "Level 50: THE FORGOTTEN",
+   "text": "...the Bear works for me. i was here before the moon. before the cages. before you.",
+   "text_v3": "[menacing] ...the Bear works for me. i was here before the moon. before the cages. before you."
+  },
+  {
+   "id": "v50_hook",
+   "voice": "v_menace",
+   "where": "Level 50: THE FORGOTTEN",
+   "text": "Untouched. Unbroken. Unforgotten.",
+   "text_v3": "[growls] Untouched. Unbroken. Unforgotten."
+  },
+  {
+   "id": "v50_spit0",
+   "voice": "v_menace",
+   "where": "Level 50: THE FORGOTTEN",
+   "text": "fossils... awaken.",
+   "text_v3": "[shouting] fossils... awaken."
+  },
+  {
+   "id": "v50_spit1",
+   "voice": "v_menace",
+   "where": "Level 50: THE FORGOTTEN",
+   "text": "the ancient ones rise.",
+   "text_v3": "[shouting] the ancient ones rise."
+  },
+  {
+   "id": "v50_down",
+   "voice": "v_menace",
+   "where": "Level 50: THE FORGOTTEN",
+   "text": "...remember... me...",
+   "text_v3": "[fading] ...remember... me..."
+  },
+  {
+   "id": "v50_gloat",
+   "voice": "v_menace",
+   "where": "Level 50: THE FORGOTTEN",
+   "text": "...forget you.",
+   "text_v3": "[laughs darkly] ...forget you."
+  },
+  {
+   "id": "f50_0",
+   "voice": "legend_midas",
+   "where": "Level 50: fight (MIDAS TOUCH)",
+   "text": "everything i touch turns to KO.",
+   "text_v3": "[haughty] everything i touch turns to KO."
+  },
+  {
+   "id": "f50_1",
+   "voice": "legend_midas",
+   "where": "Level 50: fight (MAKE IT RAIN)",
+   "text": "make it rain, feel the pain!",
+   "text_v3": "[haughty] make it rain, feel the pain!",
+   "sfx": [
+    {
+     "sfx": "coins_rain",
+     "at": "after",
+     "vol": 0.8
+    }
+   ]
+  },
+  {
+   "id": "f50_2",
+   "voice": "legend_midas",
+   "where": "Level 50: fight (BELLY BUMP)",
+   "text": "belly bump, villain slump!",
+   "text_v3": "[haughty] belly bump, villain slump!"
+  },
+  {
+   "id": "f50_3",
+   "voice": "legend_midas",
+   "where": "Level 50: fight (MIDAS TOUCH x STACK ATTACK)",
+   "text": "from the plate to the moon. villain, you are DOOMED!",
+   "text_v3": "[shouting] from the plate to the moon. villain, you are DOOMED!"
+  },
+  {
+   "id": "l50_free",
+   "voice": "legend_midas",
+   "where": "Level 50: the Chog is freed",
+   "text": "free at last. everything i stack turns to gold.",
+   "text_v3": "[smugly] free at last. everything i stack turns to gold."
+  },
+  {
+   "id": "end_0",
+   "voice": "bear",
+   "where": "Ending",
+   "text": "...you planted a flag. on MY moon.",
+   "text_v3": "[stunned] ...you planted a flag. on MY moon."
+  },
+  {
+   "id": "end_1",
+   "voice": "plumpy",
+   "where": "Ending",
+   "text": "the moon is grape jelly. there is enough for everyone.",
+   "text_v3": "[happily] the moon is grape jelly. there is enough for everyone."
+  },
+  {
+   "id": "end_2",
+   "voice": "bear",
+   "where": "Ending",
+   "text": "...can i have some?",
+   "text_v3": "[shyly] ...can i have some?"
+  },
+  {
+   "id": "end_3",
+   "voice": "plumpy",
+   "where": "Ending",
+   "text": "chog world order. everybody eats. even bears.",
+   "text_v3": "[warmly] chog world order. everybody eats. [chuckles] even bears."
+  },
+  {
+   "id": "end_4",
+   "voice": "plumpy",
+   "where": "Ending",
+   "text": "wait. what is that... behind the moon?",
+   "text_v3": "[whispers] wait. what is that... behind the moon?"
+  },
+  {
+   "id": "p_idle_0",
+   "voice": "plumpy",
+   "where": "In game: idle",
+   "text": "tap when i am over the tower. make no mistakes.",
+   "text_v3": "[bored] tap when i am over the tower. make no mistakes."
+  },
+  {
+   "id": "p_idle_1",
+   "voice": "plumpy",
+   "where": "In game: idle",
+   "text": "feed me first. i am starving.",
+   "text_v3": "[whining] feed me first. i am starving."
+  },
+  {
+   "id": "p_idle_2",
+   "voice": "plumpy",
+   "where": "In game: idle",
+   "text": "the plate is small. i am not.",
+   "text_v3": "[deadpan] the plate is small. i am not."
+  },
+  {
+   "id": "p_combo_0",
+   "voice": "plumpy",
+   "where": "In game: combo",
+   "text": "i am locked in.",
+   "text_v3": "[focused] i am locked in."
+  },
+  {
+   "id": "p_combo_1",
+   "voice": "plumpy",
+   "where": "In game: combo",
+   "text": "perfect. obviously.",
+   "text_v3": "[smug] perfect. obviously."
+  },
+  {
+   "id": "p_combo_2",
+   "voice": "plumpy",
+   "where": "In game: combo",
+   "text": "call me the stack whisperer.",
+   "text_v3": "[proudly] call me... the stack whisperer."
+  },
+  {
+   "id": "p_combo_3",
+   "voice": "plumpy",
+   "where": "In game: combo",
+   "text": "combo. say it with me. COMBO.",
+   "text_v3": "[excited] combo. say it with me. COMBO!"
+  },
+  {
+   "id": "p_drop_0",
+   "voice": "plumpy",
+   "where": "In game: drop",
+   "text": "wheeeee",
+   "text_v3": "[gleeful] wheeeeee!"
+  },
+  {
+   "id": "p_drop_1",
+   "voice": "plumpy",
+   "where": "In game: drop",
+   "text": "here i gooo",
+   "text_v3": "[excited] here i gooo!"
+  },
+  {
+   "id": "p_drop_2",
+   "voice": "plumpy",
+   "where": "In game: drop",
+   "text": "catch me",
+   "text_v3": "[nervous] catch me!"
+  },
+  {
+   "id": "p_drop_3",
+   "voice": "plumpy",
+   "where": "In game: drop",
+   "text": "i believe i can fly. i cannot.",
+   "text_v3": "[sings] i believe i can fly... [deadpan] i cannot."
+  },
+  {
+   "id": "p_land_0",
+   "voice": "plumpy",
+   "where": "In game: land",
+   "text": "squish",
+   "text_v3": "[giggles] squish.",
+   "sfx": [
+    {
+     "sfx": "plush_squish",
+     "at": "before"
+    }
+   ]
+  },
+  {
+   "id": "p_land_1",
+   "voice": "plumpy",
+   "where": "In game: land",
+   "text": "comfy.",
+   "text_v3": "[sighs happily] comfy."
+  },
+  {
+   "id": "p_land_2",
+   "voice": "plumpy",
+   "where": "In game: land",
+   "text": "don't. move.",
+   "text_v3": "[whispers] don't. move."
+  },
+  {
+   "id": "p_land_3",
+   "voice": "plumpy",
+   "where": "In game: land",
+   "text": "nobody breathe.",
+   "text_v3": "[whispers] nobody breathe."
+  },
+  {
+   "id": "p_land_4",
+   "voice": "plumpy",
+   "where": "In game: land",
+   "text": "we stack.",
+   "text_v3": "[confidently] we stack."
+  },
+  {
+   "id": "p_record_0",
+   "voice": "plumpy",
+   "where": "In game: record",
+   "text": "new record. i am scared of heights.",
+   "text_v3": "[nervously] new record. i am scared of heights."
+  },
+  {
+   "id": "p_record_1",
+   "voice": "plumpy",
+   "where": "In game: record",
+   "text": "we are so high right now",
+   "text_v3": "[giggles] we are so high right now."
+  },
+  {
+   "id": "p_record_2",
+   "voice": "plumpy",
+   "where": "In game: record",
+   "text": "tallest tower yet. do not sneeze.",
+   "text_v3": "[whispers] tallest tower yet. do not sneeze."
+  },
+  {
+   "id": "p_feed_0",
+   "voice": "plumpy",
+   "where": "In game: feed",
+   "text": "burp tasted like a rug pull.",
+   "text_v3": "[burps] tasted like a rug pull."
+  },
+  {
+   "id": "p_feed_1",
+   "voice": "plumpy",
+   "where": "In game: feed",
+   "text": "more. MORE.",
+   "text_v3": "[munching] more. MORE!"
+  },
+  {
+   "id": "p_feed_2",
+   "voice": "plumpy",
+   "where": "In game: feed",
+   "text": "that coin went to zero and so did my diet.",
+   "text_v3": "[chewing] that coin went to zero... and so did my diet."
+  },
+  {
+   "id": "p_feed_3",
+   "voice": "plumpy",
+   "where": "In game: feed",
+   "text": "i can feel my belly expanding.",
+   "text_v3": "[contented] i can feel my belly expanding."
+  },
+  {
+   "id": "p_full_0",
+   "voice": "plumpy",
+   "where": "In game: full",
+   "text": "i am full. i am literally round.",
+   "text_v3": "[burps] i am full. i am literally round."
+  },
+  {
+   "id": "p_diet_0",
+   "voice": "plumpy",
+   "where": "In game: diet",
+   "text": "salad?? betrayal.",
+   "text_v3": "[betrayed] salad?? betrayal."
+  },
+  {
+   "id": "p_fall_0",
+   "voice": "plumpy",
+   "where": "In game: fall",
+   "text": "YOU MADE A MISTAKE.",
+   "text_v3": "[shouting] YOU MADE A MISTAKE."
+  },
+  {
+   "id": "bear_sell",
+   "voice": "bear",
+   "where": "In game: the Bear",
+   "text": "sell. SELL. hahaha.",
+   "text_v3": "[laughs] sell. SELL. [laughs maniacally]"
+  },
+  {
+   "id": "bear_rug",
+   "voice": "bear",
+   "where": "In game: the Bear",
+   "text": "Rugzilla. NOW.",
+   "text_v3": "[shouting] Rugzilla. NOW!"
+  },
+  {
+   "id": "bear_pump",
+   "voice": "bear",
+   "where": "In game: the Bear",
+   "text": "who is buying?? stop that.",
+   "text_v3": "[annoyed] who is buying?? stop that."
+  },
+  {
+   "id": "bear_whale",
+   "voice": "bear",
+   "where": "In game: the Bear",
+   "text": "a whale?? ugh.",
+   "text_v3": "[groans] a whale?? ugh."
+  },
+  {
+   "id": "bear_freeze",
+   "voice": "bear",
+   "where": "In game: the Bear",
+   "text": "i froze the liquidity. slide, chogs.",
+   "text_v3": "[mischievously] i froze the liquidity. slide, chogs."
+  },
+  {
+   "id": "bear_fud",
+   "voice": "bear",
+   "where": "In game: the Bear",
+   "text": "have you heard? chog is going to zero. HOOOO.",
+   "text_v3": "[blows air] have you heard? chog is going to zero. HOOOO.",
+   "sfx": [
+    {
+     "sfx": "wind_blow",
+     "at": "HOOOO",
+     "vol": 0.7
+    }
+   ]
+  },
+  {
+   "id": "bear_final",
+   "voice": "bear",
+   "where": "In game: the Bear",
+   "text": "the cage is cracking... but i have one more candle.",
+   "text_v3": "[menacing] the cage is cracking... but i have one more candle.",
+   "sfx": [
+    {
+     "sfx": "cage_creak",
+     "at": "but",
+     "insert": true
+    }
+   ]
+  },
+  {
+   "id": "bear_slow",
+   "voice": "bear",
+   "where": "In game: the Bear",
+   "text": "too slow. plumpy let go.",
+   "text_v3": "[laughs] too slow. plumpy let go."
+  },
+  {
+   "id": "bear_pick",
+   "voice": "bear",
+   "where": "In game: the Bear",
+   "text": "this one. i pick this one. hehe.",
+   "text_v3": "[mischievously] this one. i pick this one. [giggles]"
+  },
+  {
+   "id": "bear_origin",
+   "voice": "bear",
+   "where": "In game: the Bear",
+   "text": "every crumb is mine.",
+   "text_v3": "[growls] every crumb... is mine."
+  },
+  {
+   "id": "p_crash_rug",
+   "voice": "plumpy",
+   "where": "In game: the tower falls",
+   "text": "RUGGED. the market made a mistake.",
+   "text_v3": "[frustrated] RUGGED. the market made a mistake."
+  },
+  {
+   "id": "p_crash_bite",
+   "voice": "plumpy",
+   "where": "In game: the tower falls",
+   "text": "the bear ATE the plate. not our fault.",
+   "text_v3": "[outraged] the bear ATE the plate. not our fault.",
+   "sfx": [
+    {
+     "sfx": "big_chomp",
+     "at": "not",
+     "insert": true
+    }
+   ]
+  },
+  {
+   "id": "p_crash_freeze",
+   "voice": "plumpy",
+   "where": "In game: the tower falls",
+   "text": "frozen liquidity. we slid. not our fault.",
+   "text_v3": "[sighs] frozen liquidity. we slid. not our fault."
+  },
+  {
+   "id": "p_crash_fud",
+   "voice": "plumpy",
+   "where": "In game: the tower falls",
+   "text": "the FUD got us. not our fault.",
+   "text_v3": "[annoyed] the FUD got us. not our fault."
+  },
+  {
+   "id": "p_crash_sell",
+   "voice": "plumpy",
+   "where": "In game: the tower falls",
+   "text": "paper hands sold the tower. not your fault.",
+   "text_v3": "[sighs] paper hands sold the tower. not your fault."
+  },
+  {
+   "id": "p_close",
+   "voice": "plumpy",
+   "where": "In game",
+   "text": "we were SO close. again.",
+   "text_v3": "[sighs] we were SO close. again."
+  },
+  {
+   "id": "p_hello",
+   "voice": "plumpy",
+   "where": "In game",
+   "text": "hi. i am plumpy. feed me.",
+   "text_v3": "[deadpan] hi. i am plumpy. feed me."
+  },
+  {
+   "id": "p_stairs",
+   "voice": "plumpy",
+   "where": "In game",
+   "text": "enough floating. stairs: built. let's go!",
+   "text_v3": "[excited] enough floating. stairs: built. let's go!"
+  },
+  {
+   "id": "p_origin_2",
+   "voice": "plumpy",
+   "where": "In game",
+   "text": "hi. i'm plumpy. i'm new here.",
+   "text_v3": "[shyly] hi. i'm plumpy. i'm new here."
+  },
+  {
+   "id": "p_origin_3",
+   "voice": "plumpy",
+   "where": "In game",
+   "text": "whoaaaa!",
+   "text_v3": "[screams] whoaaaa!"
+  },
+  {
+   "id": "p_origin_4",
+   "voice": "plumpy",
+   "where": "In game",
+   "text": "bought the dip. ate the dip.",
+   "text_v3": "[satisfied] bought the dip. [chewing] ate the dip.",
+   "sfx": [
+    {
+     "sfx": "munching",
+     "at": "after",
+     "vol": 0.8
+    }
+   ]
+  },
+  {
+   "id": "p_origin_5",
+   "voice": "plumpy",
+   "where": "In game",
+   "text": "i carry. you tap. we stack.",
+   "text_v3": "[confidently] i carry. you tap. we stack."
+  },
+  {
+   "id": "p_origin_7",
+   "voice": "plumpy",
+   "where": "In game",
+   "text": "let's go get them back.",
+   "text_v3": "[determined] let's go get them back."
+  },
+  {
+   "id": "n_origin_1",
+   "voice": "narrator",
+   "where": "Story: the narrator",
+   "text": "Chog World. Every night the Purple Moon rains crumbs, and the Chogs stack up to catch them.",
+   "text_v3": "[warmly] Chog World. Every night, the Purple Moon rains crumbs... and the Chogs stack up to catch them."
+  },
+  {
+   "id": "n_origin_2",
+   "voice": "narrator",
+   "where": "Story: the narrator",
+   "text": "One night, a star fell instead.",
+   "text_v3": "[mysteriously] One night... a star fell instead.",
+   "sfx": [
+    {
+     "sfx": "star_fall",
+     "at": "star",
+     "lead": 0.7,
+     "vol": 0.75
+    }
+   ]
+  },
+  {
+   "id": "n_origin_3",
+   "voice": "narrator",
+   "where": "Story: the narrator",
+   "text": "The skinniest Chog in Chog World. Every gust blew Plumpy off the tower.",
+   "text_v3": "[gently amused] The skinniest Chog in Chog World. Every gust blew Plumpy off the tower.",
+   "sfx": [
+    {
+     "sfx": "wind_blow",
+     "at": "blew",
+     "insert": true,
+     "vol": 0.7
+    }
+   ]
+  },
+  {
+   "id": "n_origin_4",
+   "voice": "narrator",
+   "where": "Story: the narrator",
+   "text": "So Plumpy ate. Every rug that got pulled. Every dip.",
+   "text_v3": "[playfully] So Plumpy ate. Every rug that got pulled. Every dip.",
+   "sfx": [
+    {
+     "sfx": "munching",
+     "at": "Every",
+     "insert": true,
+     "vol": 0.7
+    }
+   ]
+  },
+  {
+   "id": "n_origin_5",
+   "voice": "narrator",
+   "where": "Story: the narrator",
+   "text": "Too round to stack. But a Chog born from a star can float.",
+   "text_v3": "[with wonder] Too round to stack. But a Chog born from a star... can float."
+  },
+  {
+   "id": "n_origin_6",
+   "voice": "narrator",
+   "where": "Story: the narrator",
+   "text": "Then the Bear came. He stole every crumb, caged 50 Chogs and hired 50 NFT villains to guard them.",
+   "text_v3": "[ominously] Then the Bear came. He stole every crumb, caged fifty Chogs... and hired fifty NFT villains to guard them.",
+   "sfx": [
+    {
+     "sfx": "giant_stomps",
+     "at": "before",
+     "vol": 0.8
+    }
+   ]
+  },
+  {
+   "id": "n_origin_7",
+   "voice": "narrator",
+   "where": "Story: the narrator",
+   "text": "Every caged Chog is a real Chog Genesis NFT. Time to bring them home.",
+   "text_v3": "[hopeful] Every caged Chog is a real Chog Genesis NFT. [determined] Time to bring them home."
+  }
+ ]
+}

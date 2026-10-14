@@ -1,0 +1,40 @@
+{
+ "name": "Plumpy and the Purple Moon",
+ "short_name": "Plumpy",
+ "description": "Stack real Chog NFTs into a tower, knock 50 NFT villains off their perch and free 50 caged Chogs. A voiced story game on Monad. No wallet, no approvals. Ever.",
+ "id": "./",
+ "start_url": "./",
+ "scope": "./",
+ "display": "standalone",
+ "display_override": [
+  "standalone",
+  "fullscreen"
+ ],
+ "orientation": "any",
+ "background_color": "#22113f",
+ "theme_color": "#22113f",
+ "categories": [
+  "games",
+  "entertainment"
+ ],
+ "icons": [
+  {
+   "src": "icons/icon-192.png",
+   "sizes": "192x192",
+   "type": "image/png",
+   "purpose": "any"
+  },
+  {
+   "src": "icons/icon-512.png",
+   "sizes": "512x512",
+   "type": "image/png",
+   "purpose": "any"
+  },
+  {
+   "src": "icons/icon-maskable-512.png",
+   "sizes": "512x512",
+   "type": "image/png",
+   "purpose": "maskable"
+  }
+ ]
+}

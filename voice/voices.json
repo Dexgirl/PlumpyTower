@@ -1,0 +1,149 @@
+{
+  "plumpy": {
+    "name": "Plumpy",
+    "role": "the hero (always the Chog you play as)",
+    "design": "A small, round, always-hungry cartoon creature with a high, squeaky but deadpan voice. Speaks slowly and flatly, unimpressed by everything, with sudden bursts of excitement about food. Young, cute, a little nasal. Clear studio audio.",
+    "sample": "four a.m. stomach growling. time for a snack. the plate is... empty? there is a note. ugh. no rocket. no plan. we stack ourselves to the moon.",
+    "voice_id": "PASTE_VOICE_ID_HERE"
+  },
+  "bear": {
+    "name": "The Bear",
+    "role": "the villain (the bear market)",
+    "design": "A huge, smug cartoon villain bear with a very deep, gravelly, booming voice. Speaks slowly and mockingly, loves his own jokes and chuckles a lot. Theatrical and over the top. Clear studio audio.",
+    "sample": "lol. lmao. i took every snack in the chog world to the purple moon. and i locked your little friends in cages. sell. SELL. hahaha.",
+    "voice_id": "PASTE_VOICE_ID_HERE"
+  },
+  "narrator": {
+    "name": "Narrator",
+    "role": "reads the story before the game (\"How Plumpy got plump\")",
+    "design": "A warm, playful storybook narrator with a friendly, clear mid-range voice. Speaks like reading a bedtime story to kids: gentle, a little mysterious, with a smile in the voice and small dramatic pauses. Clear studio audio.",
+    "sample": "Chog World. Every night the Purple Moon rains crumbs, and the Chogs stack up to catch them. One night, a star fell instead.",
+    "voice_id": "PASTE_VOICE_ID_HERE"
+  },
+  "chog_common": {
+    "name": "Common Chog",
+    "role": "caged Commons (levels 1-14)",
+    "design": "A tiny, excitable cartoon critter with a bright, high, bubbly voice. Talks fast, giggles, very energetic and very grateful. Clear studio audio.",
+    "sample": "get me out of here! this cage smells like pickles! oh my gosh, you did it, you actually knocked him off! i am free! where are the snacks?",
+    "voice_id": "PASTE_VOICE_ID_HERE"
+  },
+  "chog_cool": {
+    "name": "Uncommon Chog",
+    "role": "caged Uncommons (levels 15-26)",
+    "design": "A laid-back cartoon critter with a smooth, relaxed, slightly raspy young voice. Talks like a cool skater kid: unbothered, confident, a bit sarcastic. Clear studio audio.",
+    "sample": "yeah, i knew you would come. took you long enough though. that cage was mid, no cap. alright, stack me up, i was born for this.",
+    "voice_id": "PASTE_VOICE_ID_HERE"
+  },
+  "chog_skull": {
+    "name": "Skull Chog",
+    "role": "caged Rare Skulls (levels 27-36)",
+    "design": "A small spooky skeleton creature with a dry, raspy, whispery voice and a hint of echo. Slow and dramatic, a little creepy but friendly. Clear studio audio.",
+    "sample": "i have waited in the dark for so long. my bones... thank you. all of them. the dead rise, and they stack. rattle, rattle.",
+    "voice_id": "PASTE_VOICE_ID_HERE"
+  },
+  "chog_toxic": {
+    "name": "Radioactive Chog",
+    "role": "caged Epic Radioactives (levels 37-44)",
+    "design": "A hyperactive radioactive cartoon creature with a fast, buzzy, slightly glitchy high voice. Jittery and excitable, talks in quick bursts. Clear studio audio.",
+    "sample": "warning, warning, radioactive chog released! my atoms are vibrating! i stick to everything, including you now. ten out of ten, would glow again!",
+    "voice_id": "PASTE_VOICE_ID_HERE"
+  },
+  "legend_scream": {
+    "name": "Chog Scream",
+    "role": "Legendary, level 45",
+    "design": "A panicked cartoon creature that screams a lot: high-pitched, shrill and frantic, like it is permanently terrified, but secretly sweet. Clear studio audio.",
+    "sample": "AAAAAAAAAAH! sorry. sorry. that means hello. AAAAH! that means thank you. i only have one setting and it is screaming.",
+    "voice_id": "PASTE_VOICE_ID_HERE"
+  },
+  "legend_grim": {
+    "name": "Grim",
+    "role": "Legendary, level 46",
+    "design": "A calm grim-reaper cartoon creature with a very low, slow, hollow and ominous voice. Speaks softly and seriously, never in a hurry. Clear studio audio.",
+    "sample": "i do not fear the cage. the cage fears me. death took a holiday today. so i will take the tower instead. lead the way.",
+    "voice_id": "PASTE_VOICE_ID_HERE"
+  },
+  "legend_abom": {
+    "name": "Chogbomination",
+    "role": "Legendary, level 47",
+    "design": "A gross zombie cartoon creature with a wet, gurgling, croaky voice. Slow and sloppy, but oddly sweet and polite. Clear studio audio.",
+    "sample": "i was a normal chog once. then i ate the forbidden snack. now i am... like this. but i am free. and i am yours. gurgle.",
+    "voice_id": "PASTE_VOICE_ID_HERE"
+  },
+  "legend_blaze": {
+    "name": "Blaze",
+    "role": "Legendary, level 48",
+    "design": "A hot-headed fiery cartoon creature with a loud, energetic, crackling young voice. Always hyped, shouts a lot, very competitive. Clear studio audio.",
+    "sample": "this cage is getting HOT and i am the reason! i am out and i am ON FIRE! let us burn this tower all the way to the moon!",
+    "voice_id": "PASTE_VOICE_ID_HERE"
+  },
+  "legend_skully": {
+    "name": "Burning Skully",
+    "role": "Legendary, level 49",
+    "design": "A flaming skeleton cartoon creature with a crackly, raspy, mid-low voice and a slight echo. Cool, dramatic, a bit of a show-off. Clear studio audio.",
+    "sample": "skeleton. on fire. in a cage. you knew what to do. flaming bones, at your service. the bear is going to feel the heat.",
+    "voice_id": "PASTE_VOICE_ID_HERE"
+  },
+  "legend_midas": {
+    "name": "Midas",
+    "role": "Legendary, level 50 (the final prize)",
+    "design": "A rich, posh, golden cartoon creature with a smooth, refined, upper-class British voice. Slow, smug and elegant, like old money. Clear studio audio.",
+    "sample": "everything i touch turns to gold. except that dreadful cage, apparently. free at last. darling, everything i stack turns to gold.",
+    "voice_id": "PASTE_VOICE_ID_HERE"
+  },
+  "v_gremlin": {
+    "name": "Villain: Gremlin",
+    "role": "NFT villains: DROOLCORE, LASER QUANT, PINEAPPLE PUFF, GLASS MOUCH, JESTERMAXXER, TWEAKIN' SNAKE, SUS JEET, NOVAH, RAGE ROCKET, VILLAIN ERA",
+    "design": "A small chaotic cartoon gremlin villain with a high, raspy, giggly voice. Talks fast, cackles between words, mischievous and smug, internet-brained teenager energy. Clear studio audio.",
+    "sample": "sorry, busy. i am aura farming. this chog was free aura, so i took it. hehehe. minus a thousand aura!",
+    "voice_id": "PASTE_VOICE_ID_HERE"
+  },
+  "v_menace": {
+    "name": "Villain: Menace",
+    "role": "NFT villains: CRASHOUT KAPYSH, COMRADE ROT, FANUM SHARK, CHOPPED CHAD, CHROME BONES, DETECTIVE 4K, TOOTHPICK ONI, THE CHOG OPP, IT'S SO OVER, THE FORGOTTEN",
+    "design": "A huge menacing cartoon villain with a very deep, gravelly, rumbling voice. Slow, dramatic pauses, theatrical evil laugh, every word lands heavy. Clear studio audio.",
+    "sample": "you broke six cages? cool. i am the seventh. and i am furious. i do not calm down. i level up.",
+    "voice_id": "PASTE_VOICE_ID_HERE"
+  },
+  "v_bot": {
+    "name": "Villain: Bot",
+    "role": "NFT villains: SLIPPY ZORP, NPC-5391, DECKHAND DEATHBOT, BUILT-DIFF BETTY",
+    "design": "A glitchy robot villain with a flat, metallic, clipped monotone voice. Speaks in short robotic phrases with odd pauses, deadpan and cold, a bit funny. Clear studio audio.",
+    "sample": "countdown started. four seconds per chog. i have infinite seconds. you do not. tick tock. i do not stop.",
+    "voice_id": "PASTE_VOICE_ID_HERE"
+  },
+  "v_diva": {
+    "name": "Villain: Diva",
+    "role": "NFT villains: SHORTCAKE SUPREME, GHOSTED BETTY, DELULU MILADY, SLAY QUEEN BETTY",
+    "design": "A sassy, dramatic diva villain with a bright, confident young female voice. Valley-girl drawl, eye-roll energy, sweet on the surface and savage underneath. Clear studio audio.",
+    "sample": "welcome to my prom. it is vip only. commons? ew. wait outside, sweetie. not on the list? not in the tower.",
+    "voice_id": "PASTE_VOICE_ID_HERE"
+  },
+  "v_bro": {
+    "name": "Villain: Bro",
+    "role": "NFT villains: KEYMASTER CHEW, BIG BACK EGGBERT, RODEO WADDLES, DUMP TRUCK DALE, SLIMEBEARD, DISCO KOI, UNC V1",
+    "design": "A loud, overconfident cartoon bro villain with a husky young male voice and a light country drawl. Big personality, laughs at his own jokes, a bit dumb but very sure of himself. Clear studio audio.",
+    "sample": "yeehaw, partner. this here chog is under arrest for bein too snackable. no keys. no chog. no cap.",
+    "voice_id": "PASTE_VOICE_ID_HERE"
+  },
+  "v_creep": {
+    "name": "Villain: Creep",
+    "role": "NFT villains: TRICK OR SHEET, HEXA SLICE, SLEEPMAXXER, MOODSWING, DIOR BONES, ENOLA, BOO SKRUMP",
+    "design": "A creepy, whispery villain voice, airy and breathy with a soft echo. Slow and unsettling but playful, like a ghost telling a joke. Clear studio audio.",
+    "sample": "boooo. three perfects in a row, or i haunt your combo forever. miss once, and you are ghosted.",
+    "voice_id": "PASTE_VOICE_ID_HERE"
+  },
+  "v_cute": {
+    "name": "Villain: Cutie",
+    "role": "NFT villains: FROSTY POOKIE, PEANUT GALE, FLUFFY BLADES",
+    "design": "A super cute, high-pitched, baby-like villain voice. Sweet and bubbly with little giggles, but secretly evil. Talks like a tiny mascot who just froze your friend. Clear studio audio.",
+    "sample": "hiii! i froze your friend. it is giving snow globe. too cute to catch. too cold to care. hehe!",
+    "voice_id": "PASTE_VOICE_ID_HERE"
+  },
+  "v_regal": {
+    "name": "Villain: Regal",
+    "role": "NFT villains: BITCOINAPARTE, SIGMA DAK, CAPTAIN NATA, KING DARIUS, GALAXY BRAIN",
+    "design": "A pompous royal villain with a refined, theatrical, mid-low British voice. Grand, slow and self-important, like an emperor reading his own legend. Clear studio audio.",
+    "sample": "i conquered the arctic with one coin and a hat. your chog is next. short king. long position. cold heart.",
+    "voice_id": "PASTE_VOICE_ID_HERE"
+  }
+}
