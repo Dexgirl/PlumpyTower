@@ -1300,7 +1300,12 @@ details.lab summary { cursor: pointer; font-weight: 900; font-size: 13px; paddin
     const ct = typeof VILLAIN_CUT !== 'undefined' ? VILLAIN_CUT[v.key] : null;
     v.gait = String(VILLAIN_GAIT[v.key] || 'inch').split(':');
     v.body = ct ? ct.body : v.accent; v.bodyDark = ct ? ct.dark : '#2a1838';
-    if (ct) { const im = new Image(); im.src = ct.img; VCUT[v.key] = { im, w: ct.w, h: ct.h }; }
+    if (ct) {
+      const im = new Image(); im.src = ct.img;
+      VCUT[v.key] = { im, w: ct.w, h: ct.h, bh: ct.bh || ct.h, tb: ct.tb || ct.h, sh: ct.sh || null, hip: ct.hip || null };
+      // v32: a bust villain has a torso in its picture and these colours for the arms, legs and feet the game adds
+      if (ct.sh) v.kit = { skin: ct.skin, sleeve: ct.sleeve, legs: ct.legs, shoe: ct.shoe, pad: ct.pad || null, arm: ct.arm || 'both' };
+    }
   }
   const vcut = (v) => { const c = VCUT[v.key]; return c && c.im.complete && c.im.naturalWidth ? c : null; };
 
@@ -2888,10 +2893,24 @@ details.lab summary { cursor: pointer; font-weight: 900; font-size: 13px; paddin
     seedTrail(c);
     return c;
   }
-  function headW(c) { const cut = vcut(c.v); return cut ? Math.max(c.H * 0.62, Math.min(c.H * 1.45, (c.H * cut.w) / cut.h)) : c.H; }
+  function headW(c) { const cut = vcut(c.v); return cut ? Math.max(c.H * 0.62, Math.min(c.H * 1.45, (c.H * cut.w) / cut.bh)) : c.H; }
+  // a villain with a body (v32): where its torso, shoulders and hips are, relative to the bust's centre (c.H is the bust's height)
+  function bodyGeo(c) {
+    const cut = vcut(c.v); if (!cut || !cut.sh || !c.v.kit) return null;
+    const H = c.H, W = headW(c), kx = W / cut.w, ky = H / cut.bh, mid = cut.w / 2;
+    return { seam: -H / 2 + cut.bh * ky, bot: -H / 2 + cut.tb * ky, imgH: cut.h * ky,
+      sh: [(cut.sh[0] - mid) * kx, (cut.sh[1] - mid) * kx], hip: [(cut.hip[0] - mid) * kx, (cut.hip[1] - mid) * kx], kit: c.v.kit };
+  }
+  const bodyLeg = (c) => (c.gait === 'waddle' ? 0.13 : c.variant === 'stubby' ? 0.2 : c.gait === 'stomp' ? 0.26 : c.gait === 'shamble' ? 0.3 : 0.32);
   // how far below the head's centre the creature touches the ground (or hovers)
   function footOff(c) {
-    const H = c.H;
+    const H = c.H, geo = bodyGeo(c);
+    if (geo) {
+      if (c.travel === 'walk') return geo.bot + H * bodyLeg(c);
+      if (c.travel === 'hop') return geo.bot + H * 0.17;
+      if (c.travel === 'treads') return geo.bot + H * 0.32;
+      return geo.bot + H * 0.32;   // fliers and riders: legs hang, the vehicle sits under the feet
+    }
     if (c.travel === 'walk') return H / 2 + H * GAIT[c.gait].leg;
     if (c.travel === 'hop') return H / 2 + H * 0.1;
     if (c.travel === 'crawl') return H * 0.44;
@@ -2965,7 +2984,7 @@ details.lab summary { cursor: pointer; font-weight: 900; font-size: 13px; paddin
     const H = c.H, add = (o) => c.fx.push(Object.assign({ x: c.x, y: c.y, vx: 0, vy: 0, life: 40, max: 40, r: H * 0.05, col: PAPER, k: 'dot' }, o));
     const g = c.gait, va = c.variant, feet = c.y + footOff(c);
     if (g === 'stomp' && moving && c.t % 22 === 0) for (const s of [-1, 1]) add({ x: c.x + s * H * 0.2, y: feet, vx: s * 0.4, vy: -0.25, r: H * 0.08, col: 'rgba(255,255,255,0.75)', k: 'puff', life: 26, max: 26 });
-    if (g === 'ooze' && moving && c.t % 8 === 0) add({ x: c.x - c.dir * H * 0.3, y: feet - 1, r: H * 0.05 + Math.random() * H * 0.04, col: rgba(c.accent, 0.7), k: 'dot', life: 140, max: 140 });
+    if ((g === 'ooze' || va === 'slime') && moving && c.t % 8 === 0) add({ x: c.x - c.dir * H * 0.3, y: feet - 1, r: H * 0.05 + Math.random() * H * 0.04, col: rgba(c.accent, 0.7), k: 'dot', life: 140, max: 140 });
     if (g === 'swim' && c.t % 30 === 0) add({ x: c.x + c.dir * H * 0.4, y: c.y - H * 0.1, vy: -0.5, r: H * 0.05, k: 'bubble', life: 60, max: 60 });
     if (g === 'ride' && va === 'broom' && moving && c.t % 4 === 0) add({ x: c.x - c.dir * H * 0.85, y: c.y + H * 0.55, vx: -c.dir * 0.3, vy: 0.2, r: H * 0.04, col: c.accent, k: 'spark', life: 30, max: 30 });
     if (g === 'ride' && va === 'rocket' && c.t % 3 === 0) add({ x: c.x + (Math.random() - 0.5) * H * 0.3, y: c.y + H * 0.75, vy: 0.9, r: H * 0.07, col: 'rgba(220,220,230,0.7)', k: 'puff', life: 28, max: 28 });
@@ -2984,7 +3003,7 @@ details.lab summary { cursor: pointer; font-weight: 900; font-size: 13px; paddin
   }
   function drawCreatureHead(g, c, W, H, o) {
     const v = c.v, cut = vcut(v);
-    if (cut) { g.drawImage(o.hurt ? hurtTint(v) || cut.im : cut.im, -W / 2, -H / 2, W, H); return; }
+    if (cut) { g.drawImage(o.hurt ? hurtTint(v) || cut.im : cut.im, -W / 2, -H / 2, W, (H * cut.h) / cut.bh); return; }
     const r = H / 2;   // no cut-out: the round picture
     g.save(); g.beginPath(); g.arc(0, 0, r, 0, Math.PI * 2); g.clip();
     const im = vimg(v);
@@ -3012,8 +3031,93 @@ details.lab summary { cursor: pointer; font-weight: 900; font-size: 13px; paddin
     const dx = a.x - b.x, dy = a.y - b.y, d = Math.hypot(dx, dy) || 1; return [dx / d, dy / d];
   }
 
+  // ---------- v32 villain bodies: the NFT is a bust, its torso is continued in the picture (scripts/villain-bodies.py),
+  // and these add arms, legs and feet in the NFT's own colours (data/villain-cut.json: skin, sleeve, legs, shoe)
+  function bodyMove(c, t, H, moving) {   // walkers and hoppers: bob, tilt and squash (pivot: the hips)
+    let hy = 0, rot = 0, sx = 1, sy = 1;
+    const ph = c.ph, va = c.variant;
+    if (c.travel === 'hop') {
+      const hp = c.hop;
+      if (hp && hp.t <= 0) { const k = Math.min(1, -hp.t / 9); sy = 1 - 0.16 * (1 - k); sx = 1 + 0.12 * (1 - k); hy = H * 0.08 * (1 - k); }
+      else if (hp) { sy = 1.05; sx = 0.96; }
+      else if (c.land > 0) { const k = c.land / 8; sy = 1 - 0.14 * k; sx = 1 + 0.1 * k; hy = H * 0.07 * k; }
+      return { hy, rot, sx, sy };
+    }
+    if (c.gait === 'waddle') return { hy: moving ? -Math.abs(Math.sin(ph)) * H * 0.03 : 0, rot: moving ? Math.sin(ph) * 0.13 : (reduceMotion ? 0 : Math.sin(t / 700) * 0.03), sx, sy };
+    hy = moving ? -Math.abs(Math.sin(ph)) * H * (va === 'skip' ? 0.12 : va === 'stubby' ? 0.07 : 0.045) : (reduceMotion ? 0 : Math.sin(t / 600) * H * 0.012);
+    if (c.gait === 'shamble') rot = (moving ? Math.sin(ph) * 0.07 : Math.sin(t / 900) * 0.04) + c.dir * 0.05;
+    if (c.gait === 'stomp' && moving) { sy = 1 - 0.04 * Math.cos(2 * ph); sx = 2 - sy; }
+    if (va === 'robot' && moving && !reduceMotion) rot = Math.sin(ph * 2) * 0.03;
+    return { hy, rot, sx, sy };
+  }
+  function bodyLegs(g, c, t, geo, P) {
+    const { X, Y, H, dir, ph, lw, moving, sx } = P, kit = geo.kit, va = c.variant, gait = c.gait, tr = c.travel;
+    if (tr === 'treads' || va === 'cloud') return;   // on treads / sitting in a cloud: no legs to see
+    const bones = va === 'bones', robot = va === 'robot';
+    const legCol = bones ? '#f3eee2' : robot ? '#9aa3b5' : kit.legs, shoeCol = bones ? '#f3eee2' : robot ? '#6b7488' : kit.shoe;
+    const thick = H * (bones ? 0.055 : gait === 'stomp' ? 0.17 : va === 'stubby' ? 0.16 : gait === 'waddle' ? 0.12 : 0.13);
+    const L = H * bodyLeg(c), hipY = Y + geo.bot - H * 0.05;
+    const stand = c.gait === 'ride' && (va === 'board' || va === 'rug' || va === 'rocket');
+    for (const i of [0, 1]) {
+      const hx0 = X + geo.hip[i] * sx, p = ph + i * Math.PI;
+      let knee, foot;
+      if (c.climbing) {   // up the rope ladder: feet take turns on the rungs
+        const lift = Math.max(0, Math.sin(p)) * H * 0.14; knee = [hx0, hipY + L * 0.5 - lift * 0.8]; foot = [hx0, hipY + L - lift];
+      } else if (tr === 'walk') {
+        const amp = !moving ? 0 : gait === 'stomp' ? 0.3 : robot ? 0.32 : gait === 'waddle' ? 0 : 0.5;
+        const sw = (gait === 'shamble' && i ? 0.35 : 1) * amp * Math.sin(p), bend = gait === 'stomp' || gait === 'waddle' ? 0 : Math.max(0, -Math.cos(p)) * (robot ? 0.3 : 0.8) * (moving ? 1 : 0);
+        const lift = gait === 'waddle' && moving ? Math.max(0, Math.sin(p)) * H * 0.06 : 0;
+        knee = [hx0 + Math.sin(sw) * dir * L * 0.5, hipY + Math.cos(sw) * L * 0.5 - lift * 0.5];
+        const a2 = sw - bend; foot = [knee[0] + Math.sin(a2) * dir * L * 0.5, knee[1] + Math.cos(a2) * L * 0.5 - lift * 0.5];
+      } else if (tr === 'hop') {
+        const air = c.hop && c.hop.t > 0, tuck = air ? 0.6 : 1, out = va === 'frog' ? (i ? 1 : -1) * H * 0.07 : 0;
+        knee = [hx0 + out * 1.4, hipY + L * 0.5 * tuck]; foot = [hx0 + out - (air ? dir * H * 0.05 : 0), hipY + L * tuck];
+      } else {   // fliers dangle their legs; riders stand on the board, the rug or rocket boots
+        const sway = reduceMotion ? 0 : Math.sin(t / 520 + i * 1.3) * H * 0.03, Lf = H * (stand ? 0.2 : 0.26);
+        knee = [hx0 + (stand ? (i ? 1 : -1) * H * 0.03 : sway * 0.5 - dir * H * 0.02), hipY + Lf * 0.5];
+        foot = [hx0 + (stand ? 0 : sway - dir * H * (moving ? 0.07 : 0.02)), hipY + Lf];
+      }
+      limb(g, [[hx0, hipY], knee, foot], thick, i ? legCol : shade(legCol, -0.12), lw);
+      if (bones) for (const q of [knee, foot]) oval(g, q[0], q[1], thick * 0.9, thick * 0.9, '#f3eee2', lw * 0.8);
+      if (c.gait === 'ride' && va === 'rocket') continue;   // the rocket boots are drawn with the ride
+      const fw = H * (gait === 'waddle' || gait === 'stomp' || va === 'frog' ? 0.13 : va === 'stubby' ? 0.11 : 0.1), fh = H * (gait === 'stomp' ? 0.075 : 0.055);
+      const fx = foot[0] + dir * fw * 0.3, fcol = i ? shoeCol : shade(shoeCol, -0.12);
+      oval(g, fx, foot[1] - fh * 0.2, fw, fh, fcol, lw);
+    }
+  }
+  function bodyArms(g, c, t, geo, P) {   // drawn in the picture's own frame (so they bend with it)
+    const { H, dir, ph, lw, moving } = P, kit = geo.kit, va = c.variant, gait = c.gait, tr = c.travel;
+    if (kit.arm === 'none') return;
+    const bones = va === 'bones', armW = H * (bones ? 0.05 : 0.105), col = bones ? '#f3eee2' : kit.sleeve, hand = bones ? '#f3eee2' : kit.skin;
+    const y0 = geo.seam + H * 0.05, laugh = c.laughT > 0 && !reduceMotion, spit = c.spitT > 0;
+    for (const i of [0, 1]) {
+      if ((kit.arm === 'L' && i === 1) || (kit.arm === 'R' && i === 0)) continue;   // the NFT already shows that arm
+      const side = i ? 1 : -1, sx0 = geo.sh[i] - side * armW * 0.6, sh = [sx0, y0];
+      let el, hd;
+      if (c.climbing) { const p = ph + i * Math.PI; hd = [sx0 + side * H * 0.02, -H * 0.5 - Math.max(0, Math.sin(p)) * H * 0.12]; el = [sx0 + side * H * 0.13, (y0 + hd[1]) / 2]; }
+      else if (laugh || (spit && i === (dir > 0 ? 1 : 0))) { hd = [sx0 + side * H * 0.2, y0 - H * 0.26]; el = [sx0 + side * H * 0.2, y0 - H * 0.02]; }   // gloating / flinging a baby
+      else if (gait === 'shamble') {   // zombie arms straight out in front
+        const droop = H * (i ? 0.1 : 0.02) + (reduceMotion ? 0 : Math.sin(ph + i * 1.7) * H * 0.04);
+        hd = [sx0 + dir * H * (0.48 + i * 0.06), y0 + droop]; el = [(sx0 + hd[0]) / 2, (y0 + hd[1]) / 2 + H * 0.03];
+      } else if (gait === 'waddle') {   // flippers out to the side, flapping
+        const fl = reduceMotion ? 0.45 : 0.45 + Math.sin(t / 95 + i) * 0.3;
+        hd = [sx0 + side * Math.sin(fl) * H * 0.28, y0 + Math.cos(fl) * H * 0.24]; el = [(sx0 + hd[0]) / 2, (y0 + hd[1]) / 2];
+      } else if (tr === 'hop' && c.hop && c.hop.t > 0) { hd = [sx0 + side * H * 0.16, y0 - H * 0.16]; el = [sx0 + side * H * 0.14, y0 + H * 0.02]; }
+      else if (tr === 'fly' || tr === 'treads' || gait === 'ride') {   // out a little, for balance
+        const sw = reduceMotion ? 0 : Math.sin(t / 600 + i) * H * 0.03;
+        hd = [sx0 + side * H * 0.2, y0 + H * 0.22 + sw]; el = [sx0 + side * H * 0.12, y0 + H * 0.12];
+      } else {   // walking: arms swing against the legs
+        const sw = moving ? Math.sin(ph + (i ? 0 : Math.PI)) * H * (va === 'skip' ? 0.14 : 0.09) : (reduceMotion ? 0 : Math.sin(t / 700 + i) * H * 0.01);
+        hd = [sx0 + side * H * 0.07 + dir * sw, y0 + H * 0.33]; el = [sx0 + side * H * 0.08 + dir * sw * 0.4, y0 + H * 0.17];
+      }
+      limb(g, [sh, el, hd], armW, i ? col : shade(col, -0.06), lw);
+      if (bones) oval(g, el[0], el[1], armW * 0.9, armW * 0.9, '#f3eee2', lw * 0.8);
+      oval(g, hd[0], hd[1], H * 0.062, H * 0.062, hand, lw);
+    }
+  }
+
   function drawCreature(g, c, t, o = {}) {
-    const H = c.H, W = headW(c), dir = c.dir, ph = c.ph, lw = Math.max(1, H * 0.042), hb = H / 2, fo = footOff(c);
+    const H = c.H, W = headW(c), dir = c.dir, ph = c.ph, lw = Math.max(1, H * 0.042), geo = bodyGeo(c), hb = geo ? geo.bot : H / 2, fo = footOff(c);
     const body = c.body || c.accent, dark = c.dark || INK, moving = Math.hypot(c.vx, c.vy) > 0.05 || Boolean(c.hop);
     let hx = 0, hy = 0, rot = 0, sx = 1, sy = 1;
     const front = [];   // parts drawn over the head
@@ -3029,7 +3133,9 @@ details.lab summary { cursor: pointer; font-weight: 900; font-size: 13px; paddin
     }
     g.globalAlpha = o.alpha != null ? o.alpha : 1;
     const X = c.x, Y = c.y;
-    switch (c.gait) {
+    const bodyOwn = geo && (c.travel === 'walk' || c.travel === 'hop');   // v32: the body draws its own legs and arms
+    if (bodyOwn) ({ hy, rot, sx, sy } = bodyMove(c, t, H, moving));
+    if (!bodyOwn) switch (c.gait) {
       case 'stride': case 'shamble': case 'stomp': {
         const va = c.variant, L = H * GAIT[c.gait].leg, bones = va === 'bones', robot = va === 'robot';
         const thick = c.gait === 'stomp' ? H * 0.2 : bones ? H * 0.05 : H * 0.11;
@@ -3191,7 +3297,7 @@ details.lab summary { cursor: pointer; font-weight: 900; font-size: 13px; paddin
         const va = c.variant, speedF = va === 'insect' ? 24 : 120, f = reduceMotion ? 0.5 : Math.sin(t / speedF);
         hy = reduceMotion ? 0 : (va === 'insect' ? Math.sin(t / 260) * H * 0.04 : -f * H * 0.06);
         for (const s of [-1, 1]) {
-          g.save(); g.translate(X + s * W * 0.28, Y - H * 0.08 + hy);
+          g.save(); g.translate(X + s * (geo ? Math.abs(geo.sh[s < 0 ? 0 : 1]) * 0.55 : W * 0.28), (geo ? Y + geo.seam - H * 0.12 : Y - H * 0.08) + hy);
           if (va === 'insect') {
             const k = 0.25 + 0.75 * Math.abs(f);
             g.globalAlpha *= 0.85;
@@ -3224,6 +3330,8 @@ details.lab summary { cursor: pointer; font-weight: 900; font-size: 13px; paddin
             const sx0 = X + c.dir * W * 0.55; g.strokeStyle = INK; g.lineWidth = lw * 3.2; g.beginPath(); g.moveTo(sx0, Y + H * 0.8 + hy); g.lineTo(sx0 + c.dir * H * 0.08, Y - H * 0.6 + hy); g.stroke(); g.strokeStyle = '#8a5a2b'; g.lineWidth = lw * 1.6; g.stroke();
             g.beginPath(); g.moveTo(sx0 + c.dir * H * 0.08, Y - H * 0.6 + hy); g.quadraticCurveTo(sx0 - c.dir * H * 0.4, Y - H * 0.75 + hy, sx0 - c.dir * H * 0.5, Y - H * 0.35 + hy); g.quadraticCurveTo(sx0 - c.dir * H * 0.25, Y - H * 0.55 + hy, sx0 + c.dir * H * 0.06, Y - H * 0.5 + hy); g.closePath(); g.fillStyle = '#d9dde8'; g.fill(); g.lineWidth = lw; g.strokeStyle = INK; g.stroke();
           });
+        } else if (geo && va === 'cosmic') {
+          g.fillStyle = '#fffbff'; for (let i = 0; i < 6; i++) { g.beginPath(); g.arc(X + Math.sin(i * 2.1 + wv * 0.3) * W * 0.45, Y + geo.bot + ((i * 0.19 + wv * 0.02) % 1) * H * 0.4 + hy, H * 0.02, 0, Math.PI * 2); g.fill(); }
         } else if (va === 'wisp' || va === 'cosmic' || va === 'flame') {
           const col = va === 'wisp' ? rgba(body, 0.75) : va === 'cosmic' ? 'rgba(60,40,140,0.85)' : 'rgba(255,120,40,0.9)';
           g.beginPath(); g.moveTo(X - W * 0.38, top);
@@ -3247,7 +3355,7 @@ details.lab summary { cursor: pointer; font-weight: 900; font-size: 13px; paddin
         } else {
           hy = reduceMotion ? 0 : Math.sin(t / 420) * H * 0.06;
           rot = Math.max(-0.2, Math.min(0.2, c.vx * 0.04));
-          const by = Y + hb + H * 0.06 + hy;
+          const by = Y + hb + (geo ? { board: H * 0.1, rug: H * 0.12, broom: H * 0.02, cloud: -H * 0.12 }[va] || 0 : H * 0.06) + hy;
           if (va === 'board') {
             g.save(); g.translate(X, by + H * 0.06); g.rotate(rot);
             glowBlobOn(g, 0, H * 0.12, W * 0.7, '#63e2e6', 0.5);
@@ -3260,9 +3368,12 @@ details.lab summary { cursor: pointer; font-weight: 900; font-size: 13px; paddin
             for (let i = -3; i <= 3; i++) { g.beginPath(); g.moveTo(bx0, by + H * 0.06); g.lineTo(bx0 - dir * H * 0.36, by + H * 0.06 + i * H * 0.05 + (reduceMotion ? 0 : Math.sin(t / 90 + i) * H * 0.01)); g.stroke(); }
             g.strokeStyle = INK; g.lineWidth = lw; g.beginPath(); g.arc(bx0 - dir * H * 0.03, by + H * 0.06, H * 0.05, 0, Math.PI * 2); g.stroke();
           } else if (va === 'cloud') {
-            g.fillStyle = '#fffbff'; g.strokeStyle = INK; g.lineWidth = lw;
-            const puffs = [[-0.45, 0.06, 0.2], [-0.15, -0.02, 0.26], [0.2, 0, 0.24], [0.48, 0.07, 0.18]];
-            for (const pass of [0, 1]) for (const [px, py, pr] of puffs) { g.beginPath(); g.arc(X + px * W * 1.2, by + py * H + H * 0.08, pr * H, 0, Math.PI * 2); if (pass) g.fill(); else g.stroke(); }
+            const cloud = () => {
+              g.fillStyle = '#fffbff'; g.strokeStyle = INK; g.lineWidth = lw;
+              const puffs = [[-0.45, 0.06, 0.2], [-0.15, -0.02, 0.26], [0.2, 0, 0.24], [0.48, 0.07, 0.18]];
+              for (const pass of [0, 1]) for (const [px, py, pr] of puffs) { g.beginPath(); g.arc(X + px * W * 1.2, by + py * H + H * 0.08, pr * H, 0, Math.PI * 2); if (pass) g.fill(); else g.stroke(); }
+            };
+            if (geo) front.push(cloud); else cloud();
           } else if (va === 'rug') {
             const w0 = W * 0.8, n = 10, wv = reduceMotion ? 0 : t / 150;
             const yAt = (i) => by + H * 0.04 + Math.sin(wv + i * 0.7) * H * 0.04;
@@ -3273,15 +3384,15 @@ details.lab summary { cursor: pointer; font-weight: 900; font-size: 13px; paddin
             g.strokeStyle = '#ffc93c'; g.lineWidth = lw * 0.8; g.beginPath(); for (let i = 0; i <= n; i++) { const x = X - w0 + (2 * w0 * i) / n; if (i) g.lineTo(x, yAt(i) + H * 0.05); else g.moveTo(x, yAt(i) + H * 0.05); } g.stroke();
             g.strokeStyle = '#ffc93c'; for (const s of [-1, 1]) for (let k = 0; k < 3; k++) { const yy = yAt(s < 0 ? 0 : n) + H * 0.02 + k * H * 0.035; g.beginPath(); g.moveTo(X + s * w0, yy); g.lineTo(X + s * (w0 + H * 0.08), yy + H * 0.02); g.stroke(); }
           } else if (va === 'cape') {
-            const wv = reduceMotion ? 0 : t / 120, back = -dir;
-            rot = moving ? dir * 0.18 : 0;
-            g.beginPath(); g.moveTo(X - W * 0.3, Y + H * 0.1 + hy); g.lineTo(X + W * 0.3, Y + H * 0.1 + hy);
-            g.quadraticCurveTo(X + back * H * 0.9, Y + H * 0.3 + hy + Math.sin(wv) * H * 0.1, X + back * H * 1.15, Y + H * (moving ? 0.25 : 0.7) + hy + Math.sin(wv + 1) * H * 0.12);
-            g.quadraticCurveTo(X + back * H * 0.6, Y + H * 0.75 + hy, X - W * 0.3, Y + H * 0.1 + hy);
+            const wv = reduceMotion ? 0 : t / 120, back = -dir, c0 = geo ? geo.seam : H * 0.1, ex = geo ? geo.bot - geo.seam : 0;
+            rot = moving ? dir * (geo ? 0.1 : 0.18) : 0;
+            g.beginPath(); g.moveTo(X - W * 0.3, Y + c0 + hy); g.lineTo(X + W * 0.3, Y + c0 + hy);
+            g.quadraticCurveTo(X + back * H * 0.9, Y + c0 + H * 0.2 + hy + Math.sin(wv) * H * 0.1, X + back * H * 1.15, Y + c0 + H * (moving ? 0.15 : 0.6) + ex + hy + Math.sin(wv + 1) * H * 0.12);
+            g.quadraticCurveTo(X + back * H * 0.6, Y + c0 + H * 0.65 + ex + hy, X - W * 0.3, Y + c0 + hy);
             g.closePath(); g.fillStyle = '#e2334f'; g.fill(); g.lineWidth = lw; g.strokeStyle = INK; g.stroke();
           } else if (va === 'rocket') {
             for (const s of [-1, 1]) {
-              const jx = X + s * W * 0.32, jy = Y + hb - H * 0.05 + hy;
+              const jx = geo ? X + geo.hip[s < 0 ? 0 : 1] : X + s * W * 0.32, jy = geo ? Y + geo.bot + H * 0.14 + hy : Y + hb - H * 0.05 + hy;
               g.beginPath(); if (g.roundRect) g.roundRect(jx - H * 0.07, jy - H * 0.2, H * 0.14, H * 0.3, H * 0.06); else g.rect(jx - H * 0.07, jy - H * 0.2, H * 0.14, H * 0.3);
               g.fillStyle = '#c9cfdb'; g.fill(); g.lineWidth = lw; g.strokeStyle = INK; g.stroke();
               const fl = H * (0.22 + (reduceMotion ? 0 : Math.random() * 0.12));
@@ -3294,10 +3405,14 @@ details.lab summary { cursor: pointer; font-weight: 900; font-size: 13px; paddin
       }
       default: break;
     }
-    // the NFT itself
-    g.save(); g.translate(X + hx, Y + hy); if (rot) g.rotate(rot);
-    const sq = o.sq || 0; g.scale(sx * (1 + sq), sy * (1 - sq));
+    if (geo) bodyLegs(g, c, t, geo, { X: X + hx, Y: Y + hy, H, dir, ph, lw, moving, sx });
+    // the NFT itself (a villain with a body bends and squashes at the hips, its arms move with it)
+    g.save();
+    const sq = o.sq || 0;
+    if (geo) { g.translate(X + hx, Y + hy + geo.bot); if (rot) g.rotate(rot); g.scale(sx * (1 + sq), sy * (1 - sq)); g.translate(0, -geo.bot); }
+    else { g.translate(X + hx, Y + hy); if (rot) g.rotate(rot); g.scale(sx * (1 + sq), sy * (1 - sq)); }
     drawCreatureHead(g, c, W, H, o);
+    if (geo) bodyArms(g, c, t, geo, { H, dir, ph, lw, moving });
     g.restore();
     for (const f of front) f();
     g.restore();

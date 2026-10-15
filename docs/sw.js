@@ -1,6 +1,6 @@
 // PLUMPY service worker: the game opens offline, and every voice file you've heard stays on the device.
 // The page itself is checked online first (so updates arrive), everything else comes from the cache first.
-const APP = 'plumpy-app-3951048eb2';
+const APP = 'plumpy-app-dd6d9b1aa5';
 const VOICES = 'plumpy-voices-2d3e93131e';
 const FONTS = 'plumpy-fonts';
 const SHELL = ['./', './manifest.webmanifest', './lib/matter.min.js', './icons/icon-192.png', './icons/icon-512.png', './icons/apple-touch-icon.png', './voices/core.json'];

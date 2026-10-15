@@ -64,14 +64,14 @@ const VILLAIN_NFTS = {
 //   stride = walks on two legs · stomp = heavy bear steps · shamble = zombie/skeleton lurch · swim = fins + tail through the air
 //   wings = flaps (insect/bat/dragon) · float = ghost tail (sheet/wisp/cloak/cosmic/flame) · ride = board/broom/cloud/treads/cape/rug/rocket
 const VILLAIN_GAIT = {
-  skrump2958: 'inch', chewy163: 'stride:boots', r3t205: 'hop:bean', monafuku653: 'stride:skip', skrump2948: 'hop:puff',
+  skrump2958: 'stride:stubby', chewy163: 'stride:boots', r3t205: 'hop:bean', monafuku653: 'stride:skip', skrump2948: 'hop:puff',
   bearish4744: 'stomp', kapysh62: 'wings:dragon', lilpudgy13790: 'waddle', pudgy7460: 'waddle', daks2948: 'waddle',
-  chewy833: 'ride:board', mayc66: 'shamble', pudgy5678: 'float:sheet', kapysh239: 'swim:shark', mouch806: 'wings:insect',
-  axie11935654: 'hop:puff', madlads5391: 'stride:robot', molandak390: 'hop:knight', mayc6519: 'stomp', bearish6399: 'stride:skip',
+  chewy833: 'ride:board', mayc66: 'shamble', pudgy5678: 'float:sheet', kapysh239: 'stride', mouch806: 'wings:insect',
+  axie11935654: 'hop:puff', madlads5391: 'stride:robot', molandak390: 'stride:stubby', mayc6519: 'stomp', bearish6399: 'stride:skip',
   sfpunk707: 'ride:broom', axie11426741: 'hop:puff', azuki1748: 'ride:cloud', betty19: 'float:wisp', mayc2151: 'ride:treads',
-  milady6745: 'stride:skip', madlads6955: 'slither', mouch1151: 'ride:cape', r3t505: 'hop:chatter', chewy1407: 'ride:treads',
+  milady6745: 'stride:skip', madlads6955: 'stride', mouch1151: 'ride:cape', r3t505: 'hop:chatter', chewy1407: 'ride:treads',
   argo8764: 'shamble:bones', betty23: 'shamble', daks867: 'hop:frog', betty24: 'shamble', madlads723: 'stride',
-  molandak3061: 'ooze', daks513: 'swim:koi', r3t806: 'inch', daks2609: 'hop:puff', argo6511: 'shamble:bones',
+  molandak3061: 'stride:slime', daks513: 'waddle', r3t806: 'stride', daks2609: 'waddle', argo6511: 'shamble:bones',
   daks1000: 'ride:rug', azuki9453: 'stride:boots', kapysh218: 'ride:rocket', madlads5176: 'float:cosmic', skrump2643: 'float:flame',
   mouch1320: 'wings:bat', argo3615: 'float:cloak', skrump2831: 'float:sheet', v1punk5103: 'stride', blokyz16: 'stomp:heavy',
 };
