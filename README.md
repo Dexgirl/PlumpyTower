@@ -2,7 +2,7 @@
 
 A tower-stacking story game for **Chogathon 2026**, starring the real **Chog Genesis** NFTs on Monad.
 
-**Play:** https://dexgirl.github.io/PlumpyTower/ (works in any modern browser on phone or computer, and installs as an app)
+**Play:** https://plumpymoon.xyz/ (also https://dexgirl.github.io/PlumpyTower/) (works in any modern browser on phone or computer, and installs as an app)
 
 The Bear stole every crumb in Chog World, caged 50 Chogs and hired 50 NFT villains to guard them. Plumpy, a Chog born from a fallen star, carries your squad up to each cage: you drop Chogs to build a tower to the line, knock the villain off its perch and free the caged Chog. Every caged Chog is a real Chog Genesis NFT, and once freed it joins your squad.
 
