@@ -23,6 +23,8 @@ def data_uri(name):
     f = os.path.join(art, name)
     return 'data:image/webp;base64,' + base64.b64encode(open(f, 'rb').read()).decode() if os.path.exists(f) else ''
 vpack_js += '\nconst COVER_ART = ' + json.dumps(data_uri('cover.webp')) + ';\nconst COVER_SMALL = ' + json.dumps(data_uri('cover-small.webp')) + ';'
+# the tall cover for phones held upright (scripts/cover-tall.py)
+vpack_js += '\nconst COVER_TALL = ' + json.dumps(data_uri('cover-tall.webp')) + ';\nconst COVER_TALL_SMALL = ' + json.dumps(data_uri('cover-tall-small.webp')) + ';'
 # recorded voices (mixed by scripts/mix-voices.py into ../build/voices/<id>.mp3):
 # the story's clips go inside the page; the rest become voices/<bundle>.json next to it, loaded when needed
 import re, shutil

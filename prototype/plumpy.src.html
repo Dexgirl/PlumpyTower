@@ -117,6 +117,10 @@ button, select { font: inherit; color: inherit; }
   .art-main { width: 140%; max-width: none; height: auto; object-fit: contain; top: 44%; }
   .app[data-screen="home"] .art-main { top: 56px; transform: translateX(-50%); }
 }
+/* phones held upright: the tall cover fills the screen (18:9 art: tall phones lose a sliver at the sides, 16:9 a sliver top and bottom) */
+.art.tall .art-main { left: 50%; top: 50%; width: 100% !important; height: 100%; max-width: none; transform: translate(-50%, -50%); object-fit: cover; object-position: 50% 50%; }
+.app[data-screen="home"] .art.tall .art-main { top: 50%; transform: translate(-50%, -50%); object-position: 50% 0%; }   /* home: keep the sky above the logo so the top bar never sits on it */
+@media (min-aspect-ratio: 5/8) { .art.tall .art-main { object-fit: contain; } }   /* squarer upright screens (tablets): the whole picture, the blur fills the sides */
 .scr-cover { cursor: pointer; }
 .cv-hit { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; background: none; cursor: pointer; }
 .cv-hit:focus-visible { outline: 4px solid var(--butter); outline-offset: -8px; }
@@ -6575,7 +6579,21 @@ details.lab summary { cursor: pointer; font-weight: 900; font-size: 13px; paddin
   $('m-msg-ok').addEventListener('click', () => { $('m-msg').hidden = true; go('home'); });
   for (const id of ['m-pause', 'm-settings']) $(id).addEventListener('click', (e) => { if (e.target.id === id) { if (id === 'm-pause') setPause(false); else $(id).hidden = true; } });
   $('cv-start').addEventListener('click', coverStart);
-  if (typeof COVER_ART !== 'undefined' && COVER_ART) { $('art-main').src = COVER_ART; $('art-blur').src = COVER_SMALL || COVER_ART; document.body.style.setProperty('--cover-blur', `url("${COVER_SMALL || COVER_ART}")`); }
+  if (typeof COVER_ART !== 'undefined' && COVER_ART) {
+    // phones held upright get the tall cover (scripts/cover-tall.py); landscape, desktop and square screens keep the wide one
+    const tallQ = window.matchMedia('(max-aspect-ratio: 9/10)');
+    const setArt = () => {
+      const tall = !!(tallQ.matches && typeof COVER_TALL !== 'undefined' && COVER_TALL);
+      const main = tall ? COVER_TALL : COVER_ART;
+      const blur = tall ? (COVER_TALL_SMALL || COVER_TALL) : (COVER_SMALL || COVER_ART);
+      if ($('art-main').getAttribute('src') !== main) $('art-main').src = main;
+      if ($('art-blur').getAttribute('src') !== blur) $('art-blur').src = blur;
+      $('art-main').parentNode.classList.toggle('tall', tall);
+      document.body.style.setProperty('--cover-blur', `url("${blur}")`);
+    };
+    setArt();
+    if (tallQ.addEventListener) tallQ.addEventListener('change', setArt); else if (tallQ.addListener) tallQ.addListener(setArt);
+  }
   $('og-next').addEventListener('click', () => Origin.next());
   $('og-skip').addEventListener('click', () => Origin.finish());
   $('worlds').addEventListener('click', (e) => {
